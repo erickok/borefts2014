@@ -1,0 +1,9 @@
+<resources>
+
+	<style name="BoreftsBaseTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+	</style>
+
+	<style name="BoreftsTheme" parent="BoreftsBaseTheme">
+	</style>
+
+</resources>
