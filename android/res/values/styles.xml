@@ -1,9 +1,11 @@
 <resources>
 
-	<style name="BoreftsBaseTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+	<style name="BoreftsTheme" parent="Theme.Borefts">
+		<item name="android:textViewStyle">@style/DefaultTextView</item>
 	</style>
 
-	<style name="BoreftsTheme" parent="BoreftsBaseTheme">
+	<style name="DefaultTextView" parent="android:Widget.Holo.Light.TextView">
+		<item name="android:textSize">@dimen/text_default</item>
 	</style>
 
 </resources>

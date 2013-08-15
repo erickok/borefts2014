@@ -2,7 +2,28 @@
 <resources>
 
 	<string name="app_name">Borefts Beer Festival 2013</string>
+	<string name="app_name_short">Borefts 2013</string>
 	
+	<string name="action_info">Info</string>
+	<string name="action_brewers">Brewers</string>
+	<string name="action_styles">Styles</string>
+	<string name="action_twitter">Twitter</string>
+	<string name="action_googleplus">Google+</string>
 	<string name="action_settings">Settings</string>
+	
+	<string name="info_what">WHAT? WHERE?</string>
+	<string name="info_address">Borefts Beer Festival 2013\nDe Molen Brewery\nDoortocht 4 and Overtocht 43\nBodegraven</string>
+	<string name="info_times">September 27 &#8211; 28\n12:00 &#8211; 22:00</string>
+	<string name="info_tokens">TOKENS</string>
+	<string name="info_entry">€ 20,- for entry, glass, bottle of water, festival book and 8 tokens</string>
+	<string name="info_token">€ 1,50 per extra token</string>
+	<string name="info_extra">Some beers are 2 or more tokens. Additional tokens can be bought at the Doordocht 4 festival location.</string>
+	<string name="info_more">MOREOVER&#8230;</string>
+	<string name="info_"></string>
 
+	<string name="info_origin">%1$s, %2$s</string>
+	
+	<string name="error_connection">No (stable) connection available. Tap to try again.</string>
+	<string name="error_"></string>
+		
 </resources>

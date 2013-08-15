@@ -2,6 +2,7 @@
 <resources>
 
 	<string name="app_name">Borefts Bierfestival 2013</string>
+	<string name="app_name_short">Borefts 2013</string>
 	
 	<string name="action_settings">Instellingen</string>
 
