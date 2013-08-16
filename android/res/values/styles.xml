@@ -5,7 +5,7 @@
 	</style>
 
 	<style name="DefaultTextView" parent="android:Widget.Holo.Light.TextView">
-		<item name="android:textSize">@dimen/text_default</item>
+		<item name="android:textSize">@dimen/text_tab</item>
 	</style>
 
 </resources>

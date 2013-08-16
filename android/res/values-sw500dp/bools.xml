@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Used to determine if a device is 'small', i.e. a phone; for reference: a Nexus 7's smallest width is 533dip -->
+	<bool name="is_small_device">false</bool>
+
+</resources>

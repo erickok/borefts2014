@@ -4,11 +4,10 @@
 	<dimen name="margin_default">16dp</dimen>
 	<dimen name="margin_half">8dp</dimen>
 	<dimen name="margin_breweritem">14dp</dimen>
-	
+
 	<!-- Text sizes -->
-	<dimen name="text_tab">12sp</dimen>
-	<dimen name="text_small">13sp</dimen>
-	<dimen name="text_default">15sp</dimen>
-	<dimen name="text_enlarged">19sp</dimen>
+	<dimen name="text_small">14sp</dimen>
+	<dimen name="text_default">17sp</dimen>
+	<dimen name="text_enlarged">18sp</dimen>
 	
 </resources>

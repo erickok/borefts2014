@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Used to determine if a device is 'small', i.e. a phone; for reference: a Nexus 7's smallest width is 533dip -->
+	<bool name="is_small_device">true</bool>
+	<!-- Used to determine if the device and orientation are wide enough for three panes next to each other in one screen -->
+	<bool name="fits_three_panes">false</bool>
+	
+</resources>

@@ -35,6 +35,7 @@
 		</activity>
 		<activity android:name="nl.brouwerijdemolen.borefts2013.gui.PhoneActivity_" />
 		<activity android:name="nl.brouwerijdemolen.borefts2013.gui.TabletActivity_" />
+		<activity android:name="nl.brouwerijdemolen.borefts2013.gui.PhoneContainerActivity_" />
 
 		<meta-data
 			android:name="com.google.android.maps.v2.API_KEY"

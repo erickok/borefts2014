@@ -1,0 +1,13 @@
+<resources>
+
+	<style name="DefaultTextView" parent="android:Widget.Holo.Light.TextView">
+		<item name="android:textSize">@dimen/text_default</item>
+		<item name="android:fontFamily">sans-serif-light</item>
+	</style>
+
+    <style name="ActionBarTabTextStyle.Borefts" parent="@style/Widget.Sherlock.ActionBar.TabText">
+    	<item name="android:textSize">@dimen/text_tab</item>
+		<item name="android:fontFamily">sans-serif-light</item>
+    </style>
+	
+</resources>
