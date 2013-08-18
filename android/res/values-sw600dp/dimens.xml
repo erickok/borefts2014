@@ -3,11 +3,13 @@
 	<!-- Margins -->
 	<dimen name="margin_default">16dp</dimen>
 	<dimen name="margin_half">8dp</dimen>
-	<dimen name="margin_breweritem">14dp</dimen>
+	<dimen name="margin_breweritem">15dp</dimen>
 
 	<!-- Text sizes -->
+	<dimen name="text_tab">12sp</dimen>
 	<dimen name="text_small">14sp</dimen>
 	<dimen name="text_default">17sp</dimen>
 	<dimen name="text_enlarged">18sp</dimen>
+	<dimen name="text_large">29sp</dimen>
 	
 </resources>

@@ -25,7 +25,7 @@ import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ViewById;
 
-@EFragment(R.layout.fragment_brewers)
+@EFragment(R.layout.fragment_list)
 public class BrewersFragment extends Fragment implements Listener<Brewers>, ErrorListener, OnItemClickListener {
 
 	@Bean
@@ -33,7 +33,7 @@ public class BrewersFragment extends Fragment implements Listener<Brewers>, Erro
 	@Bean
 	protected BrewerListAdapter brewerListAdapter;
 	@ViewById
-	protected ListView brewersList;
+	protected ListView theList;
 	@ViewById
 	protected TextView errorText;
 	@ViewById
@@ -43,14 +43,10 @@ public class BrewersFragment extends Fragment implements Listener<Brewers>, Erro
 		setRetainInstance(true);
 	}
 
-	public static BrewersFragment newInstance() {
-		return new BrewersFragment();
-	}
-
 	@AfterViews
 	protected void init() {
-		brewersList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-		brewersList.setOnItemClickListener(this);
+		theList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+		theList.setOnItemClickListener(this);
 		errorText.setOnClickListener(onRetry);
 		refreshScreen();
 	}
@@ -63,28 +59,28 @@ public class BrewersFragment extends Fragment implements Listener<Brewers>, Erro
 	public void onResponse(Brewers brewers) {
 		Collections.sort(brewers.getBrewers());
 		brewerListAdapter.update(brewers.getBrewers());
-		brewersList.setAdapter(brewerListAdapter);
-		brewersList.setVisibility(View.VISIBLE);
+		theList.setAdapter(brewerListAdapter);
+		theList.setVisibility(View.VISIBLE);
 		errorText.setVisibility(View.GONE);
 		loadingProgress.setVisibility(View.GONE);
 	}
 
 	@Override
 	public void onErrorResponse(VolleyError error) {
-		brewersList.setVisibility(View.GONE);
+		theList.setVisibility(View.GONE);
 		errorText.setVisibility(View.VISIBLE);
 		loadingProgress.setVisibility(View.GONE);
 	}
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		((NavigationManager) getActivity()).openBrewer(this, brewerListAdapter.getItem(position).getId());
+		((NavigationManager) getActivity()).openBrewer(this, brewerListAdapter.getItem(position));
 	}
 	
 	private OnClickListener onRetry = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			brewersList.setVisibility(View.GONE);
+			theList.setVisibility(View.GONE);
 			errorText.setVisibility(View.GONE);
 			loadingProgress.setVisibility(View.VISIBLE);
 			refreshScreen();

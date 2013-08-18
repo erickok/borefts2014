@@ -1,6 +1,9 @@
 package nl.brouwerijdemolen.borefts2013.gui;
 
 import nl.brouwerijdemolen.borefts2013.R;
+import nl.brouwerijdemolen.borefts2013.api.Beer;
+import nl.brouwerijdemolen.borefts2013.api.Brewer;
+import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
@@ -115,18 +118,23 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 	};
 
 	@Override
-	public void openBrewer(Fragment baseFragment, int brewerId) {
-		PhoneContainerActivity_.intent(this).brewerId(brewerId).start();
+	public void openBrewer(Fragment baseFragment, Brewer brewer) {
+		PhoneContainerActivity_.intent(this).brewer(brewer).start();
 	}
 
 	@Override
-	public void openStyle(Fragment baseFragment, int styleId) {
-		PhoneContainerActivity_.intent(this).styleId(styleId).start();
+	public void openStyle(Fragment baseFragment, Style style) {
+		PhoneContainerActivity_.intent(this).style(style).start();
 	}
 
 	@Override
-	public void openBeer(Fragment baseFragment, int beerId) {
-		PhoneContainerActivity_.intent(this).beerId(beerId).start();
+	public void openBeer(Fragment baseFragment, Beer beer) {
+		PhoneContainerActivity_.intent(this).beer(beer).start();
+	}
+
+	@Override
+	public void openMap(Fragment baseFragment, int focusId) {
+		PhoneContainerActivity_.intent(this).focusId(focusId).start();
 	}
 	
 }

@@ -1,18 +1,10 @@
 package nl.brouwerijdemolen.borefts2013.gui;
 
 import nl.brouwerijdemolen.borefts2013.R;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BeerFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.StyleFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.StylesFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.StylesFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment_;
+import nl.brouwerijdemolen.borefts2013.api.Beer;
+import nl.brouwerijdemolen.borefts2013.api.Brewer;
+import nl.brouwerijdemolen.borefts2013.api.Style;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.os.Bundle;
@@ -143,20 +135,24 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 	}
 
 	@Override
-	public void openBrewer(Fragment baseFragment, int brewerId) {
-		// TODO
-		//addFragment(baseFragment, BrewerFragment_.builder().brewerId(brewerId).build());
-		addFragment(baseFragment, BrewersFragment_.builder().build());
+	public void openBrewer(Fragment baseFragment, Brewer brewer) {
+		addFragment(baseFragment, BrewerFragment_.builder().brewer(brewer).build());
 	}
 
 	@Override
-	public void openStyle(Fragment baseFragment, int styleId) {
-		addFragment(baseFragment, StyleFragment_.builder().styleId(styleId).build());
+	public void openStyle(Fragment baseFragment, Style style) {
+		addFragment(baseFragment, StyleFragment_.builder().style(style).build());
 	}
 
 	@Override
-	public void openBeer(Fragment baseFragment, int beerId) {
-		addFragment(baseFragment, BeerFragment_.builder().beerId(beerId).build());
+	public void openBeer(Fragment baseFragment, Beer beer) {
+		addFragment(baseFragment, BeerFragment_.builder().beer(beer).build());
+	}
+
+	@Override
+	public void openMap(Fragment baseFragment, int focusId) {
+		// Don't add a new fragment, but re-focus
+		mapFragment.focusMarker(focusId);
 	}
 	
 }

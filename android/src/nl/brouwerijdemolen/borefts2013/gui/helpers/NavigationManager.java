@@ -1,5 +1,8 @@
 package nl.brouwerijdemolen.borefts2013.gui.helpers;
 
+import nl.brouwerijdemolen.borefts2013.api.Beer;
+import nl.brouwerijdemolen.borefts2013.api.Brewer;
+import nl.brouwerijdemolen.borefts2013.api.Style;
 import android.support.v4.app.Fragment;
 
 /**
@@ -12,22 +15,29 @@ public interface NavigationManager {
 	/**
 	 * Open a brewer details (and beer list) fragment for the given id.
 	 * @param baseFragment The fragment that requests the opening of a new brewer fragment
-	 * @param brewerId The id of the brewer to show details (and beer list) for
+	 * @param brewer The brewer to show details (and beer list) for
 	 */
-	void openBrewer(Fragment baseFragment, int brewerId);
+	void openBrewer(Fragment baseFragment, Brewer brewer);
 
 	/**
 	 * Open a style details (and beer list) fragment for the given id.
 	 * @param baseFragment The fragment that requests the opening of a new brewer fragment
-	 * @param styleId The id of the style to show details (and beer list) for
+	 * @param style The style to show details (and beer list) for
 	 */
-	void openStyle(Fragment baseFragment, int styleId);
+	void openStyle(Fragment baseFragment, Style style);
 
 	/**
 	 * Open a beer details fragment for the given id.
 	 * @param baseFragment The fragment that requests the opening of a new beer fragment
-	 * @param beerId The id of the beer to show details for
+	 * @param beer The beer to show details and links for
 	 */
-	void openBeer(Fragment baseFragment, int beerId);
+	void openBeer(Fragment baseFragment, Beer beer);
+
+	/**
+	 * Open a map fragment that focuses on some specific element.
+	 * @param baseFragment The fragment that requests the opening of a new map fragment
+	 * @param focusId The id of the element to focus on
+	 */
+	void openMap(Fragment baseFragment, int focusId);
 
 }

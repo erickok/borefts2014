@@ -20,7 +20,7 @@ public class BrewerListAdapter extends BaseAdapter {
 	protected Context context;
 
 	/**
-	 * Allows updating the full internal list of torrents at once, replacing the old list
+	 * Allows updating the full internal list of brewers at once, replacing the old list
 	 * @param newTorrents The new list of torrent objects
 	 */
 	public void update(List<Brewer> brewers) {

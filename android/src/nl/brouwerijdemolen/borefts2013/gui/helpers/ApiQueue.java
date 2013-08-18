@@ -1,9 +1,9 @@
 package nl.brouwerijdemolen.borefts2013.gui.helpers;
 
+import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import android.content.Context;
 import android.util.DisplayMetrics;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
@@ -15,7 +15,7 @@ public class ApiQueue {
 
 	private RequestQueue requestQueue;
 	private ImageLoader imageLoader;
-
+	
 	public ApiQueue(Context context) {
 		
 		requestQueue = Volley.newRequestQueue(context);
@@ -27,12 +27,13 @@ public class ApiQueue {
 		
 	}
 	
-	public void add(Request<?> request) {
-		requestQueue.add(request);
-	}
-	
 	public ImageLoader getImageLoader() {
 		return imageLoader;
 	}
+
+	public void add(GsonRequest<?> gsonRequest) {
+		requestQueue.add(gsonRequest);
+	}
+	
 	
 }

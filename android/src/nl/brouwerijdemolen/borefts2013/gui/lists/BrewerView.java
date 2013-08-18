@@ -30,7 +30,7 @@ import com.googlecode.androidannotations.annotations.EViewGroup;
 import com.googlecode.androidannotations.annotations.ViewById;
 
 /**
- * View that represents some {@link Torrent} object and displays progress, status, speeds, etc.
+ * View that represents some {@link Brewer} object and displays name, origin and logo.
  * @author Eric Kok
  */
 @EViewGroup(R.layout.list_item_brewer)

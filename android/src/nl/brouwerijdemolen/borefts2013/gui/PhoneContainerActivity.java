@@ -1,9 +1,10 @@
 package nl.brouwerijdemolen.borefts2013.gui;
 
 import nl.brouwerijdemolen.borefts2013.R;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BeerFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewerFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.StyleFragment_;
+import nl.brouwerijdemolen.borefts2013.api.Beer;
+import nl.brouwerijdemolen.borefts2013.api.Brewer;
+import nl.brouwerijdemolen.borefts2013.api.Style;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.support.v4.app.Fragment;
 
@@ -21,23 +22,27 @@ import com.googlecode.androidannotations.annotations.Extra;
 public class PhoneContainerActivity extends SherlockFragmentActivity implements NavigationManager {
 
 	@Extra
-	protected Integer brewerId = null;
+	protected Brewer brewer = null;
 	@Extra
-	protected Integer styleId = null;
+	protected Style style = null;
 	@Extra
-	protected Integer beerId = null;
+	protected Beer beer = null;
+	@Extra
+	protected Integer focusId = null;
 
 	@AfterViews
 	protected void openFragment() {
 		
 		// Get the fragment to open based on the supplied Extra
 		Fragment fragment = null;
-		if (brewerId != null) {
-			fragment = BrewerFragment_.builder().brewerId(brewerId).build();
-		} else if (brewerId != null) {
-			fragment = StyleFragment_.builder().styleId(styleId).build();
-		} else if (brewerId != null) {
-			fragment = BeerFragment_.builder().beerId(beerId).build();
+		if (brewer != null) {
+			fragment = BrewerFragment_.builder().brewer(brewer).build();
+		} else if (style != null) {
+			fragment = StyleFragment_.builder().style(style).build();
+		} else if (brewer != null) {
+			fragment = BeerFragment_.builder().beer(beer).build();
+		} else if (focusId != null) {
+			fragment = MapFragment_.builder().initFocusId(focusId).build();
 		}
 		if (fragment == null) {
 			throw new IllegalArgumentException("Don't know which fragment to open, since no Extra was specified.");
@@ -49,18 +54,23 @@ public class PhoneContainerActivity extends SherlockFragmentActivity implements 
 	}
 
 	@Override
-	public void openBrewer(Fragment baseFragment, int brewerId) {
-		PhoneContainerActivity_.intent(this).brewerId(brewerId).start();
+	public void openBrewer(Fragment baseFragment, Brewer brewer) {
+		PhoneContainerActivity_.intent(this).brewer(brewer).start();
 	}
 
 	@Override
-	public void openStyle(Fragment baseFragment, int styleId) {
-		PhoneContainerActivity_.intent(this).styleId(styleId).start();
+	public void openStyle(Fragment baseFragment, Style style) {
+		PhoneContainerActivity_.intent(this).style(style).start();
 	}
 
 	@Override
-	public void openBeer(Fragment baseFragment, int beerId) {
-		PhoneContainerActivity_.intent(this).beerId(beerId).start();
+	public void openBeer(Fragment baseFragment, Beer beer) {
+		PhoneContainerActivity_.intent(this).beer(beer).start();
 	}
-	
+
+	@Override
+	public void openMap(Fragment baseFragment, int focusId) {
+		PhoneContainerActivity_.intent(this).focusId(focusId).start();
+	}
+		
 }
