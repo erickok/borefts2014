@@ -5,13 +5,17 @@ import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
+import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
+import com.googlecode.androidannotations.annotations.OptionsItem;
 
 /**
  * A wrapper activity that can open details screens for brewers, beers and styles by supplying the appropriate Extra.
@@ -33,6 +37,10 @@ public class PhoneContainerActivity extends SherlockFragmentActivity implements 
 	@AfterViews
 	protected void openFragment() {
 		
+		// Set up the simple action bar with up navigation
+		getSupportActionBar().setTitle(MolenTypefaceSpan.makeMolenSpannable(this, getString(R.string.app_name_short)));
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 		// Get the fragment to open based on the supplied Extra
 		Fragment fragment = null;
 		if (brewer != null) {
@@ -42,7 +50,7 @@ public class PhoneContainerActivity extends SherlockFragmentActivity implements 
 		} else if (brewer != null) {
 			fragment = BeerFragment_.builder().beer(beer).build();
 		} else if (focusId != null) {
-			fragment = MapFragment_.builder().initFocusId(focusId).build();
+			fragment = MapFragment_.builder().initFocusId(focusId).isMinimap(false).build();
 		}
 		if (fragment == null) {
 			throw new IllegalArgumentException("Don't know which fragment to open, since no Extra was specified.");
@@ -51,6 +59,12 @@ public class PhoneContainerActivity extends SherlockFragmentActivity implements 
 		// Replace the activity contents with the new fragment
 		getSupportFragmentManager().beginTransaction().add(android.R.id.content, fragment).commit();
 		
+	}
+	
+	@SuppressLint("InlinedApi")
+	@OptionsItem(android.R.id.home)
+	protected void homeClicked() {
+		PhoneActivity_.intent(this).flags(Intent.FLAG_ACTIVITY_CLEAR_TOP).start();
 	}
 
 	@Override

@@ -9,34 +9,30 @@ import nl.brouwerijdemolen.borefts2013.api.Brewers;
 import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
-import android.os.Bundle;
 import android.util.SparseArray;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.FragmentArg;
 
 @EFragment
 public class MapFragment extends com.google.android.gms.maps.SupportMapFragment implements OnInfoWindowClickListener,
-		Listener<Brewers>, ErrorListener {
+		Listener<Brewers>, ErrorListener, OnMarkerClickListener, OnMapClickListener {
 
-	private static final LatLng MAP_BASE = new LatLng(52.085035d, 4.741126d);
 	public static final MapElement ELEMENT_TRAINS = new MapElement(0, new LatLng(52.081515d, 4.746145d), null,
 			R.string.map_trains, R.drawable.ic_marker_trains);
 	public static final MapElement ELEMENT_ENTRANCE = new MapElement(1, new LatLng(52.084904d, 4.740646d), null,
@@ -66,29 +62,33 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		setRetainInstance(true);
 	}
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View v = super.onCreateView(inflater, container, savedInstanceState);
-		if (getMap() != null) {
-			initMap(getMap());
-		}
-		return v;
-	}
+	@AfterViews
+	protected void initMap() {
 
-	private void initMap(GoogleMap map) {
+		if (getMap() == null)
+			return;
 
 		// Show the user's location, but always center the map on the festival location in Bodegraven
-		map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 		if (isMinimap) {
-			map.moveCamera(CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(MAP_BASE, 15f)));
-			map.setMyLocationEnabled(true);
-			map.getUiSettings().setCompassEnabled(true);
+			getMap().moveCamera(
+					CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(new LatLng(52.085116d,
+							4.741019d), 16f)));
+			getMap().getUiSettings().setAllGesturesEnabled(false);
+			getMap().getUiSettings().setZoomControlsEnabled(false);
+			getMap().setOnMarkerClickListener(this);
+			getMap().setOnMapClickListener(this);
 		} else {
-			map.moveCamera(CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(MAP_BASE, 17f)));
-			map.getUiSettings().setAllGesturesEnabled(false);
-			map.getUiSettings().setZoomControlsEnabled(false);
+			getMap().moveCamera(
+					CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(new LatLng(52.085116d,
+							4.741019d), 17f)));
+			getMap().setMyLocationEnabled(true);
+			getMap().getUiSettings().setCompassEnabled(true);
+			getMap().setOnInfoWindowClickListener(this);
 		}
 
+		// Load the festival outline
+		// TODO
+		
 		// Load the poi markers
 		elementMarkers = new SparseArray<Marker>(6);
 		addMarker(ELEMENT_TRAINS);
@@ -104,9 +104,6 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 
 		// Load the brewers markers asynchronously
 		apiQueue.add(new GsonRequest<Brewers>(Brewers.BREWERS_URL, Brewers.class, null, this, this));
-
-		// Enable clicks
-		map.setOnMarkerClickListener(this);
 
 	}
 
@@ -163,6 +160,21 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 			this.markerResource = markerResource;
 		}
 
+	}
+
+	@Override
+	public void onMapClick(LatLng arg0) {
+		if (isMinimap)
+			((NavigationManager) getActivity()).openMap(this, -1);
+	}
+
+	@Override
+	public boolean onMarkerClick(Marker marker) {
+		if (isMinimap) {
+			((NavigationManager) getActivity()).openMap(this, -1);
+			return true;
+		}
+		return false;
 	}
 
 }

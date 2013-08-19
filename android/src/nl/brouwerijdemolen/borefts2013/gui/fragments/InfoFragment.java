@@ -16,11 +16,16 @@ public class InfoFragment extends Fragment {
 		setRetainInstance(true);
 	}
 	
-	@Click
-	protected void minimapClicked() {
-		((NavigationManager) getActivity()).openMap(this, -1);
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		// HACK: Force the map view to be completely removed, to overcome fragment reloading issues
+		// See http://stackoverflow.com/q/14083950/243165
+		MapFragment_ f = (MapFragment_) getFragmentManager().findFragmentById(R.id.minimap);
+		if (f != null)
+			getFragmentManager().beginTransaction().remove(f).commit();
 	}
-
+	
 	@Click
 	protected void timesButtonClicked() {
 		// Try to start the calendar application

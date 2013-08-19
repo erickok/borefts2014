@@ -53,7 +53,7 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 			
         // Set up panes layout and load the first
         setPaneSizer(new ExamplePaneSizer());
-        mapFragment = MapFragment_.builder().build();
+        mapFragment = MapFragment_.builder().isMinimap(false).build();
         if (lastUsedTab.equals("info")) {
 	        infoFragment = InfoFragment_.builder().build();
 	        twitterFragment = TwitterFragment_.builder().build();
