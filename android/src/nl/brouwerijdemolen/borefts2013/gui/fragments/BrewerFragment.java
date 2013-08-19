@@ -41,7 +41,7 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 	@FragmentArg
 	protected Brewer brewer;
 	private SparseArray<Style> loadedStyles;
-	
+
 	@Bean
 	protected ApiQueue apiQueue;
 	@ViewById
@@ -88,26 +88,27 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 
 	@UiThread
 	protected void startBeersRequest() {
-		apiQueue.add(new GsonRequest<Beers>(String.format(Beers.BEERS_BASE_URL, brewer.getId()), Beers.class, null, new Listener<Beers>() {
-			@Override
-			public void onResponse(Beers beers) {
-				// Beers are loaded now too; sort them and add the style and brewer objects
-				List<Beer> beersList = beers.getBeers();
-				Collections.sort(beersList);
-				for (Beer beer : beersList) {
-					beer.setStyle(loadedStyles.get(beer.getStyleId()));
-					beer.setBrewer(brewer);
-				}
-				// Show the beers in the list view
-				beerListAdapter.update(beersList, true);
-				BrewerHeaderedAdapter adapter = new BrewerHeaderedAdapter(getActivity(), beerListAdapter);
-				adapter.updateBrewer(brewer);
-				theList.setAdapter(adapter);
-				theList.setVisibility(View.VISIBLE);
-				errorText.setVisibility(View.GONE);
-				loadingProgress.setVisibility(View.GONE);
-			}
-		}, this));
+		apiQueue.add(new GsonRequest<Beers>(String.format(Beers.BEERS_BASE_URL, brewer.getCode()), Beers.class, null,
+				new Listener<Beers>() {
+					@Override
+					public void onResponse(Beers beers) {
+						// Beers are loaded now too; sort them and add the style and brewer objects
+						List<Beer> beersList = beers.getBeers();
+						Collections.sort(beersList);
+						for (Beer beer : beersList) {
+							beer.setStyle(loadedStyles.get(beer.getStyleId()));
+							beer.setBrewer(brewer);
+						}
+						// Show the beers in the list view
+						beerListAdapter.update(beersList, true);
+						BrewerHeaderedAdapter adapter = new BrewerHeaderedAdapter(getActivity(), beerListAdapter);
+						adapter.updateBrewer(brewer);
+						theList.setAdapter(adapter);
+						theList.setVisibility(View.VISIBLE);
+						errorText.setVisibility(View.GONE);
+						loadingProgress.setVisibility(View.GONE);
+					}
+				}, this));
 	}
 
 	@Override

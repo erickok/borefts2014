@@ -23,6 +23,7 @@
 	<string name="info_"></string>
 
 	<string name="info_origin">%1$s, %2$s</string>
+	<string name="info_abvperc">%1$.1f%%</string>
 	<string name="info_color">COLOR</string>
 	<string name="info_abv">ABV</string>
 	<string name="info_bitterness">BITTER</string>

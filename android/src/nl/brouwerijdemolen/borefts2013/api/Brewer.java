@@ -101,7 +101,7 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeInt(id);
-		dest.writeString(name);
+		dest.writeString(code);
 		dest.writeString(logoUrl);
 		dest.writeString(name);
 		dest.writeString(sortName);

@@ -19,6 +19,7 @@ public class InfoFragment extends Fragment {
 	@Override
 	public void onDestroyView() {
 		super.onDestroyView();
+		// TODO
 		// HACK: Force the map view to be completely removed, to overcome fragment reloading issues
 		// See http://stackoverflow.com/q/14083950/243165
 		MapFragment_ f = (MapFragment_) getFragmentManager().findFragmentById(R.id.minimap);

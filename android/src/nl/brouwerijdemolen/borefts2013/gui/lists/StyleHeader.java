@@ -1,0 +1,73 @@
+package nl.brouwerijdemolen.borefts2013.gui.lists;
+
+import nl.brouwerijdemolen.borefts2013.R;
+import nl.brouwerijdemolen.borefts2013.api.Style;
+import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
+import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
+import nl.brouwerijdemolen.borefts2013.gui.lists.BrewerHeader.BrewerHeaderedAdapter;
+import android.content.Context;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.googlecode.androidannotations.annotations.Bean;
+import com.googlecode.androidannotations.annotations.EViewGroup;
+import com.googlecode.androidannotations.annotations.ViewById;
+
+@EViewGroup(R.layout.list_header_style)
+public class StyleHeader extends RelativeLayout {
+
+	@Bean
+	protected ApiQueue apiQueue;
+	@ViewById
+	protected TextView nameText;
+	@ViewById
+	protected View colorView, abvView, bitternessView, sweetnessView, acidityView;
+	
+	/**
+	 * Constructor for this header view. Only for internal use; use the {@link BrewerHeaderedAdapter} class instead.
+	 * @param context The activity context to inflate this view into
+	 */
+	protected StyleHeader(Context context) {
+		super(context);
+	}
+
+	protected void update(Style style) {
+		nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), style.getName()));
+		colorView.setBackgroundColor(style.getColorResource(getResources()));
+	}
+	
+	/**
+	 * An adapter that shows a header with {@link Style} info and a list of beers in the style.
+	 */
+	public static class StyleHeaderedAdapter extends MergeAdapter {
+	
+		public StyleHeaderedAdapter(Context context, BeerListAdapter beerListAdapter) {
+			super();
+			addAdapter(new StyleHeaderAdapter(StyleHeader_.build(context)));
+			addAdapter(beerListAdapter);
+		}
+		
+		/**
+		 * Updates the header of this view with style name, etc.
+		 * @param style The style to show the header data for
+		 */
+		public void updateStyle(Style style) {
+			((StyleHeader)((StyleHeaderAdapter)getAdapter(0)).getItem(0)).update(style);
+		}
+		
+	}
+	
+	/**
+	 * A wrapper adapter that only has contains a StyleHeader view. Only for internal use.
+	 */
+	private static class StyleHeaderAdapter extends ViewHolderAdapter {
+
+		public StyleHeaderAdapter(StyleHeader view) {
+			super(view);
+			setViewEnabled(false);
+		}
+
+	}
+	
+}

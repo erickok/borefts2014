@@ -4,6 +4,7 @@
 {
     "styles": [
         {
+        	"id": 0,
             "name": "Barley Wine",
             "color": 3,
             "abv": 5,
@@ -12,6 +13,7 @@
             "acidity": 1
         },
         {
+        	"id": 1,
             "name": "Double IPA",
             "color": 2,
             "abv": 4,
@@ -20,6 +22,7 @@
             "acidity": 1
         },
         {
+        	"id": 2,
             "name": "IPA",
             "color": 1,
             "abv": 3,
@@ -28,6 +31,7 @@
             "acidity": 1
         },
         {
+        	"id": 3,
             "name": "Sour Ale",
             "color": 2,
             "abv": 2,
@@ -36,6 +40,7 @@
             "acidity": 4
         },
         {
+        	"id": 4,
             "name": "Stout",
             "color": 4,
             "abv": 3,
@@ -44,6 +49,7 @@
             "acidity": 2
         },
         {
+        	"id": 5,
             "name": "Imperial Stout",
             "color": 5,
             "abv": 5,
