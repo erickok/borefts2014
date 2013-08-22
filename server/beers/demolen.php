@@ -4,6 +4,7 @@
 {
     "beers": [
         {
+        	"id": 1,
             "name": "De Molen Lief & Leed",
             "brewerId": 0,
             "styleId": 3,
@@ -12,6 +13,7 @@
             "ratebeerId": 1
         },
         {
+        	"id": 2,
             "name": "De Molen Bommen & Granaten (Cascade BA)",
             "brewerId": 0,
             "styleId": 0,
@@ -20,6 +22,7 @@
             "ratebeerId": 186551
         },
         {
+        	"id": 3,
             "name": "De Molen Hel & Verdoemenis (Wild Turkey Barrel)",
             "brewerId": 0,
             "styleId": 5,

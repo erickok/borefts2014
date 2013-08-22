@@ -152,7 +152,7 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 	@Override
 	public void openMap(Fragment baseFragment, int focusId) {
 		// Don't add a new fragment, but re-focus
-		mapFragment.focusMarker(focusId);
+		mapFragment.focusOnMarker(focusId);
 	}
 	
 }

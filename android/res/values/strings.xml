@@ -39,7 +39,7 @@
 	<string name="map_firstaid">First aid</string>
 	
 	<string name="error_connection">No (stable) connection available. Tap to try again.</string>
-	<string name="error_nolocations">Couldn\'t load brewer locations.</string>
+	<string name="error_nolocations">Couldn\'t load brewer locations</string>
 	<string name="error_nocalendar">No supported Calendar app found</string>
 		
 </resources>
