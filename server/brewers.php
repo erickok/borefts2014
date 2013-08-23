@@ -32,7 +32,7 @@
         {
         	"id": 2,
             "code": "mikkeller",
-            "logoUrl": "mikkeller.jpg",
+            "logoUrl": "mikkeller2.jpg",
             "name": "Mikkeller",
             "sortName": "Mikkeller",
             "city": "Copenhagen",
@@ -45,7 +45,7 @@
         {
         	"id": 3,
             "code": "laugar",
-            "logoUrl": "laugar.jpg",
+            "logoUrl": "laugar.png",
             "name": "Laugar Brewery",
             "sortName": "Laugar",
             "city": "Barakaldo",
@@ -58,7 +58,7 @@
         {
         	"id": 4,
             "code": "amager",
-            "logoUrl": "amager.jpg",
+            "logoUrl": "amager.png",
             "name": "Amager Bryghus",
             "sortName": "Amager",
             "city": "Kastrup",
@@ -123,7 +123,7 @@
         {
         	"id": 9,
             "code": "narke",
-            "logoUrl": "narke.jpg",
+            "logoUrl": "narke.png",
             "name": "Närke Kulturbryggeri",
             "sortName": "Narke",
             "city": "Örebro",
@@ -136,7 +136,7 @@
         {
         	"id": 10,
             "code": "toccalmatto",
-            "logoUrl": "toccalmatto.jpg",
+            "logoUrl": "toccalmatto.png",
             "name": "Birrificio Toccalmatto",
             "sortName": "Toccalmatto",
             "city": "Fidenza",
@@ -214,7 +214,7 @@
         {
         	"id": 16,
             "code": "montsaleve",
-            "logoUrl": "montsalave.jpg",
+            "logoUrl": "montsaleve.jpg",
             "name": "Mont Salève",
             "sortName": "Mont Saleve",
             "city": "Neydens",
@@ -225,5 +225,5 @@
             "longitude": 4.740705
         }
     ],
-    "revision": 3
+    "revision": 4
 }

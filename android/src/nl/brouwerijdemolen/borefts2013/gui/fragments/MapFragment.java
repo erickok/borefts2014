@@ -85,16 +85,16 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		// When shown as minimap, no interaction is allowed; the full map screen is started instead
 		if (isMinimap) {
 			getMap().moveCamera(
-					CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(new LatLng(52.084850d,
-							4.740050d), 17f)));
+					CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+							.target(new LatLng(52.084850d, 4.740050d)).zoom(17.5f).bearing(-46f).build()));
 			getMap().getUiSettings().setAllGesturesEnabled(false);
 			getMap().getUiSettings().setZoomControlsEnabled(false);
 			getMap().setOnMarkerClickListener(this);
 			getMap().setOnMapClickListener(this);
 		} else {
 			getMap().moveCamera(
-					CameraUpdateFactory.newCameraPosition(CameraPosition.fromLatLngZoom(new LatLng(52.084800d,
-							4.740050d), 18f)));
+					CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+							.target(new LatLng(52.084800d, 4.740000d)).zoom(18f).bearing(-47f).build()));
 			getMap().setMyLocationEnabled(true);
 			getMap().getUiSettings().setCompassEnabled(true);
 			getMap().setOnInfoWindowClickListener(this);
@@ -139,7 +139,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 						addBrewerMarker(brewer, response.getBitmap());
 					}
 				}
-				
+
 				@Override
 				public void onErrorResponse(VolleyError error) {
 					// Still show the marker, yet the default graphic will be used
@@ -171,13 +171,11 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		BitmapDescriptor bitmapToUse;
 		if (bitmap == null)
 			bitmapToUse = BitmapDescriptorFactory.fromResource(R.drawable.ic_marker_mask);
-		else 
+		else
 			bitmapToUse = BitmapDescriptorFactory.fromBitmap(drawBrewerMarker(bitmap));
 		Marker marker = getMap().addMarker(
-				new MarkerOptions()
-						.position(new LatLng(brewer.getLatitude(), brewer.getLongitude()))
-						.title(brewer.getName())
-						.icon(bitmapToUse));
+				new MarkerOptions().position(new LatLng(brewer.getLatitude(), brewer.getLongitude()))
+						.title(brewer.getName()).icon(bitmapToUse));
 		elementMarkers.put(BREWER_ID_THRESHOLD + brewer.getId(), marker);
 		brewerMarkers.put(marker, brewer);
 	}

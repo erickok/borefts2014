@@ -22,7 +22,7 @@ public class ApiQueue {
 		
 		// Cache at most one screen worth of pixels (at 4 bytes per pixel)
 		DisplayMetrics dm = context.getResources().getDisplayMetrics();
-		final int maxCacheSize = dm.widthPixels * dm.heightPixels * 4;
+		final int maxCacheSize = dm.widthPixels * dm.heightPixels * 4 * 3;
 		imageLoader = new ImageLoader(requestQueue, new LruBitmapCache(maxCacheSize));
 		
 	}
