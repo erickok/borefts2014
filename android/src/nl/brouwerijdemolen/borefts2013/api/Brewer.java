@@ -8,7 +8,6 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 	public static final String BREWER_LOGO_BASE_URL = "http://2312.nl/borefts2013/logos/%s";
 
 	private int id;
-	private String code;
 	private String logoUrl;
 	private String name;
 	private String sortName;
@@ -25,10 +24,6 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 		return id;
 	}
 	
-	public String getCode() {
-		return code;
-	}
-
 	public String getLogoUrl() {
 		return logoUrl;
 	}
@@ -72,7 +67,6 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 
 	public Brewer(Parcel in) {
 		this.id = in.readInt();
-		this.code = in.readString();
 		this.logoUrl = in.readString();
 		this.name = in.readString();
 		this.sortName = in.readString();
@@ -101,7 +95,6 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeInt(id);
-		dest.writeString(code);
 		dest.writeString(logoUrl);
 		dest.writeString(name);
 		dest.writeString(sortName);

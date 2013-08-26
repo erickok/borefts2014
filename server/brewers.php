@@ -4,8 +4,7 @@
 {
     "brewers": [
         {
-        	"id": 0,
-            "code": "demolen",
+            "id": 0,
             "logoUrl": "demolen.jpg",
             "name": "Brouwerij De Molen",
             "sortName": "Molen",
@@ -17,8 +16,7 @@
             "longitude": 4.739717
         },
         {
-        	"id": 1,
-            "code": "emelisse",
+            "id": 1,
             "logoUrl": "emelisse.png",
             "name": "Brouwerij Emelisse",
             "sortName": "Emelisse",
@@ -30,8 +28,7 @@
             "longitude": 4.740420
         },
         {
-        	"id": 2,
-            "code": "mikkeller",
+            "id": 2,
             "logoUrl": "mikkeller2.jpg",
             "name": "Mikkeller",
             "sortName": "Mikkeller",
@@ -43,8 +40,7 @@
             "longitude": 4.739777
         },
         {
-        	"id": 3,
-            "code": "laugar",
+            "id": 3,
             "logoUrl": "laugar.png",
             "name": "Laugar Brewery",
             "sortName": "Laugar",
@@ -56,8 +52,7 @@
             "longitude": 4.739868
         },
         {
-        	"id": 4,
-            "code": "amager",
+            "id": 4,
             "logoUrl": "amager.png",
             "name": "Amager Bryghus",
             "sortName": "Amager",
@@ -69,8 +64,7 @@
             "longitude": 4.739970
         },
         {
-        	"id": 5,
-            "code": "jopen",
+            "id": 5,
             "logoUrl": "jopen.jpg",
             "name": "Jopen Brouwerij",
             "sortName": "Jopen",
@@ -82,8 +76,7 @@
             "longitude": 4.740233
         },
         {
-        	"id": 6,
-            "code": "thekernel",
+            "id": 6,
             "logoUrl": "thekernel.jpg",
             "name": "The Kernel",
             "sortName": "Kernel",
@@ -95,8 +88,7 @@
             "longitude": 4.740410
         },
         {
-        	"id": 7,
-            "code": "thornbridge",
+            "id": 7,
             "logoUrl": "thornbridge.jpg",
             "name": "Thornbridge Brewery",
             "sortName": "Thornbridge",
@@ -108,8 +100,7 @@
             "longitude": 4.740609
         },
         {
-        	"id": 8,
-            "code": "alvinne",
+            "id": 8,
             "logoUrl": "alvinne.jpg",
             "name": "Brouwerij Alvinne",
             "sortName": "Alvinne",
@@ -121,8 +112,7 @@
             "longitude": 4.739697
         },
         {
-        	"id": 9,
-            "code": "narke",
+            "id": 9,
             "logoUrl": "narke.png",
             "name": "Närke Kulturbryggeri",
             "sortName": "Narke",
@@ -134,8 +124,7 @@
             "longitude": 4.739766
         },
         {
-        	"id": 10,
-            "code": "toccalmatto",
+            "id": 10,
             "logoUrl": "toccalmatto.png",
             "name": "Birrificio Toccalmatto",
             "sortName": "Toccalmatto",
@@ -147,8 +136,7 @@
             "longitude": 4.740212
         },
         {
-        	"id": 11,
-            "code": "brewfist",
+            "id": 11,
             "logoUrl": "brewfist.png",
             "name": "Brewfist Italian Ales",
             "sortName": "Brewfist",
@@ -160,8 +148,7 @@
             "longitude": 4.740131
         },
         {
-        	"id": 12,
-            "code": "struise",
+            "id": 12,
             "logoUrl": "struise.png",
             "name": "Struise Brouwers",
             "sortName": "Struise",
@@ -173,8 +160,7 @@
             "longitude": 4.739750
         },
         {
-        	"id": 13,
-            "code": "tool",
+            "id": 13,
             "logoUrl": "tool.png",
             "name": "To Øl",
             "sortName": "To Ol",
@@ -186,8 +172,7 @@
             "longitude": 4.740083
         },
         {
-        	"id": 14,
-            "code": "naparbier",
+            "id": 14,
             "logoUrl": "naparbier.jpg",
             "name": "Naparbier",
             "sortName": "Naparbier",
@@ -199,8 +184,7 @@
             "longitude": 4.739852
         },
         {
-        	"id": 15,
-            "code": "fyneales",
+            "id": 15,
             "logoUrl": "fyneales.png",
             "name": "Fyne Ales",
             "sortName": "Fyne",
@@ -212,8 +196,7 @@
             "longitude": 4.740008
         },
         {
-        	"id": 16,
-            "code": "montsaleve",
+            "id": 16,
             "logoUrl": "montsaleve.jpg",
             "name": "Mont Salève",
             "sortName": "Mont Saleve",

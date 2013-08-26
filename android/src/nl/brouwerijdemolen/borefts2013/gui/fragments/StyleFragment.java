@@ -1,5 +1,6 @@
 package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class StyleFragment extends Fragment implements Listener<Brewers>, ErrorL
 	@FragmentArg
 	protected Style style;
 	private SparseArray<Brewer> loadedBrewers;
-	
+
 	@Bean
 	protected ApiQueue apiQueue;
 	@ViewById
@@ -66,7 +67,7 @@ public class StyleFragment extends Fragment implements Listener<Brewers>, ErrorL
 	}
 
 	private void refreshScreen() {
-		// Load the styles first, as we will need this info to display every beer's style
+		// Load the brewers first, as we will need this info to display every beer's brewer
 		apiQueue.add(new GsonRequest<Brewers>(Brewers.BREWERS_URL, Brewers.class, null, this, this));
 	}
 
@@ -88,16 +89,19 @@ public class StyleFragment extends Fragment implements Listener<Brewers>, ErrorL
 
 	@UiThread
 	protected void startBeersRequest() {
-		apiQueue.add(new GsonRequest<Beers>(String.format(Beers.BEERS_BASE_URL, style.getId()), Beers.class, null, new Listener<Beers>() {
+		apiQueue.add(new GsonRequest<Beers>(Beers.BEERS_URL, Beers.class, null, new Listener<Beers>() {
 			@Override
 			public void onResponse(Beers beers) {
 				// Beers are loaded now too; sort them and add the style and brewer objects
-				List<Beer> beersList = beers.getBeers();
-				Collections.sort(beersList);
-				for (Beer beer : beersList) {
-					beer.setStyle(style);
-					beer.setBrewer(loadedBrewers.get(beer.getBrewerId()));
+				List<Beer> beersList = new ArrayList<Beer>();
+				for (Beer beer : beers.getBeers()) {
+					if (beer.getStyleId() == style.getId()) {
+						beer.setStyle(style);
+						beer.setBrewer(loadedBrewers.get(beer.getBrewerId()));
+						beersList.add(beer);
+					}
 				}
+				Collections.sort(beersList);
 				// Show the beers in the list view
 				beerListAdapter.update(beersList, false);
 				StyleHeaderedAdapter adapter = new StyleHeaderedAdapter(getActivity(), beerListAdapter);

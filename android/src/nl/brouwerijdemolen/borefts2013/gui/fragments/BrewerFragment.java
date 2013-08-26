@@ -1,5 +1,6 @@
 package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -88,27 +89,29 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 
 	@UiThread
 	protected void startBeersRequest() {
-		apiQueue.add(new GsonRequest<Beers>(String.format(Beers.BEERS_BASE_URL, brewer.getCode()), Beers.class, null,
-				new Listener<Beers>() {
-					@Override
-					public void onResponse(Beers beers) {
-						// Beers are loaded now too; sort them and add the style and brewer objects
-						List<Beer> beersList = beers.getBeers();
-						Collections.sort(beersList);
-						for (Beer beer : beersList) {
-							beer.setStyle(loadedStyles.get(beer.getStyleId()));
-							beer.setBrewer(brewer);
-						}
-						// Show the beers in the list view
-						beerListAdapter.update(beersList, true);
-						BrewerHeaderedAdapter adapter = new BrewerHeaderedAdapter(getActivity(), beerListAdapter);
-						adapter.updateBrewer(brewer);
-						theList.setAdapter(adapter);
-						theList.setVisibility(View.VISIBLE);
-						errorText.setVisibility(View.GONE);
-						loadingProgress.setVisibility(View.GONE);
+		apiQueue.add(new GsonRequest<Beers>(Beers.BEERS_URL, Beers.class, null, new Listener<Beers>() {
+			@Override
+			public void onResponse(Beers beers) {
+				// Beers are loaded now too; sort them and add the style and brewer objects
+				List<Beer> beersList = new ArrayList<Beer>();
+				for (Beer beer : beers.getBeers()) {
+					if (beer.getBrewerId() == brewer.getId()) {
+						beer.setStyle(loadedStyles.get(beer.getStyleId()));
+						beer.setBrewer(brewer);
+						beersList.add(beer);
 					}
-				}, this));
+				}
+				Collections.sort(beersList);
+				// Show the beers in the list view
+				beerListAdapter.update(beersList, true);
+				BrewerHeaderedAdapter adapter = new BrewerHeaderedAdapter(getActivity(), beerListAdapter);
+				adapter.updateBrewer(brewer);
+				theList.setAdapter(adapter);
+				theList.setVisibility(View.VISIBLE);
+				errorText.setVisibility(View.GONE);
+				loadingProgress.setVisibility(View.GONE);
+			}
+		}, this));
 	}
 
 	@Override
