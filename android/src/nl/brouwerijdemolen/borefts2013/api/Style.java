@@ -54,17 +54,17 @@ public class Style implements Comparable<Style>, Parcelable {
 	public int getColorResource(Resources res) {
 		switch (color) {
 		case 1:
-			return R.color.style_1;
+			return res.getColor(R.color.style_1);
 		case 2:
-			return R.color.style_2;
+			return res.getColor(R.color.style_2);
 		case 3:
-			return R.color.style_3;
+			return res.getColor(R.color.style_3);
 		case 4:
-			return R.color.style_4;
+			return res.getColor(R.color.style_4);
 		case 5:
-			return R.color.style_5;
+			return res.getColor(R.color.style_5);
 		default:
-			return R.color.style_unknown;
+			return res.getColor(R.color.style_unknown);
 		}
 	}
 

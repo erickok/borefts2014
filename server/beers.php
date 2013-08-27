@@ -10,7 +10,8 @@
             "styleId": 3,
             "abv": 11,
             "oakAged": true,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 2,
@@ -19,7 +20,8 @@
             "styleId": 3,
             "abv": 6.2,
             "oakAged": false,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 3,
@@ -28,7 +30,8 @@
             "styleId": 2,
             "abv": 4.2,
             "oakAged": false,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 4,
@@ -37,7 +40,8 @@
             "styleId": 5,
             "abv": 9.8,
             "oakAged": true,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 5,
@@ -46,7 +50,8 @@
             "styleId": 5,
             "abv": 9.8,
             "oakAged": true,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 6,
@@ -55,7 +60,8 @@
             "styleId": 5,
             "abv": 9.8,
             "oakAged": true,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 7,
@@ -64,7 +70,8 @@
             "styleId": 5,
             "abv": 18,
             "oakAged": true,
-            "ratebeerId": 87696
+            "ratebeerId": 87696,
+            "untappdId": 59860
         },
         {
         	"id": 8,
@@ -73,7 +80,8 @@
             "styleId": 5,
             "abv": 10.2,
             "oakAged": false,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 9,
@@ -82,7 +90,8 @@
             "styleId": 5,
             "abv": 10,
             "oakAged": false,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 10,
@@ -91,7 +100,8 @@
             "styleId": 2,
             "abv": -1,
             "oakAged": false,
-            "ratebeerId": -1
+            "ratebeerId": -1,
+            "untappdId": -1
         }
     ],
     "revision": 1
