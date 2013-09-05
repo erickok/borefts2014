@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<color name="background">#eeeeee</color>
 	<color name="darkred">#ce0000</color>
 	<color name="darkred_half">#66ce0000</color>
 	<color name="style_1">#fff400</color>

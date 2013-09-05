@@ -59,15 +59,18 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 	        twitterFragment = TwitterFragment_.builder().build();
 	        setMenuFragment(mapFragment);
 	        addFragment(mapFragment, infoFragment);
-	        addFragment(infoFragment, twitterFragment);
+	        if (fitsThreePanes)
+	        	addFragment(infoFragment, twitterFragment);
         } else if (lastUsedTab.equals("brewers")) {
 	        brewersFragment = BrewersFragment_.builder().build();
 	        addFragment(mapFragment, brewersFragment);
-	        addFragment(brewersFragment, BeerFragment_.builder().build()); // Will be empty
+	        if (fitsThreePanes)
+	        	addFragment(brewersFragment, BeerFragment_.builder().build()); // Will be empty
         } else if (lastUsedTab.equals("styles")) {
         	stylesFragment = StylesFragment_.builder().build();
 	        addFragment(mapFragment, stylesFragment);
-	        addFragment(stylesFragment, StyleFragment_.builder().build()); // Will be empty
+	        if (fitsThreePanes)
+	        	addFragment(stylesFragment, StyleFragment_.builder().build()); // Will be empty
         }
         
     }
