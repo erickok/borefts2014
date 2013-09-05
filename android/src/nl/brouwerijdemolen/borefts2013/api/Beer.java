@@ -12,6 +12,7 @@ public class Beer implements Comparable<Beer>, Parcelable {
 	private float abv;
 	private boolean oakAged;
 	private int ratebeerId;
+	private int untappdId;
 	
 	// These are not provided by the server, but loaded manually and attached with their setters
 	private volatile Brewer brewer;
@@ -47,6 +48,10 @@ public class Beer implements Comparable<Beer>, Parcelable {
 	public int getRatebeerId() {
 		return ratebeerId;
 	}
+
+	public int getUntappdId() {
+		return untappdId;
+	}
 	
 	public void setBrewer(Brewer brewer) {
 		this.brewer = brewer;
@@ -77,6 +82,9 @@ public class Beer implements Comparable<Beer>, Parcelable {
 		this.abv = in.readFloat();
 		this.oakAged = in.readInt() == 1;
 		this.ratebeerId = in.readInt();
+		this.untappdId = in.readInt();
+		this.brewer = in.readParcelable(Brewer.class.getClassLoader());
+		this.style = in.readParcelable(Style.class.getClassLoader());
 	}
 	
     public static final Parcelable.Creator<Beer> CREATOR = new Parcelable.Creator<Beer>() {
@@ -103,6 +111,9 @@ public class Beer implements Comparable<Beer>, Parcelable {
 		dest.writeFloat(abv);
 		dest.writeInt(oakAged? 1: 0);
 		dest.writeInt(ratebeerId);
+		dest.writeInt(untappdId);
+		dest.writeParcelable(brewer, flags);
+		dest.writeParcelable(style, flags);
 	}
 	
 }

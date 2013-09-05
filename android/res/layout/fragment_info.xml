@@ -8,9 +8,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
 
-		<fragment
+		<FrameLayout
 			android:id="@+id/minimap"
-			android:name="nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment_"
 			android:layout_width="match_parent"
 			android:layout_height="150dp" />
 

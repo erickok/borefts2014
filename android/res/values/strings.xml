@@ -30,6 +30,9 @@
 	<string name="info_sweetness">SWEET</string>
 	<string name="info_acidity">ACIDIC</string>
 	
+	<string name="info_abvlabel">ABV: %.1$f$$</string>
+	<string name="info_oakaged">OAK AGED</string>
+	
 	<string name="map_trains">Train station</string>
 	<string name="map_entrance">Entrance</string>
 	<string name="map_toilet1">Toilet 1</string>
