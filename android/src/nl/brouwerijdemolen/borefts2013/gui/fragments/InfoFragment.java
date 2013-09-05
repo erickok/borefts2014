@@ -21,31 +21,31 @@ public class InfoFragment extends Fragment {
 	protected boolean isSmallDevice;
 	@ViewById
 	protected FrameLayout minimap;
-	
+
 	public InfoFragment() {
 		setRetainInstance(true);
 	}
-	
+
 	@AfterViews
 	protected void init() {
 		if (isSmallDevice) {
-			getFragmentManager().beginTransaction().add(MapFragment_.builder().isMinimap(true).build(), "minimap")
+			getFragmentManager().beginTransaction().add(R.id.minimap, MapFragment_.builder().isMinimap(true).build())
 					.commit();
 		} else {
 			minimap.setVisibility(View.GONE);
 		}
 	}
-	
+
 	@Override
 	public void onDestroyView() {
 		super.onDestroyView();
 		// TODO Fix this (maybe keep the map fragment in memory)
 	}
-	
+
 	@Click
 	protected void timesButtonClicked() {
 		// Try to start the calendar application
-		Intent intent = new Intent(Intent.ACTION_EDIT);  
+		Intent intent = new Intent(Intent.ACTION_EDIT);
 		intent.setType("vnd.android.cursor.item/event");
 		intent.putExtra("title", getString(R.string.app_name));
 		intent.putExtra("eventLocation", getString(R.string.info_address));
@@ -65,5 +65,5 @@ public class InfoFragment extends Fragment {
 	protected void getmoreButtonClicked() {
 		((NavigationManager) getActivity()).openMap(this, MapFragment_.ELEMENT_TOKENS.focusId);
 	}
-	
+
 }

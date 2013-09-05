@@ -47,7 +47,7 @@ public class PhoneContainerActivity extends SherlockFragmentActivity implements 
 			fragment = BrewerFragment_.builder().brewer(brewer).build();
 		} else if (style != null) {
 			fragment = StyleFragment_.builder().style(style).build();
-		} else if (brewer != null) {
+		} else if (beer != null) {
 			fragment = BeerFragment_.builder().beer(beer).build();
 		} else if (focusId != null) {
 			fragment = MapFragment_.builder().initFocusId(focusId).isMinimap(false).build();
