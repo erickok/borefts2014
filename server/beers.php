@@ -1,3 +1,6 @@
+<?php
+  include 'enablecache.php';
+?>
 {
     "beers": [
         {
