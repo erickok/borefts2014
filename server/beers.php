@@ -60,7 +60,7 @@
         },
         {
         	"id": 6,
-            "name": "De Molen Moord & Brand Bourbon",
+            "name": "De Molen Moord & Brand Bourbon BA",
             "brewerId": 0,
             "styleId": 5,
             "abv": 9.8,
@@ -77,8 +77,8 @@
             "abv": 18,
             "oakAged": true,
             "tags": "barrel aged,bourbon,eisbock",
-            "ratebeerId": 87696,
-            "untappdId": 59860
+            "ratebeerId": -1,
+            "untappdId": -1
         },
         {
         	"id": 8,

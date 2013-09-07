@@ -11,6 +11,7 @@ public class Beer implements Comparable<Beer>, Parcelable {
 	private int styleId;
 	private float abv;
 	private boolean oakAged;
+	private String tags;
 	private int ratebeerId;
 	private int untappdId;
 	
@@ -43,6 +44,10 @@ public class Beer implements Comparable<Beer>, Parcelable {
 
 	public boolean isOakAged() {
 		return oakAged;
+	}
+
+	public String getTags() {
+		return tags;
 	}
 
 	public int getRatebeerId() {
@@ -81,6 +86,7 @@ public class Beer implements Comparable<Beer>, Parcelable {
 		this.styleId = in.readInt();
 		this.abv = in.readFloat();
 		this.oakAged = in.readInt() == 1;
+		this.tags = in.readString();
 		this.ratebeerId = in.readInt();
 		this.untappdId = in.readInt();
 		this.brewer = in.readParcelable(Brewer.class.getClassLoader());
@@ -110,6 +116,7 @@ public class Beer implements Comparable<Beer>, Parcelable {
 		dest.writeInt(styleId);
 		dest.writeFloat(abv);
 		dest.writeInt(oakAged? 1: 0);
+		dest.writeString(tags);
 		dest.writeInt(ratebeerId);
 		dest.writeInt(untappdId);
 		dest.writeParcelable(brewer, flags);

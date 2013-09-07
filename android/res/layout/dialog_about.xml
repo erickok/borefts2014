@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+
+	<TextView
+		android:id="@+id/logo_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="32dp"
+		android:layout_marginTop="32dp"
+		android:drawableLeft="@drawable/ic_launcher"
+		android:drawablePadding="@dimen/margin_half"
+		android:fontFamily="sans-serif-light"
+		android:text="@string/app_name_short"
+		android:textSize="28sp" />
+
+	<TextView
+		android:id="@+id/broughtby_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/logo_text"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="@dimen/margin_default"
+		android:layout_marginLeft="@dimen/margin_default"
+		android:layout_marginRight="@dimen/margin_default"
+		android:text="@string/about_broughtby" />
+
+	<TextView
+		android:id="@+id/licenses_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/broughtby_text"
+		android:layout_centerHorizontal="true"
+		android:layout_marginLeft="@dimen/margin_default"
+		android:layout_marginRight="@dimen/margin_default"
+		android:layout_marginTop="4dip"
+		android:gravity="center"
+		android:textSize="@dimen/text_small" />
+
+	<LinearLayout
+		android:id="@+id/buttonbar_view"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal" >
+
+		<Button
+			android:id="@+id/visitdemolen_button"
+			style="@style/TransparentButton"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/about_visitdemolen" />
+
+		<View
+			android:layout_width="1dp"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:layout_marginTop="8dp"
+			android:background="#aaa" />
+
+		<Button
+			android:id="@+id/visit2312_button"
+			style="@style/TransparentButton"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/about_visit2312" />
+	</LinearLayout>
+
+	<View
+		android:id="@+id/buttondivider_view"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_above="@id/buttonbar_view"
+		android:layout_marginLeft="8dp"
+		android:layout_marginRight="8dp"
+		android:layout_marginTop="@dimen/margin_default"
+		android:background="#aaa" />
+
+</RelativeLayout>

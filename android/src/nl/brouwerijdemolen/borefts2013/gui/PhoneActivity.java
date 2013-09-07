@@ -7,6 +7,7 @@ import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -68,14 +69,28 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 	}
 	
 	@OptionsItem
+	protected void actionRefresh() {
+		if (twitterFragment != null)
+			twitterFragment.refreshTwitterFeed();
+	}
+
+	@OptionsItem
 	protected void actionSettings() {
 		// TODO: Start settings activity
 	}
 
 	@OptionsItem
-	protected void actionRefresh() {
-		if (twitterFragment != null)
-			twitterFragment.refreshTwitterFeed();
+	protected void actionSendcorrection() {
+		Intent startEmail = new Intent(Intent.ACTION_SEND);
+		startEmail.setType("message/rfc822");
+		startEmail.putExtra(Intent.EXTRA_EMAIL, "borefts2013@2312.nl");
+		startEmail.putExtra(Intent.EXTRA_SUBJECT, "Borefts 2013 Android app correction");
+		startActivity(startEmail);
+	}
+
+	@OptionsItem
+	protected void actionAbout() {
+		AboutFragment_.builder().build().show(getSupportFragmentManager(), "about");
 	}
 
 	private class TabsPagerAdapter extends FragmentPagerAdapter {

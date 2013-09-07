@@ -4,6 +4,7 @@ import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.AboutFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.BeerFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewerFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment;
@@ -19,6 +20,7 @@ import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -91,8 +93,28 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 	}
 
 	@OptionsItem
+	protected void actionRefresh() {
+		if (twitterFragment != null)
+			twitterFragment.refreshTwitterFeed();
+	}
+
+	@OptionsItem
 	protected void actionSettings() {
 		// TODO: Start settings activity
+	}
+
+	@OptionsItem
+	protected void actionSendcorrection() {
+		Intent startEmail = new Intent(Intent.ACTION_SEND);
+		startEmail.setType("message/rfc822");
+		startEmail.putExtra(Intent.EXTRA_EMAIL, "borefts2013@2312.nl");
+		startEmail.putExtra(Intent.EXTRA_SUBJECT, "Borefts 2013 Android app correction");
+		startActivity(startEmail);
+	}
+
+	@OptionsItem
+	protected void actionAbout() {
+		AboutFragment_.builder().build().show(getSupportFragmentManager(), "about");
 	}
 
 	private class ExamplePaneSizer implements PaneSizer {
@@ -144,12 +166,6 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 		// No need to do anything
-	}
-
-	@OptionsItem
-	protected void actionRefresh() {
-		if (twitterFragment != null)
-			twitterFragment.refreshTwitterFeed();
 	}
 
 	@Override

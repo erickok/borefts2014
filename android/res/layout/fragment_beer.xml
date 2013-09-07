@@ -48,18 +48,16 @@
 		android:layout_marginRight="@dimen/margin_default"
 		android:textIsSelectable="false" />
 
-	<TextView
-		android:id="@+id/oakaged_text"
-		style="@style/Label"
+	<LinearLayout
+		android:id="@+id/tags_layout"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_alignParentRight="true"
 		android:layout_below="@id/abv_text"
-		android:layout_marginBottom="@dimen/margin_half"
 		android:layout_marginLeft="@dimen/margin_default"
 		android:layout_marginRight="@dimen/margin_default"
-		android:text="@string/info_oakaged"
-		android:textIsSelectable="false" />
+		android:gravity="right"
+		android:orientation="vertical" />
 
 	<LinearLayout
 		android:id="@+id/buttonbar_view"
@@ -96,10 +94,10 @@
 		android:id="@+id/buttondivider_view"
 		android:layout_width="match_parent"
 		android:layout_height="1dp"
+		android:layout_above="@id/buttonbar_view"
 		android:layout_marginLeft="8dp"
 		android:layout_marginRight="8dp"
 		android:layout_marginTop="@dimen/margin_default"
-		android:layout_above="@id/buttonbar_view"
 		android:background="#aaa" />
 
 </RelativeLayout>

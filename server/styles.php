@@ -42,7 +42,7 @@
         {
         	"id": 4,
             "name": "Stout",
-            "color": 4,
+            "color": 5,
             "abv": 3,
             "bitterness": 3,
             "sweetness": 2,
@@ -78,7 +78,7 @@
         {
         	"id": 8,
             "name": "Black IPA",
-            "color": 4,
+            "color": 5,
             "abv": 3,
             "bitterness": 4,
             "sweetness": 3,
@@ -105,7 +105,7 @@
         {
         	"id": 11,
             "name": "Porter",
-            "color": 4,
+            "color": 5,
             "abv": 3,
             "bitterness": 2,
             "sweetness": 2,
@@ -168,11 +168,11 @@
         {
         	"id": 18,
             "name": "Unknown",
-            "color": 3,
-            "abv": 3,
-            "bitterness": 3,
-            "sweetness": 3,
-            "acidity": 3
+            "color": -1,
+            "abv": 0,
+            "bitterness": 0,
+            "sweetness": 0,
+            "acidity": 0
         }
     ],
     "revision": 1
