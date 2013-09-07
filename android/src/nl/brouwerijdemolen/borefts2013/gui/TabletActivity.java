@@ -4,7 +4,19 @@ import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BeerFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewerFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StyleFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StylesFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StylesFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.os.Bundle;
@@ -14,8 +26,8 @@ import android.support.v4.app.FragmentTransaction;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.ActionBar.TabListener;
+import com.actionbarsherlock.view.Menu;
 import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.InstanceState;
 import com.googlecode.androidannotations.annotations.OptionsItem;
 import com.googlecode.androidannotations.annotations.OptionsMenu;
 import com.googlecode.androidannotations.annotations.res.BooleanRes;
@@ -23,26 +35,24 @@ import com.mapsaurus.paneslayout.PanesActivity;
 import com.mapsaurus.paneslayout.PanesSizer.PaneSizer;
 
 @EActivity
-@OptionsMenu(R.menu.home)
+@OptionsMenu(R.menu.activity_start)
 public class TabletActivity extends PanesActivity implements TabListener, NavigationManager {
 
 	@BooleanRes
 	protected boolean fitsThreePanes;
-	@InstanceState
-	protected String lastUsedTab = "info";
-	
+
 	private MapFragment mapFragment = null;
 	private InfoFragment infoFragment = null;
 	private TwitterFragment twitterFragment = null;
 	private BrewersFragment brewersFragment = null;
 	private StylesFragment stylesFragment = null;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
-        // Set up an action bar and navigation tabs
-        getSupportActionBar().setTitle(MolenTypefaceSpan.makeMolenSpannable(this, getString(R.string.app_name_short)));
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		// Set up an action bar and navigation tabs
+		getSupportActionBar().setTitle(MolenTypefaceSpan.makeMolenSpannable(this, getString(R.string.app_name_short)));
 		getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		getSupportActionBar().addTab(
 				getSupportActionBar().newTab().setText(R.string.action_info).setTabListener(this).setTag("info"));
@@ -50,37 +60,42 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 				getSupportActionBar().newTab().setText(R.string.action_brewers).setTabListener(this).setTag("brewers"));
 		getSupportActionBar().addTab(
 				getSupportActionBar().newTab().setText(R.string.action_styles).setTabListener(this).setTag("styles"));
-			
-        // Set up panes layout and load the first
-        setPaneSizer(new ExamplePaneSizer());
-        mapFragment = MapFragment_.builder().isMinimap(false).build();
-        if (lastUsedTab.equals("info")) {
-	        infoFragment = InfoFragment_.builder().build();
-	        twitterFragment = TwitterFragment_.builder().build();
-	        setMenuFragment(mapFragment);
-	        addFragment(mapFragment, infoFragment);
-	        if (fitsThreePanes)
-	        	addFragment(infoFragment, twitterFragment);
-        } else if (lastUsedTab.equals("brewers")) {
-	        brewersFragment = BrewersFragment_.builder().build();
-	        addFragment(mapFragment, brewersFragment);
-	        if (fitsThreePanes)
-	        	addFragment(brewersFragment, BeerFragment_.builder().build()); // Will be empty
-        } else if (lastUsedTab.equals("styles")) {
-        	stylesFragment = StylesFragment_.builder().build();
-	        addFragment(mapFragment, stylesFragment);
-	        if (fitsThreePanes)
-	        	addFragment(stylesFragment, StyleFragment_.builder().build()); // Will be empty
-        }
-        
-    }
+		if (!fitsThreePanes)
+			getSupportActionBar().addTab(
+					getSupportActionBar().newTab().setText(R.string.action_twitter).setTabListener(this)
+							.setTag("twitter"));
+
+		// Set up panes layout and load the first
+		setPaneSizer(new ExamplePaneSizer());
+		mapFragment = MapFragment_.builder().isMinimap(false).build();
+		setMenuFragment(mapFragment);
+		infoFragment = InfoFragment_.builder().build();
+		addFragment(mapFragment, infoFragment);
+		if (fitsThreePanes) {
+			twitterFragment = TwitterFragment_.builder().build();
+			addFragment(infoFragment, twitterFragment);
+		}
+
+	}
+
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		super.onPrepareOptionsMenu(menu);
+		boolean twitterShown;
+		if (fitsThreePanes)
+			twitterShown = getSupportActionBar().getSelectedTab().getTag().equals("info");
+		else
+			twitterShown = getSupportActionBar().getSelectedTab().getTag().equals("twitter");
+		menu.findItem(R.id.action_refresh).setVisible(twitterShown);
+		return true;
+	}
 
 	@OptionsItem
-	protected void actionSettingsSelected() {
+	protected void actionSettings() {
 		// TODO: Start settings activity
 	}
 
-    private class ExamplePaneSizer implements PaneSizer {
+	private class ExamplePaneSizer implements PaneSizer {
 
 		@Override
 		public int getWidth(int index, int type, int parentWidth, int parentHeight) {
@@ -101,14 +116,15 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 				return true;
 			return false;
 		}
-    	
-    }
+
+	}
 
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
-		lastUsedTab = (String) tab.getTag();
 		if (tab.getTag().equals("info")) {
 			addFragment(mapFragment, infoFragment);
+			if (fitsThreePanes)
+				addFragment(infoFragment, twitterFragment);
 		} else if (tab.getTag().equals("brewers")) {
 			if (brewersFragment == null)
 				brewersFragment = BrewersFragment_.builder().build();
@@ -117,13 +133,23 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 			if (stylesFragment == null)
 				stylesFragment = StylesFragment_.builder().build();
 			addFragment(mapFragment, stylesFragment);
+		} else if (tab.getTag().equals("twitter")) {
+			if (twitterFragment == null)
+				twitterFragment = TwitterFragment_.builder().build();
+			addFragment(mapFragment, twitterFragment);
 		}
+		supportInvalidateOptionsMenu();
 	}
-
 
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 		// No need to do anything
+	}
+
+	@OptionsItem
+	protected void actionRefresh() {
+		if (twitterFragment != null)
+			twitterFragment.refreshTwitterFeed();
 	}
 
 	@Override
@@ -157,5 +183,5 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 		// Don't add a new fragment, but re-focus
 		mapFragment.focusOnMarker(focusId);
 	}
-	
+
 }

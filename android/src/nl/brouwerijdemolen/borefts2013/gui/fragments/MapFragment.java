@@ -135,7 +135,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 
 				@Override
 				public void onResponse(ImageContainer response, boolean isImmediate) {
-					if (response.getBitmap() != null) {
+					if (response.getBitmap() != null && getActivity() != null) {
 						addBrewerMarker(brewer, response.getBitmap());
 					}
 				}
@@ -143,7 +143,8 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 				@Override
 				public void onErrorResponse(VolleyError error) {
 					// Still show the marker, yet the default graphic will be used
-					addBrewerMarker(brewer, null);
+					if (getActivity() != null)
+						addBrewerMarker(brewer, null);
 				}
 
 			});

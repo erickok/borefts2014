@@ -12,7 +12,6 @@
 		android:layout_marginLeft="@dimen/margin_default"
 		android:layout_marginRight="@dimen/margin_default"
 		android:layout_marginTop="@dimen/margin_default"
-		android:text="De Molen Hel &amp; Verdoemenis Wild Turkey Eisbock"
 		android:textColor="#000"
 		android:textIsSelectable="true"
 		android:textSize="@dimen/text_large" />
@@ -26,8 +25,7 @@
 		android:layout_below="@id/name_text"
 		android:layout_marginBottom="@dimen/margin_half"
 		android:layout_marginLeft="@dimen/margin_default"
-		android:layout_marginRight="@dimen/margin_default"
-		android:text="Imperial Stout" />
+		android:layout_marginRight="@dimen/margin_default" />
 
 	<TextView
 		android:id="@+id/brewer_text"
@@ -36,7 +34,6 @@
 		android:layout_below="@id/name_text"
 		android:layout_marginBottom="@dimen/margin_half"
 		android:layout_marginLeft="@dimen/margin_default"
-		android:text="Brouwerij De Molen"
 		android:textIsSelectable="false" />
 
 	<TextView
@@ -49,7 +46,6 @@
 		android:layout_marginBottom="@dimen/margin_half"
 		android:layout_marginLeft="@dimen/margin_default"
 		android:layout_marginRight="@dimen/margin_default"
-		android:text="ABV: 11.8%"
 		android:textIsSelectable="false" />
 
 	<TextView
@@ -78,10 +74,10 @@
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
-			android:text="UNTAPPD" />
+			android:text="@string/info_untappd" />
 
 		<View
-			android:layout_width="1px"
+			android:layout_width="1dp"
 			android:layout_height="wrap_content"
 			android:layout_marginBottom="8dp"
 			android:layout_marginTop="8dp"
@@ -93,13 +89,13 @@
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
-			android:text="RATEBEER" />
+			android:text="@string/info_ratebeer" />
 	</LinearLayout>
 
 	<View
 		android:id="@+id/buttondivider_view"
 		android:layout_width="match_parent"
-		android:layout_height="1px"
+		android:layout_height="1dp"
 		android:layout_marginLeft="8dp"
 		android:layout_marginRight="8dp"
 		android:layout_marginTop="@dimen/margin_default"

@@ -17,13 +17,14 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.ActionBar.TabListener;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.OptionsItem;
 import com.googlecode.androidannotations.annotations.OptionsMenu;
 
 @EActivity(R.layout.activity_phone)
-@OptionsMenu(R.menu.home)
+@OptionsMenu(R.menu.activity_start)
 public class PhoneActivity extends SherlockFragmentActivity implements NavigationManager {
 
 	private ViewPager pager;
@@ -53,14 +54,28 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 			@Override
 			public void onPageSelected(int position) {
 				getSupportActionBar().setSelectedNavigationItem(position);
+				supportInvalidateOptionsMenu();
 			}
 		});
 
 	}
 
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		super.onPrepareOptionsMenu(menu);
+		menu.findItem(R.id.action_refresh).setVisible(pager.getCurrentItem() == 3);
+		return true;
+	}
+	
 	@OptionsItem
-	protected void actionSettingsSelected() {
+	protected void actionSettings() {
 		// TODO: Start settings activity
+	}
+
+	@OptionsItem
+	protected void actionRefresh() {
+		if (twitterFragment != null)
+			twitterFragment.refreshTwitterFeed();
 	}
 
 	private class TabsPagerAdapter extends FragmentPagerAdapter {
