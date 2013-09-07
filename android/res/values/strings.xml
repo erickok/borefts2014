@@ -19,9 +19,14 @@
 	<string name="info_times">Sep 27 &#8211; 28\n12:00 &#8211; 22:00</string>
 	<string name="info_tokens">TOKENS</string>
 	<string name="info_getmore">Get more</string>
-	<string name="info_entry">€ 20,- for entry, glass, bottle of water, festival book and 8 tokens</string>
+	<string name="info_entry">€ 20,- for entry, glass, bottle of water, festival book and 7 tokens</string>
 	<string name="info_token">€ 1,50 per extra token</string>
 	<string name="info_extra">Some beers are 2 or more tokens. Additional tokens can be bought at the Doordocht 4 festival location.</string>
+	<string name="info_publictransport">PUBLIC TRANSPORT</string>
+	<string name="info_trains">Trains run every half hour, in each direction, at :15 and :45. Last trains leave at 00:45.</string>
+	<string name="info_nstimes">Departures</string>
+	<string name="info_noparking">Please don\'t drink and drive. Taxis are available via the regional taxi companies.</string>
+	<string name="info_taxis">Find taxis</string>
 	<string name="info_more">MOREOVER&#8230;</string>
 	<string name="info_"></string>
 

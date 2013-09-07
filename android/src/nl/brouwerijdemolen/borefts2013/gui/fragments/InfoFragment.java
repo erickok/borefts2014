@@ -3,6 +3,7 @@ package nl.brouwerijdemolen.borefts2013.gui.fragments;
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -64,6 +65,17 @@ public class InfoFragment extends Fragment {
 	@Click
 	protected void getmoreButtonClicked() {
 		((NavigationManager) getActivity()).openMap(this, MapFragment_.ELEMENT_TOKENS.focusId);
+	}
+
+	@Click
+	protected void nstimesButtonClicked() {
+		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.ns.nl/actvertrektijden.action?from=BDG"))
+				.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+	}
+
+	@Click
+	protected void taxisButtonClicked() {
+		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:52.084802,4.740689?z=14&q=taxi")).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 	}
 
 }
