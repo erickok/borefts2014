@@ -206,6 +206,18 @@
             "website": "http://labrasseriedumontsaleve.com",
             "latitude": 52.085085,
             "longitude": 4.740705
+        },
+        {
+            "id": 17,
+            "logoUrl": "rooiedop.jpg",
+            "name": "Rooie Dop",
+            "sortName": "Rooie Dop",
+            "city": "Utrecht",
+            "country": "THe Netherlands",
+            "description": "Rooie Dop is ... TO ADD",
+            "website": "http://www.rooiedop.nl",
+            "latitude": 52.085095,
+            "longitude": 4.740725
         }
     ],
     "revision": 4

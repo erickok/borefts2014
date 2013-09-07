@@ -44,7 +44,7 @@
             "name": "Stout",
             "color": 4,
             "abv": 3,
-            "bitterness": 2,
+            "bitterness": 3,
             "sweetness": 2,
             "acidity": 2
         },
@@ -56,6 +56,123 @@
             "bitterness": 4,
             "sweetness": 3,
             "acidity": 2
+        },
+        {
+        	"id": 6,
+            "name": "English Ale",
+            "color": 1,
+            "abv": 1,
+            "bitterness": 2,
+            "sweetness": 2,
+            "acidity": 1
+        },
+        {
+        	"id": 7,
+            "name": "American Pale Ale",
+            "color": 1,
+            "abv": 2,
+            "bitterness": 3,
+            "sweetness": 1,
+            "acidity": 1
+        },
+        {
+        	"id": 8,
+            "name": "Black IPA",
+            "color": 4,
+            "abv": 3,
+            "bitterness": 4,
+            "sweetness": 3,
+            "acidity": 1
+        },
+        {
+        	"id": 9,
+            "name": "Traditional Ale",
+            "color": 3,
+            "abv": 3,
+            "bitterness": 2,
+            "sweetness": 3,
+            "acidity": 2
+        },
+        {
+        	"id": 10,
+            "name": "Belgian Ale",
+            "color": 2,
+            "abv": 3,
+            "bitterness": 2,
+            "sweetness": 3,
+            "acidity": 3
+        },
+        {
+        	"id": 11,
+            "name": "Porter",
+            "color": 4,
+            "abv": 3,
+            "bitterness": 2,
+            "sweetness": 2,
+            "acidity": 2
+        },
+        {
+        	"id": 12,
+            "name": "Gruit",
+            "color": 4,
+            "abv": 2,
+            "bitterness": 3,
+            "sweetness": 2,
+            "acidity": 3
+        },
+        {
+        	"id": 13,
+            "name": "American Pilsner",
+            "color": 1,
+            "abv": 2,
+            "bitterness": 3,
+            "sweetness": 2,
+            "acidity": 1
+        },
+        {
+        	"id": 14,
+            "name": "Belgian Dark Ale",
+            "color": 4,
+            "abv": 4,
+            "bitterness": 3,
+            "sweetness": 4,
+            "acidity": 3
+        },
+        {
+        	"id": 15,
+            "name": "Sweet Stout",
+            "color": 4,
+            "abv": 3,
+            "bitterness": 3,
+            "sweetness": 4,
+            "acidity": 2
+        },
+        {
+        	"id": 16,
+            "name": "Braggot",
+            "color": 3,
+            "abv": 3,
+            "bitterness": 2,
+            "sweetness": 3,
+            "acidity": 2
+        },
+        {
+        	"id": 17,
+            "name": "Saison",
+            "color": 2,
+            "abv": 2,
+            "bitterness": 3,
+            "sweetness": 1,
+            "acidity": 3
+        },
+        {
+        	"id": 18,
+            "name": "Unknown",
+            "color": 3,
+            "abv": 3,
+            "bitterness": 3,
+            "sweetness": 3,
+            "acidity": 3
         }
     ],
     "revision": 1
