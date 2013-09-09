@@ -9,12 +9,12 @@
 		android:layout_height="wrap_content"
 		android:layout_centerHorizontal="true"
 		android:layout_marginBottom="32dp"
-		android:layout_marginTop="32dp"
+		android:layout_marginTop="24dp"
 		android:drawableLeft="@drawable/ic_launcher"
 		android:drawablePadding="@dimen/margin_half"
 		android:fontFamily="sans-serif-light"
 		android:text="@string/app_name_short"
-		android:textSize="28sp" />
+		android:textSize="32sp" />
 
 	<TextView
 		android:id="@+id/broughtby_text"
@@ -25,7 +25,10 @@
 		android:layout_marginBottom="@dimen/margin_default"
 		android:layout_marginLeft="@dimen/margin_default"
 		android:layout_marginRight="@dimen/margin_default"
-		android:text="@string/about_broughtby" />
+		android:fontFamily="sans-serif-light"
+		android:gravity="center"
+		android:text="@string/about_broughtby"
+		android:textSize="@dimen/text_enlarged" />
 
 	<TextView
 		android:id="@+id/licenses_text"
@@ -33,17 +36,29 @@
 		android:layout_height="wrap_content"
 		android:layout_below="@id/broughtby_text"
 		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="32dp"
 		android:layout_marginLeft="@dimen/margin_default"
 		android:layout_marginRight="@dimen/margin_default"
 		android:layout_marginTop="4dip"
+		android:autoLink="all"
+		android:fontFamily="sans-serif-light"
 		android:gravity="center"
-		android:textSize="@dimen/text_small" />
+		android:textColorLink="@color/darkred" />
+
+	<View
+		android:id="@+id/buttondivider_view"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_below="@id/licenses_text"
+		android:layout_marginLeft="8dp"
+		android:layout_marginRight="8dp"
+		android:background="#aaa" />
 
 	<LinearLayout
 		android:id="@+id/buttonbar_view"
 		android:layout_width="match_parent"
 		android:layout_height="48dp"
-		android:layout_alignParentBottom="true"
+		android:layout_below="@id/buttondivider_view"
 		android:orientation="horizontal" >
 
 		<Button
@@ -52,6 +67,7 @@
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
+			android:fontFamily="sans-serif-light"
 			android:text="@string/about_visitdemolen" />
 
 		<View
@@ -67,17 +83,8 @@
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
+			android:fontFamily="sans-serif-light"
 			android:text="@string/about_visit2312" />
 	</LinearLayout>
-
-	<View
-		android:id="@+id/buttondivider_view"
-		android:layout_width="match_parent"
-		android:layout_height="1dp"
-		android:layout_above="@id/buttonbar_view"
-		android:layout_marginLeft="8dp"
-		android:layout_marginRight="8dp"
-		android:layout_marginTop="@dimen/margin_default"
-		android:background="#aaa" />
 
 </RelativeLayout>

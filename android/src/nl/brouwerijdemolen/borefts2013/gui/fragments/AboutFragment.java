@@ -41,13 +41,13 @@ public class AboutFragment extends SherlockDialogFragment {
 	}
 
 	@Click(R.id.visit2312_button)
-	protected void visit2312ButtonClicked() {
+	protected void visit2312Clicked() {
 		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://2312.nl"))
 				.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 	}
 
-	@Click
-	protected void visitdemolenButtonClicked() {
+	@Click(R.id.visitdemolen_button)
+	protected void visitdemolenClicked() {
 		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://http://www.brouwerijdemolen.nl/"))
 				.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 	}
