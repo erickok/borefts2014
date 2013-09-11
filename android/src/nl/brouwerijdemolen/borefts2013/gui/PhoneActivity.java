@@ -90,7 +90,7 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 
 	@OptionsItem
 	protected void actionAbout() {
-		AboutFragment_.builder().build().show(getSupportFragmentManager(), "about");
+		AboutDialog_.builder().build().show(getSupportFragmentManager(), "about");
 	}
 
 	private class TabsPagerAdapter extends FragmentPagerAdapter {

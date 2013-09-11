@@ -18,12 +18,12 @@ import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.dialog_about)
-public class AboutFragment extends SherlockDialogFragment {
+public class AboutDialog extends SherlockDialogFragment {
 
 	@ViewById
 	protected TextView logoText, licensesText;
 
-	public AboutFragment() {
+	public AboutDialog() {
 		setRetainInstance(true);
 	}
 
@@ -48,7 +48,7 @@ public class AboutFragment extends SherlockDialogFragment {
 
 	@Click(R.id.visitdemolen_button)
 	protected void visitdemolenClicked() {
-		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://http://www.brouwerijdemolen.nl/"))
+		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.brouwerijdemolen.nl"))
 				.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 	}
 

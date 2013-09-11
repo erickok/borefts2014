@@ -4,20 +4,7 @@ import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.AboutFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BeerFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewerFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.StyleFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.StylesFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.StylesFragment_;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.content.Intent;
@@ -114,7 +101,7 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 
 	@OptionsItem
 	protected void actionAbout() {
-		AboutFragment_.builder().build().show(getSupportFragmentManager(), "about");
+		AboutDialog_.builder().build().show(getSupportFragmentManager(), "about");
 	}
 
 	private class ExamplePaneSizer implements PaneSizer {

@@ -94,19 +94,37 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		} else {
 			getMap().moveCamera(
 					CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
-							.target(new LatLng(52.084800d, 4.740000d)).zoom(18f).bearing(-47f).build()));
+							.target(new LatLng(52.084850d, 4.740083d)).zoom(18.5f).build()));
 			getMap().setMyLocationEnabled(true);
 			getMap().getUiSettings().setCompassEnabled(true);
 			getMap().setOnInfoWindowClickListener(this);
 		}
 
 		// Load the festival outline
+		// Parking area
 		getMap().addPolygon(
 				new PolygonOptions()
-						.add(new LatLng(52.084990d, 4.740764d), new LatLng(52.085273d, 4.740357d),
-								new LatLng(52.084660d, 4.739418d), new LatLng(52.084531d, 4.739632d),
-								new LatLng(52.084406d, 4.739611d), new LatLng(52.084334d, 4.739750d))
-						.strokeColor(getResources().getColor(R.color.darkred))
+						.add(new LatLng(52.084557d, 4.739626d), new LatLng(52.084961d, 4.740251d),
+								new LatLng(52.085024d, 4.740243d), new LatLng(52.085169d, 4.740476d),
+								new LatLng(52.085009d, 4.740749d), new LatLng(52.084419d, 4.739824d))
+						.strokeColor(getResources().getColor(R.color.yellow)).strokeWidth(5f)
+						.fillColor(getResources().getColor(R.color.yellow_half)));
+		// Storage/bottling building
+		getMap().addPolygon(
+				new PolygonOptions()
+						.add(new LatLng(52.085263d, 4.740358d), new LatLng(52.085113d, 4.740092d),
+								new LatLng(52.085134d, 4.740039d), new LatLng(52.084887d, 4.739685d),
+								new LatLng(52.084872d, 4.739703d), new LatLng(52.084696d, 4.739392d),
+								new LatLng(52.084557d, 4.739626d), new LatLng(52.084961d, 4.740251d),
+								new LatLng(52.085024d, 4.740243d), new LatLng(52.085190d, 4.740505d))
+						.strokeColor(getResources().getColor(R.color.darkred)).strokeWidth(5f)
+						.fillColor(getResources().getColor(R.color.darkred_half)));
+		// Brewery building
+		getMap().addPolygon(
+				new PolygonOptions()
+						.add(new LatLng(52.085144d, 4.740540d), new LatLng(52.085203d, 4.740631d),
+								new LatLng(52.085073d, 4.740849d), new LatLng(52.085019d, 4.740741d))
+						.strokeColor(getResources().getColor(R.color.darkred)).strokeWidth(5f)
 						.fillColor(getResources().getColor(R.color.darkred_half)));
 
 		// Load the POI markers

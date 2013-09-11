@@ -15,7 +15,7 @@
             "untappdId": -1
         },
         {
-        	"id": 2,
+            "id": 2,
             "name": "De Molen Zure Kersen Bom",
             "brewerId": 0,
             "styleId": 3,
@@ -26,7 +26,7 @@
             "untappdId": -1
         },
         {
-        	"id": 3,
+            "id": 3,
             "name": "De Molen Ginger Shot",
             "brewerId": 0,
             "styleId": 2,
@@ -37,7 +37,7 @@
             "untappdId": -1
         },
         {
-        	"id": 4,
+            "id": 4,
             "name": "De Molen Moord & Brand Balsamico",
             "brewerId": 0,
             "styleId": 5,
@@ -48,7 +48,7 @@
             "untappdId": -1
         },
         {
-        	"id": 5,
+            "id": 5,
             "name": "De Molen Moord & Brand High Ester Rhum",
             "brewerId": 0,
             "styleId": 5,
@@ -59,7 +59,7 @@
             "untappdId": -1
         },
         {
-        	"id": 6,
+            "id": 6,
             "name": "De Molen Moord & Brand Bourbon BA",
             "brewerId": 0,
             "styleId": 5,
@@ -70,7 +70,7 @@
             "untappdId": -1
         },
         {
-        	"id": 7,
+            "id": 7,
             "name": "De Molen Hel & Verdoemenis Wild Turkey Eisbock",
             "brewerId": 0,
             "styleId": 5,
@@ -81,7 +81,7 @@
             "untappdId": -1
         },
         {
-        	"id": 8,
+            "id": 8,
             "name": "De Molen Hot & Spicy III",
             "brewerId": 0,
             "styleId": 5,
@@ -92,7 +92,7 @@
             "untappdId": -1
         },
         {
-        	"id": 9,
+            "id": 9,
             "name": "De Molen Hel & Verdoemenis Kopi Loewak",
             "brewerId": 0,
             "styleId": 5,
@@ -103,7 +103,7 @@
             "untappdId": -1
         },
         {
-        	"id": 10,
+            "id": 10,
             "name": "De Molen Dutch Fresh Hopped",
             "brewerId": 0,
             "styleId": 2,
@@ -114,7 +114,7 @@
             "untappdId": -1
         },
         {
-        	"id": 11,
+            "id": 11,
             "name": "De Molen Braggot BA",
             "brewerId": 0,
             "styleId": 16,
@@ -125,7 +125,7 @@
             "untappdId": -1
         },
         {
-        	"id": 12,
+            "id": 12,
             "name": "Emelisse Barley Wine Buffalo Trace BA",
             "brewerId": 1,
             "styleId": 0,
@@ -136,7 +136,7 @@
             "untappdId": -1
         },
         {
-        	"id": 13,
+            "id": 13,
             "name": "Emelisse 2,5",
             "brewerId": 1,
             "styleId": 2,
@@ -147,7 +147,7 @@
             "untappdId": 190274
         },
         {
-        	"id": 14,
+            "id": 14,
             "name": "Emelisse XXV",
             "brewerId": 1,
             "styleId": 5,
@@ -158,7 +158,7 @@
             "untappdId": 236483
         },
         {
-        	"id": 15,
+            "id": 15,
             "name": "Emelisse Imperial Russian Stout Wild Turkey BA",
             "brewerId": 1,
             "styleId": 5,
@@ -169,7 +169,7 @@
             "untappdId": 315055
         },
         {
-        	"id": 16,
+            "id": 16,
             "name": "Emelisse Creme Brulee Stout",
             "brewerId": 1,
             "styleId": 4,
@@ -180,7 +180,7 @@
             "untappdId": -1
         },
         {
-        	"id": 17,
+            "id": 17,
             "name": "Emelisse Aceto Balsamico BA",
             "brewerId": 1,
             "styleId": 5,
@@ -191,7 +191,7 @@
             "untappdId": -1
         },
         {
-        	"id": 18,
+            "id": 18,
             "name": "Emelisse Imperial Russian Stout Peated Bowmore BA",
             "brewerId": 1,
             "styleId": 5,
@@ -202,7 +202,7 @@
             "untappdId": -1
         },
         {
-        	"id": 19,
+            "id": 19,
             "name": "Emelisse Brett Bees",
             "brewerId": 1,
             "styleId": 16,
@@ -213,7 +213,7 @@
             "untappdId": -1
         },
         {
-        	"id": 20,
+            "id": 20,
             "name": "Emelisse Porter",
             "brewerId": 1,
             "styleId": 11,
@@ -224,7 +224,7 @@
             "untappdId": -1
         },
         {
-        	"id": 21,
+            "id": 21,
             "name": "Emelisse Smoke Rye IPA",
             "brewerId": 1,
             "styleId": 8,
@@ -235,19 +235,19 @@
             "untappdId": -1
         },
         {
-        	"id": 22,
-            "name": "Laugar Aupa Tovarisch",
+            "id": 22,
+            "name": "Laugar Laino Basatia",
             "brewerId": 3,
-            "styleId": 5,
-            "abv": 11,
+            "styleId": 18,
+            "abv": 9,
             "oakAged": false,
             "tags": "",
             "ratebeerId": -1,
-            "untappdId": 353348
+            "untappdId": -1
         },
         {
-        	"id": 23,
-            "name": "Laugar Rye Strong Ale",
+            "id": 23,
+            "name": "Laugar Lisergic Strong Beer",
             "brewerId": 3,
             "styleId": 14,
             "abv": 10.5,
@@ -257,18 +257,18 @@
             "untappdId": -1
         },
         {
-        	"id": 24,
-            "name": "Laugar Laugarian",
+            "id": 24,
+            "name": "Laugar Hop Shock",
             "brewerId": 3,
             "styleId": 2,
-            "abv": 3.5,
+            "abv": 3.9,
             "oakAged": false,
             "tags": "",
             "ratebeerId": -1,
             "untappdId": -1
         },
         {
-        	"id": 25,
+            "id": 25,
             "name": "Laugar Cypress Valley",
             "brewerId": 3,
             "styleId": 12,
@@ -279,7 +279,7 @@
             "untappdId": -1
         },
         {
-        	"id": 26,
+            "id": 26,
             "name": "Amager Pride",
             "brewerId": 4,
             "styleId": 5,
@@ -290,7 +290,7 @@
             "untappdId": 304320
         },
         {
-        	"id": 27,
+            "id": 27,
             "name": "Amager Envy",
             "brewerId": 4,
             "styleId": 2,
@@ -301,7 +301,7 @@
             "untappdId": 324254
         },
         {
-        	"id": 28,
+            "id": 28,
             "name": "Amager ",
             "brewerId": 4,
             "styleId": 7,
@@ -312,7 +312,7 @@
             "untappdId": 172822
         },
         {
-        	"id": 29,
+            "id": 29,
             "name": "Amager Greed",
             "brewerId": 4,
             "styleId": 13,
@@ -323,7 +323,7 @@
             "untappdId": 292146
         },
         {
-        	"id": 30,
+            "id": 30,
             "name": "Amager Hr. Frederiksen Niepoort",
             "brewerId": 4,
             "styleId": 5,
@@ -334,7 +334,7 @@
             "untappdId": 421433
         },
         {
-        	"id": 31,
+            "id": 31,
             "name": "Amager Honey Quad",
             "brewerId": 4,
             "styleId": 14,
@@ -345,7 +345,7 @@
             "untappdId": -1
         },
         {
-        	"id": 32,
+            "id": 32,
             "name": "Amager/Cigar City Xiquic And The Hero Twins",
             "brewerId": 4,
             "styleId": 5,
@@ -356,7 +356,7 @@
             "untappdId": 434203
         },
         {
-        	"id": 33,
+            "id": 33,
             "name": "Amager/Three Floyds Arctic SunStone",
             "brewerId": 4,
             "styleId": 7,
@@ -367,7 +367,7 @@
             "untappdId": 421744
         },
         {
-        	"id": 34,
+            "id": 34,
             "name": "Jopen Gouds Gruit",
             "brewerId": 5,
             "styleId": 12,
@@ -378,7 +378,7 @@
             "untappdId": -1
         },
         {
-        	"id": 35,
+            "id": 35,
             "name": "Jopen/Monarchy Grätzer",
             "brewerId": 5,
             "styleId": 9,
@@ -389,7 +389,7 @@
             "untappdId": 433141
         },
         {
-        	"id": 36,
+            "id": 36,
             "name": "Jopen/Monarchy Grodziskie",
             "brewerId": 5,
             "styleId": 9,
@@ -400,7 +400,7 @@
             "untappdId": 366363
         },
         {
-        	"id": 37,
+            "id": 37,
             "name": "Jopen/Grateful Deaf Zythos IPA",
             "brewerId": 5,
             "styleId": 2,
@@ -411,7 +411,7 @@
             "untappdId": 440122
         },
         {
-        	"id": 38,
+            "id": 38,
             "name": "Jopen Jacobus RPA",
             "brewerId": 5,
             "styleId": 8,
@@ -422,7 +422,7 @@
             "untappdId": 151035
         },
         {
-        	"id": 39,
+            "id": 39,
             "name": "Jopen Frans Hals Kuit",
             "brewerId": 5,
             "styleId": 9,
@@ -433,7 +433,7 @@
             "untappdId": 329881
         },
         {
-        	"id": 40,
+            "id": 40,
             "name": "Jopen SurpRYEse",
             "brewerId": 5,
             "styleId": 8,
@@ -444,7 +444,7 @@
             "untappdId": 437316
         },
         {
-        	"id": 41,
+            "id": 41,
             "name": "Jopen Koyt",
             "brewerId": 5,
             "styleId": 12,
@@ -455,7 +455,7 @@
             "untappdId": 6954
         },
         {
-        	"id": 42,
+            "id": 42,
             "name": "The Kernel India Pale Ale Simcoe Amarillo",
             "brewerId": 6,
             "styleId": 2,
@@ -466,7 +466,7 @@
             "untappdId": -1
         },
         {
-        	"id": 43,
+            "id": 43,
             "name": "The Kernel Pale Ale Waimea",
             "brewerId": 6,
             "styleId": 7,
@@ -477,7 +477,7 @@
             "untappdId": -1
         },
         {
-        	"id": 44,
+            "id": 44,
             "name": "The Kernel Table Beer",
             "brewerId": 6,
             "styleId": 7,
@@ -488,7 +488,7 @@
             "untappdId": 243048
         },
         {
-        	"id": 45,
+            "id": 45,
             "name": "The Kernel Imperial Brown Stout Glen Spey Whisky BA",
             "brewerId": 6,
             "styleId": 5,
@@ -499,7 +499,7 @@
             "untappdId": 392855
         },
         {
-        	"id": 46,
+            "id": 46,
             "name": "The Kernel Borefts Festival Special",
             "brewerId": 6,
             "styleId": 7,
@@ -510,7 +510,7 @@
             "untappdId": -1
         },
         {
-        	"id": 47,
+            "id": 47,
             "name": "The Kernel Bière de Table BA",
             "brewerId": 6,
             "styleId": 17,
@@ -521,7 +521,7 @@
             "untappdId": 330677
         },
         {
-        	"id": 48,
+            "id": 48,
             "name": "Thornbridge Berliner Weisse",
             "brewerId": 7,
             "styleId": 3,
@@ -532,7 +532,7 @@
             "untappdId": -1
         },
         {
-        	"id": 49,
+            "id": 49,
             "name": "Thornbridge Jaipur",
             "brewerId": 7,
             "styleId": 2,
@@ -543,7 +543,7 @@
             "untappdId": 7705
         },
         {
-        	"id": 50,
+            "id": 50,
             "name": "Thornbridge Calver",
             "brewerId": 7,
             "styleId": 8,
@@ -554,7 +554,7 @@
             "untappdId": 430239
         },
         {
-        	"id": 51,
+            "id": 51,
             "name": "Thornbridge Kacho",
             "brewerId": 7,
             "styleId": 18,
@@ -565,7 +565,7 @@
             "untappdId": -1
         },
         {
-        	"id": 52,
+            "id": 52,
             "name": "Thornbridge Halcyon 2013",
             "brewerId": 7,
             "styleId": 2,
@@ -576,7 +576,7 @@
             "untappdId": 13845
         },
         {
-        	"id": 53,
+            "id": 53,
             "name": "Thornbridge Bracia BA",
             "brewerId": 7,
             "styleId": 9,
@@ -587,7 +587,7 @@
             "untappdId": -1
         },
         {
-        	"id": 54,
+            "id": 54,
             "name": "Thornbridge St. Eriks Collaboration",
             "brewerId": 7,
             "styleId": 18,
@@ -598,7 +598,7 @@
             "untappdId": -1
         },
         {
-        	"id": 55,
+            "id": 55,
             "name": "Alvinne Honey-B Bragot",
             "brewerId": 8,
             "styleId": 16,
@@ -609,7 +609,7 @@
             "untappdId": -1
         },
         {
-        	"id": 56,
+            "id": 56,
             "name": "Alvinne BZN Gruit",
             "brewerId": 8,
             "styleId": 12,
@@ -620,7 +620,7 @@
             "untappdId": -1
         },
         {
-        	"id": 57,
+            "id": 57,
             "name": "Alvinne Balthazar II",
             "brewerId": 8,
             "styleId": 14,
@@ -631,7 +631,7 @@
             "untappdId": -1
         },
         {
-        	"id": 58,
+            "id": 58,
             "name": "Alvinne Land van Mortagne",
             "brewerId": 8,
             "styleId": 14,
@@ -642,7 +642,7 @@
             "untappdId": 141500
         },
         {
-        	"id": 59,
+            "id": 59,
             "name": "Alvinne Foederbier",
             "brewerId": 8,
             "styleId": 3,
@@ -653,7 +653,7 @@
             "untappdId": 344283
         },
         {
-        	"id": 60,
+            "id": 60,
             "name": "Alvinne/Stillwater Wild West",
             "brewerId": 8,
             "styleId": 3,
@@ -664,7 +664,7 @@
             "untappdId": 138501
         },
         {
-        	"id": 61,
+            "id": 61,
             "name": "Alvinne Gaspar",
             "brewerId": 8,
             "styleId": 14,
@@ -675,7 +675,7 @@
             "untappdId": 14571
         },
         {
-        	"id": 62,
+            "id": 62,
             "name": "Alvinne Melchior",
             "brewerId": 8,
             "styleId": 14,
@@ -686,7 +686,7 @@
             "untappdId": 59782
         },
         {
-        	"id": 63,
+            "id": 63,
             "name": "Alvinne Mano Negra",
             "brewerId": 8,
             "styleId": 5,
@@ -697,7 +697,7 @@
             "untappdId": 83646
         },
         {
-        	"id": 64,
+            "id": 64,
             "name": "Alvinne Morpheus Dark",
             "brewerId": 8,
             "styleId": 14,
@@ -708,7 +708,7 @@
             "untappdId": 24416
         },
         {
-        	"id": 65,
+            "id": 65,
             "name": "Alvinne Beer Geek Wedding Batch III",
             "brewerId": 8,
             "styleId": 3,
@@ -719,7 +719,7 @@
             "untappdId": -1
         },
         {
-        	"id": 66,
+            "id": 66,
             "name": "Alvinne Folkbier",
             "brewerId": 8,
             "styleId": 17,
@@ -730,7 +730,7 @@
             "untappdId": 437107
         },
         {
-        	"id": 67,
+            "id": 67,
             "name": "Mikkeller Beer Geek Brunch Weasel",
             "brewerId": 8,
             "styleId": 5,
@@ -741,7 +741,7 @@
             "untappdId": 8391
         },
         {
-        	"id": 68,
+            "id": 68,
             "name": "Mikkeller Mikkeller Drink’in the Sun 13",
             "brewerId": 8,
             "styleId": 7,
@@ -752,7 +752,7 @@
             "untappdId": 411757
         },
         {
-        	"id": 69,
+            "id": 69,
             "name": "Mikkeller Single Hop IPA Citra",
             "brewerId": 8,
             "styleId": 2,
@@ -763,7 +763,7 @@
             "untappdId": 54202
         },
         {
-        	"id": 70,
+            "id": 70,
             "name": "Mikkeller Green Gold Chardonnay BA",
             "brewerId": 8,
             "styleId": 2,
@@ -774,7 +774,7 @@
             "untappdId": 432534
         },
         {
-        	"id": 71,
+            "id": 71,
             "name": "Mikkeller Monk's Elixir",
             "brewerId": 8,
             "styleId": 14,
@@ -785,7 +785,7 @@
             "untappdId": 25293
         },
         {
-        	"id": 72,
+            "id": 72,
             "name": "Mikkeller 黑 Black",
             "brewerId": 8,
             "styleId": 5,
@@ -796,7 +796,7 @@
             "untappdId": 70959
         },
         {
-        	"id": 73,
+            "id": 73,
             "name": "Mikkeller SpontanPeach",
             "brewerId": 8,
             "styleId": 3,
@@ -807,7 +807,7 @@
             "untappdId": 355351
         },
         {
-        	"id": 74,
+            "id": 74,
             "name": "Mikkeller It's Alive! Chardonnay Mango BA",
             "brewerId": 8,
             "styleId": 3,
@@ -818,7 +818,7 @@
             "untappdId": 356965
         },
         {
-        	"id": 75,
+            "id": 75,
             "name": "Mikkeller/De Molen/To Øl Bragging Braggot",
             "brewerId": 8,
             "styleId": 16,
@@ -829,7 +829,7 @@
             "untappdId": -1
         },
         {
-        	"id": 76,
+            "id": 76,
             "name": "Toccalmatto Surfing Hop",
             "brewerId": 10,
             "styleId": 1,
@@ -840,7 +840,7 @@
             "untappdId": 65635
         },
         {
-        	"id": 77,
+            "id": 77,
             "name": "Toccalmatto Zona Cesarini Pacifica",
             "brewerId": 10,
             "styleId": 2,
@@ -851,7 +851,7 @@
             "untappdId": 33917
         },
         {
-        	"id": 78,
+            "id": 78,
             "name": "Toccalmatto Mediterranean",
             "brewerId": 10,
             "styleId": 16,
@@ -862,7 +862,7 @@
             "untappdId": -1
         },
         {
-        	"id": 79,
+            "id": 79,
             "name": "Toccalmatto [No Name] Gose",
             "brewerId": 10,
             "styleId": 9,
@@ -873,7 +873,7 @@
             "untappdId": -1
         },
         {
-        	"id": 80,
+            "id": 80,
             "name": "Toccalmatto/Buxton Gruit Ale",
             "brewerId": 10,
             "styleId": 12,
@@ -884,7 +884,7 @@
             "untappdId": -1
         },
         {
-        	"id": 81,
+            "id": 81,
             "name": "Toccalmatto/Buxton [No Name] IPA",
             "brewerId": 10,
             "styleId": 2,
@@ -895,7 +895,7 @@
             "untappdId": -1
         },
         {
-        	"id": 82,
+            "id": 82,
             "name": "Toccalmatto Russian Imperial Stout (Wild) Sagrantino Red Wine BA",
             "brewerId": 10,
             "styleId": 5,
@@ -906,7 +906,7 @@
             "untappdId": -1
         },
         {
-        	"id": 76,
+            "id": 76,
             "name": "Toccalmatto Bedda Matri Marsala BA",
             "brewerId": 10,
             "styleId": 0,
@@ -917,7 +917,7 @@
             "untappdId": -1
         },
         {
-        	"id": 76,
+            "id": 76,
             "name": "Toccalmatto Vecchio Bruno Sour Emilian Red Ale BA",
             "brewerId": 10,
             "styleId": 3,
@@ -928,7 +928,7 @@
             "untappdId": -1
         },
         {
-        	"id": 77,
+            "id": 77,
             "name": "To Øl I've Seen Bigger Than Yours",
             "brewerId": 13,
             "styleId": 0,
@@ -939,7 +939,7 @@
             "untappdId": 421548
         },
         {
-        	"id": 78,
+            "id": 78,
             "name": "To Øl Black Malts & Body Salts",
             "brewerId": 13,
             "styleId": 8,
@@ -950,7 +950,7 @@
             "untappdId": 386689
         },
         {
-        	"id": 79,
+            "id": 79,
             "name": "To Øl/Ølrepubliken Total Hubris",
             "brewerId": 13,
             "styleId": 13,
@@ -961,7 +961,7 @@
             "untappdId": 433040
         },
         {
-        	"id": 80,
+            "id": 80,
             "name": "To Øl By Udder Means Muscatel BA",
             "brewerId": 13,
             "styleId": 15,
@@ -972,7 +972,7 @@
             "untappdId": -1
         },
         {
-        	"id": 81,
+            "id": 81,
             "name": "To Øl Special Borefts Braggot Forca Victory Xtra Ekstra Edition 0.8.2",
             "brewerId": 13,
             "styleId": 16,
@@ -983,7 +983,7 @@
             "untappdId": -1
         },
         {
-        	"id": 82,
+            "id": 82,
             "name": "Struise Weltmerz",
             "brewerId": 12,
             "styleId": 3,
@@ -994,7 +994,7 @@
             "untappdId": 286038
         },
         {
-        	"id": 83,
+            "id": 83,
             "name": "Struise Ypres",
             "brewerId": 12,
             "styleId": 3,
@@ -1005,7 +1005,7 @@
             "untappdId": 286038
         },
         {
-        	"id": 84,
+            "id": 84,
             "name": "Struise Saint Amatus",
             "brewerId": 12,
             "styleId": 14,
@@ -1016,7 +1016,7 @@
             "untappdId": 270216
         },
         {
-        	"id": 85,
+            "id": 85,
             "name": "Struise Smonk",
             "brewerId": 12,
             "styleId": 3,
@@ -1027,7 +1027,7 @@
             "untappdId": 443781
         },
         {
-        	"id": 86,
+            "id": 86,
             "name": "Struise Tsjeeses",
             "brewerId": 12,
             "styleId": 10,
@@ -1038,7 +1038,7 @@
             "untappdId": 43043
         },
         {
-        	"id": 87,
+            "id": 87,
             "name": "Struise Tsjeeses Reserva",
             "brewerId": 12,
             "styleId": 10,
@@ -1049,7 +1049,7 @@
             "untappdId": 80111
         },
         {
-        	"id": 88,
+            "id": 88,
             "name": "Struise/Mikkeller Elliot Brew",
             "brewerId": 12,
             "styleId": 1,
@@ -1060,7 +1060,7 @@
             "untappdId": 28662
         },
         {
-        	"id": 89,
+            "id": 89,
             "name": "Struise Pannepot",
             "brewerId": 12,
             "styleId": 14,
@@ -1071,7 +1071,7 @@
             "untappdId": 170
         },
         {
-        	"id": 90,
+            "id": 90,
             "name": "Struise Pannepot Reserva",
             "brewerId": 12,
             "styleId": 14,
@@ -1082,7 +1082,7 @@
             "untappdId": 392956
         },
         {
-        	"id": 91,
+            "id": 91,
             "name": "Struise Black Berry Albert",
             "brewerId": 12,
             "styleId": 5,
@@ -1093,7 +1093,7 @@
             "untappdId": 236002
         },
         {
-        	"id": 92,
+            "id": 92,
             "name": "Struise Black Albert",
             "brewerId": 12,
             "styleId": 5,
@@ -1104,7 +1104,7 @@
             "untappdId": 4719
         },
         {
-        	"id": 93,
+            "id": 93,
             "name": "Struise Cuvée Delphine",
             "brewerId": 12,
             "styleId": 5,
@@ -1115,7 +1115,7 @@
             "untappdId": 17653
         },
         {
-        	"id": 94,
+            "id": 94,
             "name": "Struise Motuecha",
             "brewerId": 12,
             "styleId": 10,
@@ -1126,7 +1126,7 @@
             "untappdId": 118833
         },
         {
-        	"id": 95,
+            "id": 95,
             "name": "Naparbier Back in Black ",
             "brewerId": 14,
             "styleId": 8,
@@ -1137,7 +1137,7 @@
             "untappdId": 144042
         },
         {
-        	"id": 96,
+            "id": 96,
             "name": "Naparbier Betagarri",
             "brewerId": 14,
             "styleId": 13,
@@ -1148,7 +1148,7 @@
             "untappdId": 441838
         },
         {
-        	"id": 97,
+            "id": 97,
             "name": "Naparbier ZZ+ Amber Ale",
             "brewerId": 14,
             "styleId": 2,
@@ -1159,7 +1159,7 @@
             "untappdId": 174574
         },
         {
-        	"id": 98,
+            "id": 98,
             "name": "Naparbier Aker",
             "brewerId": 14,
             "styleId": 2,
@@ -1170,7 +1170,7 @@
             "untappdId": 366291
         },
         {
-        	"id": 99,
+            "id": 99,
             "name": "Naparbier Gruit",
             "brewerId": 14,
             "styleId": 12,
@@ -1181,7 +1181,7 @@
             "untappdId": 437226
         },
         {
-        	"id": 100,
+            "id": 100,
             "name": "Naparbier Black Rock Imperial Cacao+Coffee Porter",
             "brewerId": 14,
             "styleId": 11,
@@ -1192,7 +1192,7 @@
             "untappdId": -1
         },
         {
-        	"id": 101,
+            "id": 101,
             "name": "Naparbier 5 Titius Aniversary IPA",
             "brewerId": 14,
             "styleId": 2,
@@ -1203,7 +1203,7 @@
             "untappdId": -1
         },
         {
-        	"id": 102,
+            "id": 102,
             "name": "Fyne Ales Jarl",
             "brewerId": 15,
             "styleId": 6,
@@ -1214,7 +1214,7 @@
             "untappdId": 10109
         },
         {
-        	"id": 103,
+            "id": 103,
             "name": "Fyne Ales Vital Spark",
             "brewerId": 15,
             "styleId": 6,
@@ -1225,7 +1225,7 @@
             "untappdId": 22503
         },
         {
-        	"id": 104,
+            "id": 104,
             "name": "Fyne Ales Fladda Rock",
             "brewerId": 15,
             "styleId": 2,
@@ -1236,7 +1236,7 @@
             "untappdId": 213291
         },
         {
-        	"id": 105,
+            "id": 105,
             "name": "Fyne Ales Fladda Rock Belgian",
             "brewerId": 15,
             "styleId": 10,
@@ -1247,7 +1247,7 @@
             "untappdId": -1
         },
         {
-        	"id": 106,
+            "id": 106,
             "name": "Fyne Ales Superior IPA",
             "brewerId": 15,
             "styleId": 1,
@@ -1258,7 +1258,7 @@
             "untappdId": 180967
         },
         {
-        	"id": 107,
+            "id": 107,
             "name": "Fyne Ales Sublime Stout",
             "brewerId": 15,
             "styleId": 4,
@@ -1269,7 +1269,7 @@
             "untappdId": 16970
         },
         {
-        	"id": 108,
+            "id": 108,
             "name": "Fyne Ales Sanda Black",
             "brewerId": 15,
             "styleId": 8,
@@ -1280,7 +1280,7 @@
             "untappdId": 229465
         },
         {
-        	"id": 109,
+            "id": 109,
             "name": "Fyne Ales Sanda Blonde",
             "brewerId": 15,
             "styleId": 2,
@@ -1291,7 +1291,7 @@
             "untappdId": 229473
         },
         {
-        	"id": 110,
+            "id": 110,
             "name": "Fyne Ales Smoked Chilli Dark Ale",
             "brewerId": 15,
             "styleId": 18,
@@ -1302,7 +1302,7 @@
             "untappdId": -1
         },
         {
-        	"id": 111,
+            "id": 111,
             "name": "Mont Salève Mozaic Black Bitter",
             "brewerId": 16,
             "styleId": 8,
@@ -1313,7 +1313,7 @@
             "untappdId": 176674
         },
         {
-        	"id": 112,
+            "id": 112,
             "name": "Mont Salève GSC Bitter",
             "brewerId": 16,
             "styleId": 6,
@@ -1324,7 +1324,7 @@
             "untappdId": -1
         },
         {
-        	"id": 113,
+            "id": 113,
             "name": "Mont Salève Double IPA",
             "brewerId": 16,
             "styleId": 1,
@@ -1335,7 +1335,7 @@
             "untappdId": -1
         },
         {
-        	"id": 114,
+            "id": 114,
             "name": "Mont Salève Imperial Stout",
             "brewerId": 16,
             "styleId": 5,
@@ -1346,7 +1346,7 @@
             "untappdId": -1
         },
         {
-        	"id": 115,
+            "id": 115,
             "name": "Mont Salève Mademoiselle French Pale Ale",
             "brewerId": 16,
             "styleId": 7,
@@ -1357,7 +1357,7 @@
             "untappdId": 117706
         },
         {
-        	"id": 116,
+            "id": 116,
             "name": "Mont Salève Oyster Stout",
             "brewerId": 16,
             "styleId": 4,
@@ -1368,7 +1368,7 @@
             "untappdId": -1
         },
         {
-        	"id": 117,
+            "id": 117,
             "name": "Rooie Dop 24/7 Session Ale",
             "brewerId": 17,
             "styleId": 7,
@@ -1379,7 +1379,7 @@
             "untappdId": 376326
         },
         {
-        	"id": 118,
+            "id": 118,
             "name": "Rooie Dop Chica Americana",
             "brewerId": 17,
             "styleId": 2,
@@ -1390,7 +1390,7 @@
             "untappdId": 159195
         },
         {
-        	"id": 119,
+            "id": 119,
             "name": "Rooie Dop Ot The Explorer",
             "brewerId": 17,
             "styleId": 1,
@@ -1401,7 +1401,7 @@
             "untappdId": 376327
         },
         {
-        	"id": 120,
+            "id": 120,
             "name": "Rooie Dop Double Oatmeal Stout",
             "brewerId": 17,
             "styleId": 5,
@@ -1412,7 +1412,7 @@
             "untappdId": 159814
         },
         {
-        	"id": 121,
+            "id": 121,
             "name": "Rooie Dop Double Oatmeal Stout Bourbon BA",
             "brewerId": 17,
             "styleId": 5,
@@ -1421,6 +1421,160 @@
             "tags": "barrel aged,bourbon",
             "ratebeerId": 206168,
             "untappdId": 332235
+        },
+        {
+            "id": 122,
+            "name": "Laugar Aupa Tovarisch Jura Edition",
+            "brewerId": 3,
+            "styleId": 5,
+            "abv": 11,
+            "oakAged": true,
+            "tags": "barrel aged,wiskey",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 123,
+            "name": "Laugar Aupa Tovarisch Oporto Edition",
+            "brewerId": 3,
+            "styleId": 5,
+            "abv": 11,
+            "oakAged": true,
+            "tags": "barrel aged,wine,port",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 124,
+            "name": "Laugar Aupa Tovarisch Bordeaux Edition",
+            "brewerId": 3,
+            "styleId": 5,
+            "abv": 11,
+            "oakAged": true,
+            "tags": "barrel aged,wine",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 125,
+            "name": "Laugar Aupa Tovarisch Calvados Edition",
+            "brewerId": 3,
+            "styleId": 5,
+            "abv": 11,
+            "oakAged": true,
+            "tags": "barrel aged,wine",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 126,
+            "name": "Närke Rauch American Pale Ale",
+            "brewerId": 9,
+            "styleId": 7,
+            "abv": 4.8,
+            "oakAged": false,
+            "tags": "smoked",
+            "ratebeerId": 227161,
+            "untappdId": 439390
+        },
+        {
+            "id": 127,
+            "name": "Närke Anders Göranssons Bästa Rököl",
+            "brewerId": 9,
+            "styleId": 9,
+            "abv": 6.5,
+            "oakAged": false,
+            "tags": "smoked",
+            "ratebeerId": 44032,
+            "untappdId": 263742
+        },
+        {
+            "id": 128,
+            "name": "Närke/Haandbryggeriet Viking IPA",
+            "brewerId": 9,
+            "styleId": 2,
+            "abv": 7.6,
+            "oakAged": false,
+            "tags": "smoked",
+            "ratebeerId": 214989,
+            "untappdId": 370914
+        },
+        {
+            "id": 129,
+            "name": "Närke \"forest\" beers",
+            "brewerId": 9,
+            "styleId": 18,
+            "abv": -1,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 130,
+            "name": "Brewfist Terminal Pale Ale",
+            "brewerId": 11,
+            "styleId": 7,
+            "abv": 3.7,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 202737,
+            "untappdId": 326843
+        },
+        {
+            "id": 131,
+            "name": "Brewfist Spaceman",
+            "brewerId": 11,
+            "styleId": 2,
+            "abv": 7,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 144877,
+            "untappdId": 442442
+        },
+        {
+            "id": 132,
+            "name": "Brewfist Green Petrol",
+            "brewerId": 11,
+            "styleId": 8,
+            "abv": 8.2,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 203360,
+            "untappdId": 316720
+        },
+        {
+            "id": 133,
+            "name": "Brewfist 2Late",
+            "brewerId": 11,
+            "styleId": 1,
+            "abv": 9.5,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 176821,
+            "untappdId": 189124
+        },
+        {
+            "id": 134,
+            "name": "Brewfist X-Ray",
+            "brewerId": 11,
+            "styleId": 11,
+            "abv": 8.5,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 170751,
+            "untappdId": 143420
+        },
+        {
+            "id": 135,
+            "name": "Brewfist Gruit",
+            "brewerId": 11,
+            "styleId": 12,
+            "abv": -1,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
         }
     ],
     "revision": 2
