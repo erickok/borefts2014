@@ -202,7 +202,7 @@
             "sortName": "Mont Saleve",
             "city": "Neydens",
             "country": "France",
-            "description": "Mont Salève is ... TO ADD",
+            "description": "Mont Salève is a micro brewery from the French Haute-Savoie, situated at the foot of the Salève mountain. Since 2010, brew master Mickaël Novo has gone beyond the classic French white and blond and experiments with British and American styles and hops.",
             "website": "http://labrasseriedumontsaleve.com",
             "latitude": 52.085085,
             "longitude": 4.740705

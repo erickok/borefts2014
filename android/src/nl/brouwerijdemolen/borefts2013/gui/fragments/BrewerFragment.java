@@ -92,6 +92,8 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 		apiQueue.add(new GsonRequest<Beers>(Beers.BEERS_URL, Beers.class, null, new Listener<Beers>() {
 			@Override
 			public void onResponse(Beers beers) {
+				if (getActivity() == null)
+					return;
 				// Beers are loaded now too; sort them and add the style and brewer objects
 				List<Beer> beersList = new ArrayList<Beer>();
 				for (Beer beer : beers.getBeers()) {

@@ -1,6 +1,7 @@
 package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
 import nl.brouwerijdemolen.borefts2013.R;
+import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.content.Intent;
 import android.net.Uri;
@@ -64,7 +65,7 @@ public class InfoFragment extends Fragment {
 
 	@Click
 	protected void getmoreButtonClicked() {
-		((NavigationManager) getActivity()).openMap(this, MapFragment_.ELEMENT_TOKENS.focusId);
+		((NavigationManager) getActivity()).openMap(this, MapFragment_.ELEMENT_TOKENS.focusId, null);
 	}
 
 	@Click

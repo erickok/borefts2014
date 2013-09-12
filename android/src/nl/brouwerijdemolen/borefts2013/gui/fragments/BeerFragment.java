@@ -8,7 +8,6 @@ import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -16,14 +15,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.SherlockFragment;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.FragmentArg;
+import com.googlecode.androidannotations.annotations.OptionsItem;
+import com.googlecode.androidannotations.annotations.OptionsMenu;
 import com.googlecode.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.fragment_beer)
-public class BeerFragment extends Fragment {
+@OptionsMenu(R.menu.fragment_beer)
+public class BeerFragment extends SherlockFragment {
 
 	@FragmentArg
 	protected Beer beer;
@@ -36,6 +39,7 @@ public class BeerFragment extends Fragment {
 
 	public BeerFragment() {
 		setRetainInstance(true);
+		setHasOptionsMenu(true);
 	}
 
 	@AfterViews
@@ -53,16 +57,22 @@ public class BeerFragment extends Fragment {
 			}
 		}
 	}
-	
+
 	private void addTagView(String tag) {
 		getActivity().getLayoutInflater().inflate(R.layout.widget_label, tagsLayout);
 		tag = tag.toUpperCase(Locale.getDefault());
-		((TextView)tagsLayout.getChildAt(tagsLayout.getChildCount() - 1)).setText(tag);
+		((TextView) tagsLayout.getChildAt(tagsLayout.getChildCount() - 1)).setText(tag);
 	}
 
 	@Click
 	protected void styleButtonClicked() {
 		((NavigationManager) getActivity()).openStyle(this, beer.getStyle());
+	}
+
+	@OptionsItem
+	protected void actionLocate() {
+		((NavigationManager) getActivity()).openMap(this, MapFragment.BREWER_ID_THRESHOLD + beer.getBrewerId(),
+				beer.getBrewer());
 	}
 
 	@Click

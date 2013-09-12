@@ -59,7 +59,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 			R.string.map_mill, R.drawable.ic_marker_mill);
 	public static final MapElement ELEMENT_FIRSTAID = new MapElement(6, new LatLng(52.084707d, 4.740264d),
 			R.string.map_firstaid, R.drawable.ic_marker_firstaid);
-	private static final int BREWER_ID_THRESHOLD = 10;
+	public static final int BREWER_ID_THRESHOLD = 10;
 
 	private SparseArray<Marker> elementMarkers;
 	private Map<Marker, Brewer> brewerMarkers;
@@ -256,13 +256,13 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 	@Override
 	public void onMapClick(LatLng arg0) {
 		if (isMinimap)
-			((NavigationManager) getActivity()).openMap(this, -1);
+			((NavigationManager) getActivity()).openMap(this, -1, null);
 	}
 
 	@Override
 	public boolean onMarkerClick(Marker marker) {
 		if (isMinimap) {
-			((NavigationManager) getActivity()).openMap(this, -1);
+			((NavigationManager) getActivity()).openMap(this, -1, null);
 			return true;
 		}
 		return false;

@@ -37,7 +37,8 @@ public interface NavigationManager {
 	 * Open a map fragment that focuses on some specific element.
 	 * @param baseFragment The fragment that requests the opening of a new map fragment
 	 * @param focusId The id of the element to focus on
+	 * @param brewerToOpen Optionally a brewer object so this can be shows along with the map marker to focus
 	 */
-	void openMap(Fragment baseFragment, int focusId);
+	void openMap(Fragment baseFragment, int focusId, Brewer brewerToOpen);
 
 }

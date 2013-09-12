@@ -4,7 +4,10 @@ import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BeerFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewerFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StyleFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.annotation.SuppressLint;
@@ -83,7 +86,7 @@ public class PhoneContainerActivity extends SherlockFragmentActivity implements 
 	}
 
 	@Override
-	public void openMap(Fragment baseFragment, int focusId) {
+	public void openMap(Fragment baseFragment, int focusId, Brewer brewerToOpen) {
 		PhoneContainerActivity_.intent(this).focusId(focusId).start();
 	}
 		

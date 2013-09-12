@@ -163,7 +163,7 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 	}
 
 	@Override
-	public void openMap(Fragment baseFragment, int focusId) {
+	public void openMap(Fragment baseFragment, int focusId, Brewer brewerToOpen) {
 		PhoneContainerActivity_.intent(this).focusId(focusId).start();
 	}
 	

@@ -182,9 +182,10 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 	}
 
 	@Override
-	public void openMap(Fragment baseFragment, int focusId) {
+	public void openMap(Fragment baseFragment, int focusId, Brewer brewerToOpen) {
 		// Don't add a new fragment, but re-focus
 		mapFragment.focusOnMarker(focusId);
+		addFragment(baseFragment, BrewerFragment_.builder().brewer(brewerToOpen).build());
 	}
 
 }
