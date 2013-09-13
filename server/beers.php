@@ -43,7 +43,7 @@
             "styleId": 5,
             "abv": 9.8,
             "oakAged": true,
-            "tags": "barrel aged,balsamico",
+            "tags": "smoked,barrel aged,balsamico",
             "ratebeerId": -1,
             "untappdId": -1
         },
@@ -54,8 +54,8 @@
             "styleId": 5,
             "abv": 9.8,
             "oakAged": true,
-            "tags": "barrel aged,rum",
-            "ratebeerId": -1,
+            "tags": "smoked,barrel aged,rum",
+            "ratebeerId": 228834,
             "untappdId": -1
         },
         {
@@ -65,7 +65,7 @@
             "styleId": 5,
             "abv": 9.8,
             "oakAged": true,
-            "tags": "barrel aged,bourbon",
+            "tags": "smoked,barrel aged,bourbon",
             "ratebeerId": -1,
             "untappdId": -1
         },
@@ -107,7 +107,7 @@
             "name": "De Molen Dutch Fresh Hopped",
             "brewerId": 0,
             "styleId": 2,
-            "abv": -1,
+            "abv": 6,
             "oakAged": false,
             "tags": "",
             "ratebeerId": -1,
@@ -120,7 +120,7 @@
             "styleId": 16,
             "abv": 9,
             "oakAged": true,
-            "tags": "barrel aged",
+            "tags": "barrel aged,bourbon,cognac",
             "ratebeerId": -1,
             "untappdId": -1
         },
@@ -302,7 +302,7 @@
         },
         {
             "id": 28,
-            "name": "Amager ",
+            "name": "Amager Sloth",
             "brewerId": 4,
             "styleId": 7,
             "abv": 6,
@@ -502,7 +502,7 @@
             "id": 46,
             "name": "The Kernel Borefts Festival Special",
             "brewerId": 6,
-            "styleId": 7,
+            "styleId": 3,
             "abv": 4.3,
             "oakAged": false,
             "tags": "",
@@ -577,12 +577,12 @@
         },
         {
             "id": 53,
-            "name": "Thornbridge Bracia BA",
+            "name": "Thornbridge Bracia Bourbon BA",
             "brewerId": 7,
             "styleId": 9,
             "abv": 10,
-            "oakAged": false,
-            "tags": "",
+            "oakAged": true,
+            "tags": "barrel aged,bourbon",
             "ratebeerId": -1,
             "untappdId": -1
         },
@@ -732,7 +732,7 @@
         {
             "id": 67,
             "name": "Mikkeller Beer Geek Brunch Weasel",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 5,
             "abv": 10.9,
             "oakAged": false,
@@ -743,7 +743,7 @@
         {
             "id": 68,
             "name": "Mikkeller Mikkeller Drink’in the Sun 13",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 7,
             "abv": 1.4,
             "oakAged": false,
@@ -754,7 +754,7 @@
         {
             "id": 69,
             "name": "Mikkeller Single Hop IPA Citra",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 2,
             "abv": 6.9,
             "oakAged": false,
@@ -765,7 +765,7 @@
         {
             "id": 70,
             "name": "Mikkeller Green Gold Chardonnay BA",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 2,
             "abv": 7.5,
             "oakAged": false,
@@ -776,7 +776,7 @@
         {
             "id": 71,
             "name": "Mikkeller Monk's Elixir",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 14,
             "abv": 10,
             "oakAged": false,
@@ -787,7 +787,7 @@
         {
             "id": 72,
             "name": "Mikkeller 黑 Black",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 5,
             "abv": 17.5,
             "oakAged": false,
@@ -798,7 +798,7 @@
         {
             "id": 73,
             "name": "Mikkeller SpontanPeach",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 3,
             "abv": 7.7,
             "oakAged": false,
@@ -809,7 +809,7 @@
         {
             "id": 74,
             "name": "Mikkeller It's Alive! Chardonnay Mango BA",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 3,
             "abv": 8,
             "oakAged": true,
@@ -820,7 +820,7 @@
         {
             "id": 75,
             "name": "Mikkeller/De Molen/To Øl Bragging Braggot",
-            "brewerId": 8,
+            "brewerId": 2,
             "styleId": 16,
             "abv": -1,
             "oakAged": false,

@@ -11,7 +11,6 @@
 	<string name="action_googleplus">Google+</string>
 	<string name="action_refresh">Refresh</string>
 	<string name="action_locate">Locate beer</string>
-	<string name="action_about">About this app</string>
 	<string name="action_settings">Settings</string>
 	<string name="action_sendcorrection">Send correction</string>
 	<string name="action_about">About this app</string>
@@ -47,11 +46,15 @@
 	
 	<string name="map_trains">Train station</string>
 	<string name="map_entrance">Entrance</string>
-	<string name="map_toilet1">Toilet 1</string>
-	<string name="map_toilet2">Toilet 2</string>
+	<string name="map_mtoilet1">Male toilet 1</string>
+	<string name="map_mtoilet2">Male toilet 2</string>
+	<string name="map_mtoilet3">Male toilet 3</string>
+	<string name="map_ftoilet1">Female toilet 1</string>
+	<string name="map_ftoilet2">Female toilet 2</string>
 	<string name="map_tokens">Token sale</string>
 	<string name="map_mill">Tasting room/restaurant</string>
 	<string name="map_firstaid">First aid</string>
+	<string name="map_foodplaza">Food plaza</string>
 
 	<string name="about_broughtby">Brought by Eric Kok\nof 2312 development</string>
 	<string name="about_visit2312">2312.NL</string>

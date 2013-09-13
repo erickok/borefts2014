@@ -1,5 +1,16 @@
 <?php
   include 'enablecache.php';
+  // Bottling building
+  //    De Molen Bar   52.085118,4.740189   52.085175,4.740269   52.085207,4.740358
+  //                                                             52.085192,4.740409
+  // Brewery building
+  //    52.085147,4.740602
+  //                             52.085157,4.740661
+  // Food plaza
+  //              52.084781,4.741101
+  //    FOOD      52.084757,4.741138
+  // Festival terrain 2
+  //    EHBO   52.084885,4.741176   52.084938,4.741254   52.084989,4.741331   52.08504,4.741409   52.085091,4.741487   52.085144,4.741568   52.085197,4.741645   52.085246,4.741712   52.085292,4.741779   52.08533,4.741836
 ?>
 {
     "brewers": [
@@ -12,8 +23,8 @@
             "country": "The Netherlands",
             "description": "De Molen is the host of the Borefts festival... TO ADD",
             "website": "http://www.brouwerijdemolen.nl",
-            "latitude": 52.084483,
-            "longitude": 4.739717
+            "latitude": 52.085045,
+            "longitude": 4.740098
         },
         {
             "id": 1,
@@ -24,8 +35,8 @@
             "country": "The Netherlands",
             "description": "Emelisse is... TO ADD",
             "website": "http://www.emelisse.nl",
-            "latitude": 52.085192,
-            "longitude": 4.740420
+            "latitude": 52.085118,
+            "longitude": 4.740189
         },
         {
             "id": 2,
@@ -36,8 +47,8 @@
             "country": "Denmark",
             "description": "Mikkeller is ... TO ADD",
             "website": "http://www.mikkeller.dk",
-            "latitude": 52.084897,
-            "longitude": 4.739777
+            "latitude": 52.085175,
+            "longitude": 4.740269
         },
         {
             "id": 3,
@@ -48,8 +59,8 @@
             "country": "Spain",
             "description": "Laugar is ... TO ADD",
             "website": "http://www.laugarbrewery.com",
-            "latitude": 52.085000,
-            "longitude": 4.739868
+            "latitude": 52.085207,
+            "longitude": 4.740358
         },
         {
             "id": 4,
@@ -60,8 +71,8 @@
             "country": "Denmark",
             "description": "Amager is ... TO ADD",
             "website": "http://amagerbryghus.dk",
-            "latitude": 52.084835,
-            "longitude": 4.739970
+            "latitude": 52.085192,
+            "longitude": 4.740409
         },
         {
             "id": 5,
@@ -72,8 +83,8 @@
             "country": "The Netherlands",
             "description": "Jopen is ... TO ADD",
             "website": "http://www.jopen.nl/",
-            "latitude": 52.085181,
-            "longitude": 4.740233
+            "latitude": 52.085147,
+            "longitude": 4.740602
         },
         {
             "id": 6,
@@ -84,8 +95,8 @@
             "country": "England",
             "description": "The Kernel is ... TO ADD",
             "website": "http://www.thekernelbrewery.com",
-            "latitude": 52.085131,
-            "longitude": 4.740410
+            "latitude": 52.085157,
+            "longitude": 4.740661
         },
         {
             "id": 7,
@@ -96,8 +107,8 @@
             "country": "England",
             "description": "Thornbridge is ... TO ADD",
             "website": "http://www.thornbridgebrewery.co.uk",
-            "latitude": 52.085092,
-            "longitude": 4.740609
+            "latitude": 52.084781,
+            "longitude": 4.741101
         },
         {
             "id": 8,
@@ -108,8 +119,8 @@
             "country": "Belgium",
             "description": "Alvinne is ... TO ADD",
             "website": "http://www.alvinne.be",
-            "latitude": 52.084531,
-            "longitude": 4.739697
+            "latitude": 52.084757,
+            "longitude": 4.741138
         },
         {
             "id": 9,
@@ -120,8 +131,8 @@
             "country": "Sweden",
             "description": "Närke is ... TO ADD",
             "website": "http://www.kulturbryggeri.se",
-            "latitude": 52.084934,
-            "longitude": 4.739766
+            "latitude": 52.084885,
+            "longitude": 4.741176
         },
         {
             "id": 10,
@@ -132,8 +143,8 @@
             "country": "Italy",
             "description": "Toccalmatto is ... TO ADD",
             "website": "http://www.birratoccalmatto.it",
-            "latitude": 52.084868,
-            "longitude": 4.740212
+            "latitude": 52.084938,
+            "longitude": 4.741254
         },
         {
             "id": 11,
@@ -144,8 +155,8 @@
             "country": "Italy",
             "description": "Brewfist is ... TO ADD",
             "website": "http://www.brewfist.com",
-            "latitude": 52.084861,
-            "longitude": 4.740131
+            "latitude": 52.084989,
+            "longitude": 4.741331
         },
         {
             "id": 12,
@@ -156,8 +167,8 @@
             "country": "Belgium",
             "description": "Struise is ... TO ADD",
             "website": "http://struise.com",
-            "latitude": 52.084525,
-            "longitude": 4.739750
+            "latitude": 52.08504,
+            "longitude": 4.741409
         },
         {
             "id": 13,
@@ -168,8 +179,8 @@
             "country": "Denmark",
             "description": "To Øl is ... TO ADD",
             "website": "http://to-ol.dk",
-            "latitude": 52.085108,
-            "longitude": 4.740083
+            "latitude": 52.085091,
+            "longitude": 4.741487
         },
         {
             "id": 14,
@@ -180,8 +191,8 @@
             "country": "Spain",
             "description": "Naparbier is ... TO ADD",
             "website": "http://www.naparbier.com",
-            "latitude": 52.084518,
-            "longitude": 4.739852
+            "latitude": 52.085144,
+            "longitude": 4.741568
         },
         {
             "id": 15,
@@ -192,8 +203,8 @@
             "country": "Scotland",
             "description": "Fyne Ales is ... TO ADD",
             "website": "http://www.fyneales.com",
-            "latitude": 52.084746,
-            "longitude": 4.740008
+            "latitude": 52.085197,
+            "longitude": 4.741645
         },
         {
             "id": 16,
@@ -204,8 +215,8 @@
             "country": "France",
             "description": "Mont Salève is a micro brewery from the French Haute-Savoie, situated at the foot of the Salève mountain. Since 2010, brew master Mickaël Novo has gone beyond the classic French white and blond and experiments with British and American styles and hops.",
             "website": "http://labrasseriedumontsaleve.com",
-            "latitude": 52.085085,
-            "longitude": 4.740705
+            "latitude": 52.085246,
+            "longitude": 4.741712
         },
         {
             "id": 17,
@@ -216,8 +227,8 @@
             "country": "THe Netherlands",
             "description": "Rooie Dop is ... TO ADD",
             "website": "http://www.rooiedop.nl",
-            "latitude": 52.085095,
-            "longitude": 4.740725
+            "latitude": 52.085292,
+            "longitude": 4.741779
         }
     ],
     "revision": 4

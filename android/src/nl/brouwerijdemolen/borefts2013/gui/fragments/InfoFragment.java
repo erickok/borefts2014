@@ -1,7 +1,6 @@
 package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
 import nl.brouwerijdemolen.borefts2013.R;
-import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.content.Intent;
 import android.net.Uri;

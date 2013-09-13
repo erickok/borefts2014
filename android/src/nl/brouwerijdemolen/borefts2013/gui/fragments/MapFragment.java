@@ -47,18 +47,26 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 
 	public static final MapElement ELEMENT_TRAINS = new MapElement(0, new LatLng(52.081515d, 4.746145d),
 			R.string.map_trains, R.drawable.ic_marker_trains);
-	public static final MapElement ELEMENT_ENTRANCE = new MapElement(1, new LatLng(52.084904d, 4.740646d),
+	public static final MapElement ELEMENT_ENTRANCE = new MapElement(1, new LatLng(52.084935d, 4.740653d),
 			R.string.map_entrance, R.drawable.ic_marker_entrance);
-	public static final MapElement ELEMENT_TOILET1 = new MapElement(2, new LatLng(52.084382d, 4.739835d),
-			R.string.map_toilet1, R.drawable.ic_marker_toilet);
-	public static final MapElement ELEMENT_TOILET2 = new MapElement(3, new LatLng(52.085108d, 4.740736d),
-			R.string.map_toilet2, R.drawable.ic_marker_toilet);
-	public static final MapElement ELEMENT_TOKENS = new MapElement(4, new LatLng(52.084851d, 4.740432d),
+	public static final MapElement ELEMENT_FTOILET1 = new MapElement(2, new LatLng(52.084742d, 4.740870d),
+			R.string.map_ftoilet1, R.drawable.ic_marker_toilet);
+	public static final MapElement ELEMENT_FTOILET2 = new MapElement(3, new LatLng(52.085127d, 4.740728d),
+			R.string.map_ftoilet2, R.drawable.ic_marker_toilet);
+	public static final MapElement ELEMENT_TOKENS = new MapElement(4, new LatLng(52.084935d, 4.740653d),
 			R.string.map_tokens, R.drawable.ic_marker_tokens);
-	public static final MapElement ELEMENT_MILL = new MapElement(5, new LatLng(52.085652d, 4.742069d),
+	public static final MapElement ELEMENT_MILL = new MapElement(5, new LatLng(52.085711d, 4.742077d),
 			R.string.map_mill, R.drawable.ic_marker_mill);
-	public static final MapElement ELEMENT_FIRSTAID = new MapElement(6, new LatLng(52.084707d, 4.740264d),
+	public static final MapElement ELEMENT_FIRSTAID = new MapElement(6, new LatLng(52.084738d, 4.740854d),
 			R.string.map_firstaid, R.drawable.ic_marker_firstaid);
+	public static final MapElement ELEMENT_MTOILET1 = new MapElement(7, new LatLng(52.085345d, 4.741973d),
+			R.string.map_mtoilet1, R.drawable.ic_marker_toilet);
+	public static final MapElement ELEMENT_MTOILET2 = new MapElement(8, new LatLng(52.084771d, 4.740420d),
+			R.string.map_mtoilet2, R.drawable.ic_marker_toilet);
+	public static final MapElement ELEMENT_MTOILET3 = new MapElement(9, new LatLng(52.085106d, 4.740752d),
+			R.string.map_mtoilet3, R.drawable.ic_marker_toilet);
+	public static final MapElement ELEMENT_FOODPLAZA = new MapElement(10, new LatLng(52.084692d, 4.740983d),
+			R.string.map_foodplaza, R.drawable.ic_marker_entrance);
 	public static final int BREWER_ID_THRESHOLD = 10;
 
 	private SparseArray<Marker> elementMarkers;
@@ -86,7 +94,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		if (isMinimap) {
 			getMap().moveCamera(
 					CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
-							.target(new LatLng(52.084850d, 4.740050d)).zoom(17.5f).bearing(-46f).build()));
+							.target(new LatLng(52.085207d, 4.740871d)).zoom(17f).bearing(-46f).build()));
 			getMap().getUiSettings().setAllGesturesEnabled(false);
 			getMap().getUiSettings().setZoomControlsEnabled(false);
 			getMap().setOnMarkerClickListener(this);
@@ -94,28 +102,27 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		} else {
 			getMap().moveCamera(
 					CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
-							.target(new LatLng(52.084850d, 4.740083d)).zoom(18.5f).build()));
+							.target(new LatLng(52.085041d, 4.741054d)).zoom(18f).build()));
 			getMap().setMyLocationEnabled(true);
 			getMap().getUiSettings().setCompassEnabled(true);
 			getMap().setOnInfoWindowClickListener(this);
 		}
 
 		// Load the festival outline
-		// Parking area
+		// Festival area 1
 		getMap().addPolygon(
 				new PolygonOptions()
-						.add(new LatLng(52.084557d, 4.739626d), new LatLng(52.084961d, 4.740251d),
+						.add(new LatLng(52.084906d, 4.740165d), new LatLng(52.084961d, 4.740251d),
 								new LatLng(52.085024d, 4.740243d), new LatLng(52.085169d, 4.740476d),
-								new LatLng(52.085009d, 4.740749d), new LatLng(52.084419d, 4.739824d))
+								new LatLng(52.085009d, 4.740749d), new LatLng(52.084821d, 4.740436d))
 						.strokeColor(getResources().getColor(R.color.yellow)).strokeWidth(5f)
 						.fillColor(getResources().getColor(R.color.yellow_half)));
-		// Storage/bottling building
+		// Bottling building
 		getMap().addPolygon(
 				new PolygonOptions()
 						.add(new LatLng(52.085263d, 4.740358d), new LatLng(52.085113d, 4.740092d),
-								new LatLng(52.085134d, 4.740039d), new LatLng(52.084887d, 4.739685d),
-								new LatLng(52.084872d, 4.739703d), new LatLng(52.084696d, 4.739392d),
-								new LatLng(52.084557d, 4.739626d), new LatLng(52.084961d, 4.740251d),
+								new LatLng(52.085134d, 4.740039d), new LatLng(52.08504d, 4.739942d),
+								new LatLng(52.084915d, 4.740162d), new LatLng(52.084961d, 4.740251d),
 								new LatLng(52.085024d, 4.740243d), new LatLng(52.085190d, 4.740505d))
 						.strokeColor(getResources().getColor(R.color.darkred)).strokeWidth(5f)
 						.fillColor(getResources().getColor(R.color.darkred_half)));
@@ -126,16 +133,49 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 								new LatLng(52.085073d, 4.740849d), new LatLng(52.085019d, 4.740741d))
 						.strokeColor(getResources().getColor(R.color.darkred)).strokeWidth(5f)
 						.fillColor(getResources().getColor(R.color.darkred_half)));
+		// Entrance area
+		getMap().addPolygon(
+				new PolygonOptions()
+						.add(new LatLng(52.084910d, 4.740556d), new LatLng(52.084969d, 4.740648d),
+								new LatLng(52.084953d, 4.740698d), new LatLng(52.084892d, 4.740605d))
+						.strokeColor(getResources().getColor(R.color.blue)).strokeWidth(5f)
+						.fillColor(getResources().getColor(R.color.blue_half)));
+		// Food plaza
+		getMap().addPolygon(
+				new PolygonOptions()
+						.add(new LatLng(52.084730d, 4.741184d), new LatLng(52.084798d, 4.741074d),
+								new LatLng(52.084668d, 4.740881d), new LatLng(52.084625d, 4.741004d))
+						.strokeColor(getResources().getColor(R.color.blue)).strokeWidth(5f)
+						.fillColor(getResources().getColor(R.color.blue_half)));
+		// Festival area 2
+		getMap().addPolygon(
+				new PolygonOptions()
+						.add(new LatLng(52.084668d, 4.740881d), new LatLng(52.084762d, 4.740768d),
+								new LatLng(52.085470d, 4.741804d), new LatLng(52.085343d, 4.742064d),
+								new LatLng(52.085279d, 4.741973d), new LatLng(52.085324d, 4.741892d))
+						.strokeColor(getResources().getColor(R.color.yellow)).strokeWidth(5f)
+						.fillColor(getResources().getColor(R.color.yellow_half)));
+		// Mill building
+		getMap().addPolygon(
+				new PolygonOptions()
+						.add(new LatLng(52.085645d, 4.741879d), new LatLng(52.085816d, 4.742056d),
+								new LatLng(52.085752d, 4.742251d), new LatLng(52.085571d, 4.742085d))
+						.strokeColor(getResources().getColor(R.color.darkred)).strokeWidth(5f)
+						.fillColor(getResources().getColor(R.color.darkred_half)));
 
 		// Load the POI markers
 		elementMarkers = new SparseArray<Marker>(6);
 		addPoiMarker(ELEMENT_TRAINS);
 		addPoiMarker(ELEMENT_ENTRANCE);
-		addPoiMarker(ELEMENT_TOILET1);
-		addPoiMarker(ELEMENT_TOILET2);
+		addPoiMarker(ELEMENT_FTOILET1);
+		addPoiMarker(ELEMENT_FTOILET2);
 		addPoiMarker(ELEMENT_TOKENS);
 		addPoiMarker(ELEMENT_MILL);
 		addPoiMarker(ELEMENT_FIRSTAID);
+		addPoiMarker(ELEMENT_MTOILET1);
+		addPoiMarker(ELEMENT_MTOILET2);
+		addPoiMarker(ELEMENT_MTOILET3);
+		addPoiMarker(ELEMENT_FOODPLAZA);
 		if (initFocusId >= 0) {
 			focusOnMarker(initFocusId);
 		}
