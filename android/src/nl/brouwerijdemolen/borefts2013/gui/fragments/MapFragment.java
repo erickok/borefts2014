@@ -67,7 +67,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 			R.string.map_mtoilet3, R.drawable.ic_marker_toilet);
 	public static final MapElement ELEMENT_FOODPLAZA = new MapElement(10, new LatLng(52.084692d, 4.740983d),
 			R.string.map_foodplaza, R.drawable.ic_marker_entrance);
-	public static final int BREWER_ID_THRESHOLD = 10;
+	public static final int BREWER_ID_THRESHOLD = 100;
 
 	private SparseArray<Marker> elementMarkers;
 	private Map<Marker, Brewer> brewerMarkers;
@@ -176,7 +176,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		addPoiMarker(ELEMENT_MTOILET2);
 		addPoiMarker(ELEMENT_MTOILET3);
 		addPoiMarker(ELEMENT_FOODPLAZA);
-		if (initFocusId >= 0) {
+		if (initFocusId >= 0 && initFocusId < BREWER_ID_THRESHOLD) {
 			focusOnMarker(initFocusId);
 		}
 
@@ -235,6 +235,9 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		Marker marker = getMap().addMarker(
 				new MarkerOptions().position(new LatLng(brewer.getLatitude(), brewer.getLongitude()))
 						.title(brewer.getName()).icon(bitmapToUse));
+		// Also open the info window if a focus ID for this brewer was supplied
+		if (initFocusId == BREWER_ID_THRESHOLD + brewer.getId())
+			marker.showInfoWindow();
 		elementMarkers.put(BREWER_ID_THRESHOLD + brewer.getId(), marker);
 		brewerMarkers.put(marker, brewer);
 	}
