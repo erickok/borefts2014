@@ -28,8 +28,9 @@
 	<string name="info_nstimes">Departures</string>
 	<string name="info_noparking">Please don\'t drink and drive. Taxis are available via the regional taxi companies.</string>
 	<string name="info_taxis">Find taxis</string>
-	<string name="info_more">MOREOVER&#8230;</string>
-	<string name="info_"></string>
+	<string name="info_beercafe">BEER CAFÉ</string>
+	<string name="info_cafeinfo">Friday night from 22.00 till 24.00 hours the bar in the mill will be open for those who don’t want to go home just yet.</string>
+	<string name="info_findmill">Find mill</string>
 
 	<string name="info_origin">%1$s, %2$s</string>
 	<string name="info_abvperc">%1$.1f%%</string>

@@ -53,7 +53,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 			R.string.map_ftoilet1, R.drawable.ic_marker_toilet);
 	public static final MapElement ELEMENT_FTOILET2 = new MapElement(3, new LatLng(52.085127d, 4.740728d),
 			R.string.map_ftoilet2, R.drawable.ic_marker_toilet);
-	public static final MapElement ELEMENT_TOKENS = new MapElement(4, new LatLng(52.084935d, 4.740653d),
+	public static final MapElement ELEMENT_TOKENS = new MapElement(4, new LatLng(52.084919d, 4.740567d),
 			R.string.map_tokens, R.drawable.ic_marker_tokens);
 	public static final MapElement ELEMENT_MILL = new MapElement(5, new LatLng(52.085711d, 4.742077d),
 			R.string.map_mill, R.drawable.ic_marker_mill);

@@ -7,7 +7,8 @@
 
 	<RelativeLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content" >
+		android:layout_height="wrap_content"
+		android:paddingBottom="@dimen/margin_default" >
 
 		<FrameLayout
 			android:id="@+id/minimap"
@@ -164,13 +165,39 @@
 			android:textIsSelectable="false" />
 
 		<TextView
+			android:id="@+id/beercafe_text"
 			style="@style/SectionHeader"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/noparking_text"
 			android:layout_margin="@dimen/margin_default"
-			android:text="@string/info_more"
+			android:text="@string/info_beercafe"
 			android:textIsSelectable="false" />
+		
+		<Button
+			android:id="@+id/findmill_button"
+			style="@style/DefaultButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@id/beercafe_text"
+			android:layout_marginLeft="@dimen/margin_half"
+			android:layout_marginRight="@dimen/margin_default"
+			android:text="@string/info_findmill" />
+		
+		<TextView
+			android:id="@+id/cafeinfo_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/beercafe_text"
+			android:layout_marginBottom="@dimen/margin_half"
+			android:layout_marginLeft="@dimen/margin_default"
+			android:layout_marginRight="@dimen/margin_default"
+			android:layout_toLeftOf="@id/findmill_button"
+			android:paddingLeft="4dp"
+			android:text="@string/info_cafeinfo"
+			android:textIsSelectable="false" />
+		
 	</RelativeLayout>
 
 </ScrollView>

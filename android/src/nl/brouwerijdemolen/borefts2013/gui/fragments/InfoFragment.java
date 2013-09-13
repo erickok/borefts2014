@@ -78,4 +78,9 @@ public class InfoFragment extends Fragment {
 		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:52.084802,4.740689?z=14&q=taxi")).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 	}
 
+	@Click
+	protected void findmillButtonClicked() {
+		((NavigationManager) getActivity()).openMap(this, MapFragment_.ELEMENT_MILL.focusId, null);
+	}
+
 }

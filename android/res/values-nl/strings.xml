@@ -28,8 +28,9 @@
 	<string name="info_nstimes">Vertrektijden</string>
 	<string name="info_noparking">Alcohol en autorijden gaat niet samen. Taxi\'s zijn beschikbaar via de lokale taxicentrales.</string>
 	<string name="info_taxis">Zoek een taxi</string>
-	<string name="info_more">EN VERDER&#8230;</string>
-	<string name="info_"></string>
+	<string name="info_beercafe">BIERCAFÉ</string>
+	<string name="info_cafeinfo">Vrijdagavond van 2:00 tot 24:00 is de bar van de molen geopend voor diegene die nog even willen blijven hangen.</string>
+	<string name="info_findmill">Zoek de molen</string>
 
 	<string name="info_origin">%1$s, %2$s</string>
 	<string name="info_abvperc">%1$.1f%%</string>
