@@ -16,9 +16,10 @@
 	<string name="action_about">About this app</string>
 	
 	<string name="info_what">WHAT? WHERE?</string>
-	<string name="info_address">Borefts Beer Festival 2013\nDe Molen Brewery\nDoortocht 4\nBodegraven</string>
+	<string name="info_address">Borefts Beer Festival 2013\nDe Molen Brewery\nDoortocht 4, Bodegraven</string>
 	<string name="info_times">Sep 27 &#8211; 28\n12:00 &#8211; 22:00</string>
-	<string name="info_tokens">TOKENS</string>
+	<string name="info_dinner">The beer dinner (sold out!) takes place in the old mill\nOvertocht 43, Bodegraven</string>
+		<string name="info_tokens">TOKENS</string>
 	<string name="info_getmore">Get more</string>
 	<string name="info_entry">€ 20,- for entry, glass, bottle of water, festival book and 7 tokens</string>
 	<string name="info_token">€ 1,50 per extra token</string>
@@ -28,9 +29,10 @@
 	<string name="info_nstimes">Departures</string>
 	<string name="info_noparking">Please don\'t drink and drive. Taxis are available via the regional taxi companies.</string>
 	<string name="info_taxis">Find taxis</string>
-	<string name="info_beercafe">BEER CAFÉ</string>
+	<string name="info_beercafe">BEER CAFÉ &amp; SHOP</string>
 	<string name="info_cafeinfo">Friday night from 22.00 till 24.00 hours the bar in the mill will be open for those who don’t want to go home just yet.</string>
 	<string name="info_findmill">Find mill</string>
+	<string name="info_shopinfo">The beer shop in the old mill is open as well; for De Molen specialties, festival beers and hundreds of other beers.</string>
 
 	<string name="info_origin">%1$s, %2$s</string>
 	<string name="info_abvperc">%1$.1f%%</string>

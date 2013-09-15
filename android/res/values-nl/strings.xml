@@ -16,8 +16,9 @@
 	<string name="action_about">Over deze app</string>
 	
 	<string name="info_what">WAT? WAAR?</string>
-	<string name="info_address">Borefts Bierfestival 2013\nBrouwerij De Molen\nDoortocht 4\nBodegraven</string>
+	<string name="info_address">Borefts Bierfestival 2013\nBrouwerij De Molen\nDoortocht 4, Bodegraven</string>
 	<string name="info_times">Sep 27 &#8211; 28\n12:00 &#8211; 22:00</string>
+	<string name="info_dinner">Het bierdiner (uitverkocht!) vindt plaats in de oude molen\nOvertocht 43, Bodegraven</string>
 	<string name="info_tokens">MUNTEN</string>
 	<string name="info_getmore">EXTRA MUNTEN</string>
 	<string name="info_entry">€ 20,- voor toegang, glas, flesje water, festivalboekje en 7 munten</string>
@@ -28,9 +29,10 @@
 	<string name="info_nstimes">Vertrektijden</string>
 	<string name="info_noparking">Alcohol en autorijden gaat niet samen. Taxi\'s zijn beschikbaar via de lokale taxicentrales.</string>
 	<string name="info_taxis">Zoek een taxi</string>
-	<string name="info_beercafe">BIERCAFÉ</string>
+	<string name="info_beercafe">BIERCAFÉ &amp; -WINKEL</string>
 	<string name="info_cafeinfo">Vrijdagavond van 2:00 tot 24:00 is de bar van de molen geopend voor diegene die nog even willen blijven hangen.</string>
 	<string name="info_findmill">Zoek de molen</string>
+	<string name="info_shopinfo">De bierwinkel in de molen is natuurlijk ook geopend; voor specialiteiten van De Molen en brouwers op het festival en honderen andere bieren.</string>
 
 	<string name="info_origin">%1$s, %2$s</string>
 	<string name="info_abvperc">%1$.1f%%</string>

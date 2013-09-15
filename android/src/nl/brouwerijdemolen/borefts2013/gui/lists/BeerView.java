@@ -19,7 +19,6 @@ package nl.brouwerijdemolen.borefts2013.gui.lists;
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
-import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import android.content.Context;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -48,7 +47,8 @@ public class BeerView extends RelativeLayout {
 	}
 
 	public void bind(Beer beer, boolean showStyle) {
-		nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), beer.getName()));
+		//nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), beer.getName()));
+		nameText.setText(beer.getName());
 		stylebrewerText.setText(showStyle? beer.getStyle().getName(): beer.getBrewer().getName());
 		if (beer.getAbv() > 0)
 			abvText.setText(getResources().getString(R.string.info_abvperc, beer.getAbv()));

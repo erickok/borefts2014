@@ -9,7 +9,7 @@
 	<dimen name="text_tab">12sp</dimen>
 	<dimen name="text_small">14sp</dimen>
 	<dimen name="text_default">17sp</dimen>
-	<dimen name="text_enlarged">18sp</dimen>
+	<dimen name="text_enlarged">22sp</dimen>
 	<dimen name="text_large">29sp</dimen>
 	
 </resources>

@@ -18,7 +18,9 @@
 		android:layout_marginLeft="@dimen/margin_breweritem"
 		android:layout_toRightOf="@id/style_view"
 		android:textColor="#000"
-		android:textIsSelectable="false" />
+		android:textIsSelectable="false"
+		android:textStyle="bold"
+		android:textSize="@dimen/text_enlarged" />
 
 	<TextView
 		android:id="@+id/abv_text"

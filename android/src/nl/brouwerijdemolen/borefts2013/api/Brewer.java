@@ -10,6 +10,7 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 	private int id;
 	private String logoUrl;
 	private String name;
+	private String shortName;
 	private String sortName;
 	private String city;
 	private String country;
@@ -32,6 +33,10 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 		return name;
 	}
 
+	public String getShortName() {
+		return shortName;
+	}
+	
 	public String getSortName() {
 		return sortName;
 	}
@@ -69,6 +74,7 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 		this.id = in.readInt();
 		this.logoUrl = in.readString();
 		this.name = in.readString();
+		this.shortName = in.readString();
 		this.sortName = in.readString();
 		this.city = in.readString();
 		this.country = in.readString();
@@ -97,6 +103,7 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 		dest.writeInt(id);
 		dest.writeString(logoUrl);
 		dest.writeString(name);
+		dest.writeString(shortName);
 		dest.writeString(sortName);
 		dest.writeString(city);
 		dest.writeString(country);

@@ -19,6 +19,7 @@
 		android:layout_toRightOf="@id/color_view"
 		android:textColor="#000"
 		android:textIsSelectable="false"
+		android:textStyle="bold"
 		android:textSize="@dimen/text_enlarged" />
 
 </RelativeLayout>

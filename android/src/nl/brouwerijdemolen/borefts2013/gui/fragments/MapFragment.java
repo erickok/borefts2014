@@ -234,7 +234,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 			bitmapToUse = BitmapDescriptorFactory.fromBitmap(drawBrewerMarker(bitmap));
 		Marker marker = getMap().addMarker(
 				new MarkerOptions().position(new LatLng(brewer.getLatitude(), brewer.getLongitude()))
-						.title(brewer.getName()).icon(bitmapToUse));
+						.title(brewer.getShortName()).icon(bitmapToUse));
 		// Also open the info window if a focus ID for this brewer was supplied
 		if (initFocusId == BREWER_ID_THRESHOLD + brewer.getId())
 			marker.showInfoWindow();

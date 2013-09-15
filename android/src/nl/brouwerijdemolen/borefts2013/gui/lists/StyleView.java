@@ -19,7 +19,6 @@ package nl.brouwerijdemolen.borefts2013.gui.lists;
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
-import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import android.content.Context;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -48,7 +47,8 @@ public class StyleView extends RelativeLayout {
 	}
 
 	public void bind(Style style) {
-		nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), style.getName()));
+		//nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), style.getName()));
+		nameText.setText(style.getName());
 		colorView.setBackgroundColor(style.getColorResource(getContext().getResources()));
 	}
 

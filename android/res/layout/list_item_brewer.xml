@@ -18,6 +18,7 @@
 		android:layout_toRightOf="@id/logo_image"
 		android:textColor="#000"
 		android:textIsSelectable="false"
+		android:textStyle="bold"
 		android:textSize="@dimen/text_enlarged" />
 
 	<TextView

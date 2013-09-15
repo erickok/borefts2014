@@ -1,8 +1,10 @@
 package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
 import java.util.Collections;
+import java.util.Comparator;
 
 import nl.brouwerijdemolen.borefts2013.R;
+import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Brewers;
 import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
@@ -57,7 +59,7 @@ public class BrewersFragment extends Fragment implements Listener<Brewers>, Erro
 
 	@Override
 	public void onResponse(Brewers brewers) {
-		Collections.sort(brewers.getBrewers());
+		Collections.sort(brewers.getBrewers(), brewersComparator);
 		brewerListAdapter.update(brewers.getBrewers());
 		theList.setAdapter(brewerListAdapter);
 		theList.setVisibility(View.VISIBLE);
@@ -85,6 +87,20 @@ public class BrewersFragment extends Fragment implements Listener<Brewers>, Erro
 			loadingProgress.setVisibility(View.VISIBLE);
 			refreshScreen();
 		}
+	};
+	
+	private final Comparator<Brewer> brewersComparator = new Comparator<Brewer>(){
+		@Override
+		public int compare(Brewer lhs, Brewer rhs) {
+			// De Molen (ID 0) itself is always first in the list, the rest is handled by the Brewer objects comparable 
+			// implementation (on the brewer's sort name)
+			if (lhs.getId() == 0)
+				return -1;
+			if (rhs.getId() == 0)
+				return 1;
+			return lhs.compareTo(rhs);
+		}
+		
 	};
 
 }
