@@ -83,7 +83,7 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 	protected void actionSendcorrection() {
 		Intent startEmail = new Intent(Intent.ACTION_SEND);
 		startEmail.setType("message/rfc822");
-		startEmail.putExtra(Intent.EXTRA_EMAIL, "borefts2013@2312.nl");
+		startEmail.putExtra(Intent.EXTRA_EMAIL, new String[] { "borefts2013@2312.nl" });
 		startEmail.putExtra(Intent.EXTRA_SUBJECT, "Borefts 2013 Android app correction");
 		startActivity(startEmail);
 	}

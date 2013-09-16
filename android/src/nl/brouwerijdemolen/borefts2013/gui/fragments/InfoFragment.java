@@ -1,5 +1,7 @@
 package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
+import java.util.GregorianCalendar;
+
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.content.Intent;
@@ -49,10 +51,9 @@ public class InfoFragment extends Fragment {
 		Intent intent = new Intent(Intent.ACTION_EDIT);
 		intent.setType("vnd.android.cursor.item/event");
 		intent.putExtra("title", getString(R.string.app_name));
-		intent.putExtra("eventLocation", getString(R.string.info_address));
-		intent.putExtra("beginTime", 1380301200); // 27 sep 2013 12:00
-		intent.putExtra("endTime", 1380337200); // 27 sep 2013 22:00
-		intent.putExtra("endTime", 1380337200); // 27 sep 2013 22:00
+		intent.putExtra("eventLocation", "Doortocht 4, Bodegraven, The Netherlands");
+		intent.putExtra("beginTime", new GregorianCalendar(2013, 8, 27, 12, 0).getTimeInMillis());
+		intent.putExtra("endTime", new GregorianCalendar(2013, 8, 27, 22, 0).getTimeInMillis());
 		intent.putExtra("rrule", "FREQ=DAILY;COUNT=2");
 		if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
 			startActivity(intent);
