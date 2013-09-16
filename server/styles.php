@@ -164,15 +164,6 @@
             "bitterness": 3,
             "sweetness": 1,
             "acidity": 3
-        },
-        {
-        	"id": 18,
-            "name": "Unknown",
-            "color": -1,
-            "abv": 0,
-            "bitterness": 0,
-            "sweetness": 0,
-            "acidity": 0
         }
     ],
     "revision": 1
