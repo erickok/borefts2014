@@ -57,7 +57,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 			R.string.map_tokens, R.drawable.ic_marker_tokens);
 	public static final MapElement ELEMENT_MILL = new MapElement(5, new LatLng(52.085711d, 4.742077d),
 			R.string.map_mill, R.drawable.ic_marker_mill);
-	public static final MapElement ELEMENT_FIRSTAID = new MapElement(6, new LatLng(52.084738d, 4.740854d),
+	public static final MapElement ELEMENT_FIRSTAID = new MapElement(6, new LatLng(52.084859d, 4.741085d),
 			R.string.map_firstaid, R.drawable.ic_marker_firstaid);
 	public static final MapElement ELEMENT_MTOILET1 = new MapElement(7, new LatLng(52.085345d, 4.741973d),
 			R.string.map_mtoilet1, R.drawable.ic_marker_toilet);
@@ -66,7 +66,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 	public static final MapElement ELEMENT_MTOILET3 = new MapElement(9, new LatLng(52.085106d, 4.740752d),
 			R.string.map_mtoilet3, R.drawable.ic_marker_toilet);
 	public static final MapElement ELEMENT_FOODPLAZA = new MapElement(10, new LatLng(52.084692d, 4.740983d),
-			R.string.map_foodplaza, R.drawable.ic_marker_entrance);
+			R.string.map_foodplaza, R.drawable.ic_marker_food);
 	public static final int BREWER_ID_THRESHOLD = 100;
 
 	private SparseArray<Marker> elementMarkers;
