@@ -164,7 +164,16 @@
             "bitterness": 3,
             "sweetness": 1,
             "acidity": 3
+        },
+        {
+        	"id": 18,
+            "name": "American Strong Ale",
+            "color": 4,
+            "abv": 5,
+            "bitterness": 4,
+            "sweetness": 5,
+            "acidity": 2
         }
     ],
-    "revision": 1
+    "revision": 2
 }

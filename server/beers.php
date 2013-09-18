@@ -1380,7 +1380,7 @@
         },
         {
             "id": 118,
-            "name": "Rooie Dop Chica Americana",
+            "name": "Rooie Dop Chica Americana IPA",
             "brewerId": 17,
             "styleId": 2,
             "abv": 7.1,
@@ -1391,7 +1391,7 @@
         },
         {
             "id": 119,
-            "name": "Rooie Dop Ot The Explorer",
+            "name": "Rooie Dop Ot The Explorer Double IPA",
             "brewerId": 17,
             "styleId": 1,
             "abv": 8.7,
@@ -1575,7 +1575,40 @@
             "tags": "",
             "ratebeerId": -1,
             "untappdId": -1
+        },
+        {
+            "id": 119,
+            "name": "Rooie Dop/Oersoep What A Wunderful White",
+            "brewerId": 17,
+            "styleId": 2,
+            "abv": 7.2,
+            "oakAged": false,
+            "tags": "white ipa",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 119,
+            "name": "Rooie Dop/Oersoep Brown Mothafuckah",
+            "brewerId": 17,
+            "styleId": 8,
+            "abv": 4.3,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 119,
+            "name": "Rooie Dop Utrecht Strong Ale",
+            "brewerId": 17,
+            "styleId": 18,
+            "abv": 9.1,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 191347,
+            "untappdId": 259572‎
         }
     ],
-    "revision": 2
+    "revision": 3
 }

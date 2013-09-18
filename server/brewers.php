@@ -248,7 +248,7 @@
             "shortName": "Rooie Dop",
             "sortName": "Rooie Dop",
             "city": "Utrecht",
-            "country": "THe Netherlands",
+            "country": "The Netherlands",
             "description": "Rooie Dop is ... TO ADD",
             "website": "http://www.rooiedop.nl",
             "latitude": 52.085292,
