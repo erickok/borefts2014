@@ -15,6 +15,7 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 	private String city;
 	private String country;
 	private String description;
+	private String website;
 	private float latitude;
 	private float longitude;
 
@@ -53,6 +54,10 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 		return description;
 	}
 	
+	public String getWebsite() {
+		return website;
+	}
+	
 	public float getLatitude() {
 		return latitude;
 	}
@@ -79,6 +84,7 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 		this.city = in.readString();
 		this.country = in.readString();
 		this.description = in.readString();
+		this.website = in.readString();
 		this.latitude = in.readFloat();
 		this.longitude = in.readFloat();
 	}
@@ -108,6 +114,7 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 		dest.writeString(city);
 		dest.writeString(country);
 		dest.writeString(description);
+		dest.writeString(website);
 		dest.writeFloat(latitude);
 		dest.writeFloat(longitude);
 	}

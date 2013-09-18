@@ -1607,7 +1607,7 @@
             "oakAged": false,
             "tags": "",
             "ratebeerId": 191347,
-            "untappdId": 259572‎
+            "untappdId": 259572
         }
     ],
     "revision": 3

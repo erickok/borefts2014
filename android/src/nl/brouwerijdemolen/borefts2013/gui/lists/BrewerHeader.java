@@ -21,7 +21,7 @@ public class BrewerHeader extends RelativeLayout {
 	@ViewById
 	protected NetworkImageView logoImage;
 	@ViewById
-	protected TextView nameText, originText, descriptionText;
+	protected TextView nameText, originText, weblinkText;
 	
 	/**
 	 * Constructor for this header view. Only for internal use; use the {@link BrewerHeaderedAdapter} class instead.
@@ -34,7 +34,7 @@ public class BrewerHeader extends RelativeLayout {
 	protected void update(Brewer brewer) {
 		nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), brewer.getName()));
 		originText.setText(getResources().getString(R.string.info_origin, brewer.getCity(), brewer.getCountry()));
-		descriptionText.setText(brewer.getDescription());
+		weblinkText.setText(brewer.getWebsite());
 		logoImage.setImageUrl(brewer.getLogoFullUrl(), apiQueue.getImageLoader());
 	}
 	
