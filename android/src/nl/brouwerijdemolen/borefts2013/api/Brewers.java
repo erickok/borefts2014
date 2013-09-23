@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Brewers {
 
-	public static final String BREWERS_URL = "http://2312.nl/borefts2013/brewers.php";
+	public static final String BREWERS_URL = "http://62.212.65.175/borefts2013/brewers.php";
 
 	private List<Brewer> brewers;
 	private int revision;

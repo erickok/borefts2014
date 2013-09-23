@@ -33,6 +33,7 @@ import com.googlecode.androidannotations.annotations.Background;
 import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.FragmentArg;
+import com.googlecode.androidannotations.annotations.InstanceState;
 import com.googlecode.androidannotations.annotations.UiThread;
 import com.googlecode.androidannotations.annotations.ViewById;
 
@@ -40,6 +41,7 @@ import com.googlecode.androidannotations.annotations.ViewById;
 public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorListener, OnItemClickListener {
 
 	@FragmentArg
+	@InstanceState
 	protected Brewer brewer;
 	private SparseArray<Style> loadedStyles;
 
@@ -92,7 +94,7 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 		apiQueue.add(new GsonRequest<Beers>(Beers.BEERS_URL, Beers.class, null, new Listener<Beers>() {
 			@Override
 			public void onResponse(Beers beers) {
-				if (getActivity() == null)
+				if (getActivity() == null || brewer == null)
 					return;
 				// Beers are loaded now too; sort them and add the style and brewer objects
 				List<Beer> beersList = new ArrayList<Beer>();

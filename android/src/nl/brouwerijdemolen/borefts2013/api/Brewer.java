@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class Brewer implements Comparable<Brewer>, Parcelable {
 
-	public static final String BREWER_LOGO_BASE_URL = "http://2312.nl/borefts2013/logos/%s";
+	public static final String BREWER_LOGO_BASE_URL = "http://62.212.65.175/borefts2013/logos/%s";
 
 	private int id;
 	private String logoUrl;

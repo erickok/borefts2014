@@ -173,7 +173,16 @@
             "bitterness": 4,
             "sweetness": 5,
             "acidity": 2
+        },
+        {
+        	"id": 19,
+            "name": "Flemish Brown",
+            "color": 4,
+            "abv": 3,
+            "bitterness": 2,
+            "sweetness": 3,
+            "acidity": 4
         }
     ],
-    "revision": 2
+    "revision": 3
 }

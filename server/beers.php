@@ -4,17 +4,6 @@
 {
     "beers": [
         {
-            "id": 1,
-            "name": "De Molen Plastic Soup BA",
-            "brewerId": 0,
-            "styleId": 3,
-            "abv": 11,
-            "oakAged": true,
-            "tags": "barrel aged",
-            "ratebeerId": -1,
-            "untappdId": -1
-        },
-        {
             "id": 2,
             "name": "De Molen Zure Kersen Bom",
             "brewerId": 0,
@@ -29,7 +18,7 @@
             "id": 3,
             "name": "De Molen Ginger Shot",
             "brewerId": 0,
-            "styleId": 2,
+            "styleId": 10,
             "abv": 4.2,
             "oakAged": false,
             "tags": "ginger",
@@ -60,7 +49,7 @@
         },
         {
             "id": 6,
-            "name": "De Molen Moord & Brand Bourbon BA",
+            "name": "De Molen Moord & Brand Bourbon",
             "brewerId": 0,
             "styleId": 5,
             "abv": 9.8,
@@ -99,17 +88,6 @@
             "abv": 10,
             "oakAged": false,
             "tags": "coffee",
-            "ratebeerId": -1,
-            "untappdId": -1
-        },
-        {
-            "id": 10,
-            "name": "De Molen Dutch Fresh Hopped",
-            "brewerId": 0,
-            "styleId": 2,
-            "abv": 6,
-            "oakAged": false,
-            "tags": "",
             "ratebeerId": -1,
             "untappdId": -1
         },
@@ -183,7 +161,7 @@
             "id": 17,
             "name": "Emelisse Aceto Balsamico BA",
             "brewerId": 1,
-            "styleId": 5,
+            "styleId": 19,
             "abv": 7.5,
             "oakAged": true,
             "tags": "barrel aged,balsamico",
@@ -645,7 +623,7 @@
             "id": 59,
             "name": "Alvinne Foederbier",
             "brewerId": 8,
-            "styleId": 3,
+            "styleId": 19,
             "abv": 6.9,
             "oakAged": false,
             "tags": "",
@@ -920,7 +898,7 @@
             "id": 76,
             "name": "Toccalmatto Vecchio Bruno Sour Emilian Red Ale BA",
             "brewerId": 10,
-            "styleId": 3,
+            "styleId": 19,
             "abv": 8,
             "oakAged": true,
             "tags": "barrel aged",
@@ -1578,7 +1556,7 @@
         },
         {
             "id": 119,
-            "name": "Rooie Dop/Oersoep What A Wunderful White",
+            "name": "Rooie Dop/Oersoep What A Wonderful White",
             "brewerId": 17,
             "styleId": 2,
             "abv": 7.2,
@@ -1608,7 +1586,106 @@
             "tags": "",
             "ratebeerId": 191347,
             "untappdId": 259572
+        },
+        {
+            "id": 120,
+            "name": "De Molen Hel & Verdoemenis Bowmore BA",
+            "brewerId": 0,
+            "styleId": 5,
+            "abv": 11,
+            "oakAged": true,
+            "tags": "barrel aged,wiskey,bowmore",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 121,
+            "name": "De Molen IPL India Pale Lager Cascade/Simcoe",
+            "brewerId": 0,
+            "styleId": 13,
+            "abv": 6.2,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 122,
+            "name": "De Molen IPL India Pale Lager Cascade/Amarillo",
+            "brewerId": 0,
+            "styleId": 13,
+            "abv": 6.2,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 123,
+            "name": "De Molen Hot & Spicy Naga Jolokia",
+            "brewerId": 0,
+            "styleId": 5,
+            "abv": 10.2,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 124,
+            "name": "De Molen Bommen & Granaten Giovanni",
+            "brewerId": 0,
+            "styleId": 0,
+            "abv": 15.2,
+            "oakAged": true,
+            "tags": "barrel aged,wine",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 125,
+            "name": "De Molen Rime of the Ancient Mariner",
+            "brewerId": 0,
+            "styleId": 5,
+            "abv": 11,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 126,
+            "name": "De Molen Zwaaien & Zwieren",
+            "brewerId": 0,
+            "styleId": 5,
+            "abv": 12.6,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 127,
+            "name": "Mont Salève Twin Bitter",
+            "brewerId": 16,
+            "styleId": 6,
+            "abv": 2.5,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 128,
+            "name": "Mont Salève Nouveaux Mondes",
+            "brewerId": 16,
+            "styleId": 1,
+            "abv": -1,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
         }
     ],
-    "revision": 3
+    "revision": 4
 }
