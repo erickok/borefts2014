@@ -1,5 +1,6 @@
 package nl.brouwerijdemolen.borefts2013.gui;
 
+import im.delight.apprater.AppRater;
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
@@ -59,6 +60,13 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 			}
 		});
 
+		AppRater appRater = new AppRater(this, this.getPackageName());
+		appRater.setDaysBeforePrompt(0);
+		appRater.setLaunchesBeforePrompt(5);
+		appRater.setPhrases(R.string.rate_title, R.string.rate_explanation, R.string.rate_now, R.string.rate_later,
+				R.string.rate_never);
+		appRater.show();
+		
 	}
 
 	@Override
