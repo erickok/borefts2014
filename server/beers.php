@@ -983,17 +983,6 @@
             "untappdId": 286038
         },
         {
-            "id": 84,
-            "name": "Struise Saint Amatus",
-            "brewerId": 12,
-            "styleId": 14,
-            "abv": 10.5,
-            "oakAged": true,
-            "tags": "barrel aged,woodford reserve",
-            "ratebeerId": 119174,
-            "untappdId": 270216
-        },
-        {
             "id": 85,
             "name": "Struise Smonk",
             "brewerId": 12,
@@ -1603,7 +1592,7 @@
             "name": "De Molen IPL India Pale Lager Cascade/Simcoe",
             "brewerId": 0,
             "styleId": 13,
-            "abv": 6.2,
+            "abv": 5.4,
             "oakAged": false,
             "tags": "",
             "ratebeerId": -1,
@@ -1614,7 +1603,7 @@
             "name": "De Molen IPL India Pale Lager Cascade/Amarillo",
             "brewerId": 0,
             "styleId": 13,
-            "abv": 6.2,
+            "abv": 5.4,
             "oakAged": false,
             "tags": "",
             "ratebeerId": -1,
@@ -1685,7 +1674,29 @@
             "tags": "",
             "ratebeerId": -1,
             "untappdId": -1
+        },
+        {
+            "id": 130,
+            "name": "Struise/Rio Brewing Yairo aka Eight Colors",
+            "brewerId": 12,
+            "styleId": 20,
+            "abv": 5,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id":131,
+            "name": "Struise O.N.E. Our Nastiest Effort",
+            "brewerId": 12,
+            "styleId": 14,
+            "abv": 10,
+            "oakAged": true,
+            "tags": "barrel aged,bourbon",
+            "ratebeerId": 186727,
+            "untappdId": 449513
         }
     ],
-    "revision": 4
+    "revision": 5
 }

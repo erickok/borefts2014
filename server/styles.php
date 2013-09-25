@@ -182,7 +182,16 @@
             "bitterness": 2,
             "sweetness": 3,
             "acidity": 4
+        },
+        {
+        	"id": 20,
+            "name": "Wheat Ale",
+            "color": 3,
+            "abv": 2,
+            "bitterness": 3,
+            "sweetness": 3,
+            "acidity": 3
         }
     ],
-    "revision": 3
+    "revision": 4
 }
