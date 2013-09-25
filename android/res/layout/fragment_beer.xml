@@ -24,17 +24,17 @@
 		android:layout_alignParentRight="true"
 		android:layout_below="@id/name_text"
 		android:layout_marginBottom="@dimen/margin_half"
-		android:layout_marginLeft="@dimen/margin_default"
+		android:layout_marginLeft="@dimen/margin_half"
 		android:layout_marginRight="@dimen/margin_default" />
 
-	<TextView
-		android:id="@+id/brewer_text"
+	<Button
+		android:id="@+id/brewer_button"
+		style="@style/DefaultButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@id/name_text"
-		android:layout_marginBottom="@dimen/margin_half"
 		android:layout_marginLeft="@dimen/margin_default"
-		android:textIsSelectable="false" />
+		android:layout_marginRight="@dimen/margin_half" />
 
 	<TextView
 		android:id="@+id/abv_text"

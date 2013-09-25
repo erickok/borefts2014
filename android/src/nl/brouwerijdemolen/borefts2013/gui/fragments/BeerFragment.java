@@ -36,9 +36,9 @@ public class BeerFragment extends SherlockFragment {
 	@Bean
 	protected StarPersistance stars;
 	@ViewById
-	protected TextView nameText, brewerText, abvText;
+	protected TextView nameText, abvText;
 	@ViewById
-	protected Button styleButton;
+	protected Button brewerButton, styleButton;
 	@ViewById
 	protected LinearLayout tagsLayout;
 
@@ -50,7 +50,7 @@ public class BeerFragment extends SherlockFragment {
 	@AfterViews
 	protected void init() {
 		nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getActivity(), beer.getName()));
-		brewerText.setText(beer.getBrewer().getName());
+		brewerButton.setText(beer.getBrewer().getName());
 		styleButton.setText(beer.getStyle().getName());
 		if (beer.getAbv() >= 0)
 			abvText.setText(getString(R.string.info_abvlabel, beer.getAbv()));
@@ -70,11 +70,16 @@ public class BeerFragment extends SherlockFragment {
 		menu.findItem(R.id.action_star_off).setVisible(!isStarred);
 		menu.findItem(R.id.action_star_on).setVisible(isStarred);
 	}
-	
+
 	private void addTagView(String tag) {
 		getActivity().getLayoutInflater().inflate(R.layout.widget_label, tagsLayout);
 		tag = tag.toUpperCase(Locale.getDefault());
 		((TextView) tagsLayout.getChildAt(tagsLayout.getChildCount() - 1)).setText(tag);
+	}
+
+	@Click
+	protected void brewerButtonClicked() {
+		((NavigationManager) getActivity()).openBrewer(this, beer.getBrewer());
 	}
 
 	@Click
