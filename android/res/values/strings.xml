@@ -8,9 +8,12 @@
 	<string name="action_brewers">Brewers</string>
 	<string name="action_styles">Styles</string>
 	<string name="action_twitter">Twitter</string>
+	<string name="action_stars">Stars</string>
 	<string name="action_googleplus">Google+</string>
 	<string name="action_refresh">Refresh</string>
 	<string name="action_locate">Locate beer</string>
+	<string name="action_star_on">Star this beer</string>
+	<string name="action_star_off">Remove star</string>
 	<string name="action_settings">Settings</string>
 	<string name="action_sendcorrection">Send correction</string>
 	<string name="action_about">About this app</string>
@@ -47,6 +50,9 @@
 	<string name="info_untappd">UNTAPPD</string>
 	<string name="info_ratebeer">RATEBEER</string>
 	
+	<string name="info_stars">Stars</string>
+	<string name="info_nostars">No beers starred yet.\n\nYou can add your favourite beers to this list using the star button in the top of every beer details screen.</string>
+		
 	<string name="map_trains">Train station</string>
 	<string name="map_entrance">Entrance</string>
 	<string name="map_mtoilet1">Male toilet 1</string>

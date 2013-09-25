@@ -22,10 +22,11 @@ public class BeerListAdapter extends BaseAdapter {
 
 	/**
 	 * Allows updating the full internal list of beers at once, replacing the old list
-	 * @param newTorrents The new list of torrent objects
+	 * @param beers The new list of beer objects
+	 * @param showStyleName Whether to show the style name in the UI instead of the brewer name
 	 */
-	public void update(List<Beer> brewers, boolean showStyleName) {
-		this.beers = brewers;
+	public void update(List<Beer> beers, boolean showStyleName) {
+		this.beers = beers;
 		this.showStyleName = showStyleName;
 		notifyDataSetChanged();
 	}
