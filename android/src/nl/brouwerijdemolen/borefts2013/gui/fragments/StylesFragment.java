@@ -3,7 +3,6 @@ package nl.brouwerijdemolen.borefts2013.gui.fragments;
 import java.util.Collections;
 
 import nl.brouwerijdemolen.borefts2013.R;
-import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import nl.brouwerijdemolen.borefts2013.api.Styles;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
@@ -52,7 +51,7 @@ public class StylesFragment extends Fragment implements Listener<Styles>, ErrorL
 	}
 
 	private void refreshScreen() {
-		apiQueue.add(new GsonRequest<Styles>(Styles.STYLES_URL, Styles.class, null, this, this));
+		apiQueue.requestStyles(this, this);
 	}
 
 	@Override

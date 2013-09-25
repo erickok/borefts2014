@@ -9,7 +9,6 @@ import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Beers;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Brewers;
-import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
@@ -68,7 +67,7 @@ public class StyleFragment extends Fragment implements Listener<Brewers>, ErrorL
 
 	private void refreshScreen() {
 		// Load the brewers first, as we will need this info to display every beer's brewer
-		apiQueue.add(new GsonRequest<Brewers>(Brewers.BREWERS_URL, Brewers.class, null, this, this));
+		apiQueue.requestBrewers(this, this);
 	}
 
 	@Override
@@ -89,7 +88,7 @@ public class StyleFragment extends Fragment implements Listener<Brewers>, ErrorL
 
 	@UiThread
 	protected void startBeersRequest() {
-		apiQueue.add(new GsonRequest<Beers>(Beers.BEERS_URL, Beers.class, null, new Listener<Beers>() {
+		apiQueue.requestBeers(new Listener<Beers>() {
 			@Override
 			public void onResponse(Beers beers) {
 				// Beers are loaded now too; sort them and add the style and brewer objects
@@ -111,7 +110,7 @@ public class StyleFragment extends Fragment implements Listener<Brewers>, ErrorL
 				errorText.setVisibility(View.GONE);
 				loadingProgress.setVisibility(View.GONE);
 			}
-		}, this));
+		}, this);
 	}
 
 	@Override

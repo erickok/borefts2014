@@ -8,7 +8,6 @@ import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Beers;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
-import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.api.Styles;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
@@ -70,7 +69,7 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 
 	private void refreshScreen() {
 		// Load the styles first, as we will need this info to display every beer's style
-		apiQueue.add(new GsonRequest<Styles>(Styles.STYLES_URL, Styles.class, null, this, this));
+		apiQueue.requestStyles(this, this);
 	}
 
 	@Override
@@ -91,7 +90,7 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 
 	@UiThread
 	protected void startBeersRequest() {
-		apiQueue.add(new GsonRequest<Beers>(Beers.BEERS_URL, Beers.class, null, new Listener<Beers>() {
+		apiQueue.requestBeers(new Listener<Beers>() {
 			@Override
 			public void onResponse(Beers beers) {
 				if (getActivity() == null || brewer == null)
@@ -115,7 +114,7 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 				errorText.setVisibility(View.GONE);
 				loadingProgress.setVisibility(View.GONE);
 			}
-		}, this));
+		}, this);
 	}
 
 	@Override

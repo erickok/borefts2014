@@ -6,7 +6,6 @@ import java.util.Map;
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Brewers;
-import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import android.graphics.Bitmap;
@@ -181,7 +180,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		}
 
 		// Load the brewers markers asynchronously
-		apiQueue.add(new GsonRequest<Brewers>(Brewers.BREWERS_URL, Brewers.class, null, this, this));
+		apiQueue.requestBrewers(this, this);
 
 	}
 
