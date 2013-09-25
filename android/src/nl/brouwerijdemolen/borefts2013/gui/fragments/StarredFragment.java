@@ -9,7 +9,6 @@ import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Beers;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Brewers;
-import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.api.Styles;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
@@ -52,6 +51,8 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 	protected TextView errorText;
 	@ViewById
 	protected ProgressBar loadingProgress;
+	@ViewById
+	protected TextView emptyText;
 	@Bean
 	protected BeerListAdapter beerListAdapter;
 
@@ -64,6 +65,7 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 		theList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		theList.setOnItemClickListener(this);
 		errorText.setOnClickListener(onRetry);
+		emptyText.setText(R.string.info_nostars);
 		refreshScreen();
 	}
 
@@ -73,12 +75,12 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 			return;
 		}
 		// Load the brewers first, as we will need this info to display every beer's brewer
-		apiQueue.add(new GsonRequest<Brewers>(Brewers.BREWERS_URL, Brewers.class, null, new Listener<Brewers>() {
+		apiQueue.requestBrewers(new Listener<Brewers>() {
 			@Override
 			public void onResponse(Brewers brewers) {
 				handleBrewersResult(brewers.getBrewers());
 			}
-		}, this));
+		}, this);
 	}
 
 	@Background
@@ -88,12 +90,12 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 			this.loadedBrewers.append(brewer.getId(), brewer);
 		}
 		// Now we have loaded and sorted the brewers, start (via the UI thread) the loading of the styles
-		apiQueue.add(new GsonRequest<Styles>(Styles.STYLES_URL, Styles.class, null, new Listener<Styles>() {
+		apiQueue.requestStyles(new Listener<Styles>() {
 			@Override
 			public void onResponse(Styles styles) {
 				handleStylesResult(styles.getStyles());
 			}
-		}, this));
+		}, this);
 	}
 
 	@Background
@@ -108,7 +110,7 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 
 	@UiThread
 	protected void startBeersRequest() {
-		apiQueue.add(new GsonRequest<Beers>(Beers.BEERS_URL, Beers.class, null, new Listener<Beers>() {
+		apiQueue.requestBeers(new Listener<Beers>() {
 			@Override
 			public void onResponse(Beers beers) {
 				// Beers are loaded now too; search for those that are starred and bind the beer brewer/style
@@ -126,7 +128,7 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 				theList.setAdapter(beerListAdapter);
 				updateErrorViews(false, false);
 			}
-		}, this));
+		}, this);
 	}
 
 	@Override
@@ -137,7 +139,7 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 	private void updateErrorViews(boolean showAsError, boolean showAsEmpty) {
 		theList.setVisibility(!showAsError && !showAsEmpty? View.VISIBLE: View.GONE);
 		errorText.setVisibility(showAsError? View.VISIBLE: View.GONE);
-		//emptyText.setVisibility(!showAsError && showAsEmpty? View.VISIBLE: View.GONE);
+		emptyText.setVisibility(!showAsError && showAsEmpty? View.VISIBLE: View.GONE);
 		loadingProgress.setVisibility(View.GONE);
 	}
 

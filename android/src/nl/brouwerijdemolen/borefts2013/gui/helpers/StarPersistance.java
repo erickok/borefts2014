@@ -79,10 +79,11 @@ public class StarPersistance {
 			starCache = new HashSet<Integer>();
 			return;
 		}
-		String[] rawStars = rawPref.split("|");
+		String[] rawStars = rawPref.split("\\|");
 		starCache = new HashSet<Integer>(rawStars.length);
 		for (String beerId : rawStars) {
-			starCache.add(Integer.parseInt(beerId));
+			if (!beerId.equals(""))
+				starCache.add(Integer.parseInt(beerId));
 		}
 	}
 

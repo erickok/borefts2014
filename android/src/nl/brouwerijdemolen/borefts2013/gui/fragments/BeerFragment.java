@@ -67,8 +67,8 @@ public class BeerFragment extends SherlockFragment {
 	public void onPrepareOptionsMenu(Menu menu) {
 		super.onPrepareOptionsMenu(menu);
 		boolean isStarred = stars.isStarred(beer.getId());
-		menu.findItem(R.id.action_star_on).setVisible(!isStarred);
-		menu.findItem(R.id.action_star_off).setVisible(isStarred);
+		menu.findItem(R.id.action_star_off).setVisible(!isStarred);
+		menu.findItem(R.id.action_star_on).setVisible(isStarred);
 	}
 	
 	private void addTagView(String tag) {
@@ -84,13 +84,13 @@ public class BeerFragment extends SherlockFragment {
 
 	@OptionsItem
 	protected void actionStarOn() {
-		stars.addStar(beer.getId());
+		stars.removeStar(beer.getId());
 		getSherlockActivity().supportInvalidateOptionsMenu();
 	}
 
 	@OptionsItem
 	protected void actionStarOff() {
-		stars.removeStar(beer.getId());
+		stars.addStar(beer.getId());
 		getSherlockActivity().supportInvalidateOptionsMenu();
 	}
 
