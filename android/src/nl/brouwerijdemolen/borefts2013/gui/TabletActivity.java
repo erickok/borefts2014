@@ -36,6 +36,7 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 	private TwitterFragment twitterFragment = null;
 	private BrewersFragment brewersFragment = null;
 	private StylesFragment stylesFragment = null;
+	private StarredFragment starredFragment = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,8 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 			getSupportActionBar().addTab(
 					getSupportActionBar().newTab().setText(R.string.action_twitter).setTabListener(this)
 							.setTag("twitter"));
+		getSupportActionBar().addTab(
+				getSupportActionBar().newTab().setText(R.string.info_stars).setTabListener(this).setTag("stars"));
 
 		// Set up panes layout and load the first
 		setPaneSizer(new ExamplePaneSizer());
@@ -95,7 +98,6 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 
 	@OptionsItem
 	protected void actionSettings() {
-		// TODO: Start settings activity
 	}
 
 	@OptionsItem
@@ -154,6 +156,10 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 			if (twitterFragment == null)
 				twitterFragment = TwitterFragment_.builder().build();
 			addFragment(mapFragment, twitterFragment);
+		} else if (tab.getTag().equals("stars")) {
+			if (starredFragment == null)
+				starredFragment = StarredFragment_.builder().build();
+			addFragment(mapFragment, starredFragment);
 		}
 		supportInvalidateOptionsMenu();
 	}
