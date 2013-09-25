@@ -11,7 +11,9 @@
 	<string name="action_googleplus">Google+</string>
 	<string name="action_refresh">Verversen</string>
 	<string name="action_locate">Bier lokaliseren</string>
-	<string name="action_settings">Instellingen</string>
+	<string name="action_star_on">Bier van ster voorzien</string>
+	<string name="action_star_off">Ster verwijderen</string>
+		<string name="action_settings">Instellingen</string>
 	<string name="action_sendcorrection">Correctie doorgeven</string>
 	<string name="action_about">Over deze app</string>
 	
@@ -46,6 +48,9 @@
 	<string name="info_oakaged">HOUTGERIJPT</string>
 	<string name="info_untappd">UNTAPPD</string>
 	<string name="info_ratebeer">RATEBEER</string>
+	
+	<string name="info_stars">Sterren</string>
+	<string name="info_nostars">Nog geen bieren van ster voorzien.\n\nJe kunt je favoriete bieren van een ster voorzien in een bierdetailscherm met de ster bovenin het scherm.</string>
 	
 	<string name="map_trains">Treinstation</string>
 	<string name="map_entrance">Ingang</string>

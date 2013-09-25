@@ -34,6 +34,7 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 	private BrewersFragment brewersFragment = null;
 	private StylesFragment stylesFragment = null;
 	private TwitterFragment twitterFragment = null;
+	private StarredFragment starredFragment = null;
 
 	@AfterViews
 	protected void init() {
@@ -49,6 +50,8 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 				getSupportActionBar().newTab().setText(R.string.action_styles).setTabListener(tabListener));
 		getSupportActionBar().addTab(
 				getSupportActionBar().newTab().setText(R.string.action_twitter).setTabListener(tabListener));
+		getSupportActionBar().addTab(
+				getSupportActionBar().newTab().setText(R.string.info_stars).setTabListener(tabListener));
 
 		pager = (ViewPager) findViewById(R.id.pager);
 		pager.setAdapter(new TabsPagerAdapter(getSupportFragmentManager()));
@@ -84,7 +87,6 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 
 	@OptionsItem
 	protected void actionSettings() {
-		// TODO: Start settings activity
 	}
 
 	@OptionsItem
@@ -131,6 +133,10 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 				if (twitterFragment == null)
 					twitterFragment = TwitterFragment_.builder().build();
 				return twitterFragment;
+			case 4:
+				if (starredFragment == null)
+					starredFragment = StarredFragment_.builder().build();
+				return starredFragment;
 			}
 			return null;
 		}

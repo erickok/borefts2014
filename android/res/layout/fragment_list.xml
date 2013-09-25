@@ -34,4 +34,16 @@
 		android:gravity="center_horizontal"
 		android:visibility="gone" />
 	
+	<TextView
+		android:id="@+id/empty_text"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginTop="19dip"
+		android:padding="@dimen/margin_default"
+		android:drawableTop="@drawable/ic_logo_dimmed"
+		android:drawablePadding="@dimen/margin_default"
+		android:gravity="center_horizontal"
+		android:visibility="gone" />
+	
 </FrameLayout>

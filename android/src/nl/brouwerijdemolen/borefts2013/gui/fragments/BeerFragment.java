@@ -6,6 +6,7 @@ import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
+import nl.brouwerijdemolen.borefts2013.gui.helpers.StarPersistance;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
@@ -16,7 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.actionbarsherlock.view.Menu;
 import com.googlecode.androidannotations.annotations.AfterViews;
+import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.FragmentArg;
@@ -30,6 +33,8 @@ public class BeerFragment extends SherlockFragment {
 
 	@FragmentArg
 	protected Beer beer;
+	@Bean
+	protected StarPersistance stars;
 	@ViewById
 	protected TextView nameText, brewerText, abvText;
 	@ViewById
@@ -58,6 +63,14 @@ public class BeerFragment extends SherlockFragment {
 		}
 	}
 
+	@Override
+	public void onPrepareOptionsMenu(Menu menu) {
+		super.onPrepareOptionsMenu(menu);
+		boolean isStarred = stars.isStarred(beer.getId());
+		menu.findItem(R.id.action_star_on).setVisible(!isStarred);
+		menu.findItem(R.id.action_star_off).setVisible(isStarred);
+	}
+	
 	private void addTagView(String tag) {
 		getActivity().getLayoutInflater().inflate(R.layout.widget_label, tagsLayout);
 		tag = tag.toUpperCase(Locale.getDefault());
@@ -67,6 +80,18 @@ public class BeerFragment extends SherlockFragment {
 	@Click
 	protected void styleButtonClicked() {
 		((NavigationManager) getActivity()).openStyle(this, beer.getStyle());
+	}
+
+	@OptionsItem
+	protected void actionStarOn() {
+		stars.addStar(beer.getId());
+		getSherlockActivity().supportInvalidateOptionsMenu();
+	}
+
+	@OptionsItem
+	protected void actionStarOff() {
+		stars.removeStar(beer.getId());
+		getSherlockActivity().supportInvalidateOptionsMenu();
 	}
 
 	@OptionsItem
