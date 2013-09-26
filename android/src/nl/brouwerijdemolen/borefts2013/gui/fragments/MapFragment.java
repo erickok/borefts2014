@@ -79,7 +79,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 	protected int initFocusId;
 
 	public MapFragment() {
-		setRetainInstance(true);
+		setRetainInstance(false);
 	}
 
 	@AfterViews

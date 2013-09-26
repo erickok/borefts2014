@@ -2,8 +2,11 @@ package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
 import nl.brouwerijdemolen.borefts2013.R;
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EFragment;
@@ -24,6 +27,14 @@ public class TwitterFragment extends Fragment {
 	public void init() {
 		twitterWebview.getSettings().setJavaScriptEnabled(true);
 		twitterWebview.getSettings().setDomStorageEnabled(true);
+		twitterWebview.setWebViewClient(new WebViewClient() {
+			@Override
+			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))
+						.setFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET));
+				return true;
+			}
+		});
 		refreshTwitterFeed();
 	}
 
