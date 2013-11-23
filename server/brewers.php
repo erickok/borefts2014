@@ -43,8 +43,8 @@
             "country": "The Netherlands",
             "description": "Emelisse is... TO ADD",
             "website": "http://www.emelisse.nl",
-            "latitude": 52.085118,
-            "longitude": 4.740189
+            "latitude": 52.085167,
+            "longitude": 4.740248
         },
         {
             "id": 2,
@@ -56,8 +56,8 @@
             "country": "Denmark",
             "description": "Mikkeller is ... TO ADD",
             "website": "http://www.mikkeller.dk",
-            "latitude": 52.085175,
-            "longitude": 4.740269
+            "latitude": 52.084897,
+            "longitude": 4.74116
         },
         {
             "id": 3,
@@ -69,8 +69,8 @@
             "country": "Spain",
             "description": "Laugar is ... TO ADD",
             "website": "http://www.laugarbrewery.com",
-            "latitude": 52.085207,
-            "longitude": 4.740358
+            "latitude": 52.084748,
+            "longitude": 4.741122
         },
         {
             "id": 4,
@@ -82,8 +82,8 @@
             "country": "Denmark",
             "description": "Amager is ... TO ADD",
             "website": "http://amagerbryghus.dk",
-            "latitude": 52.085192,
-            "longitude": 4.740409
+            "latitude": 52.085233,
+            "longitude": 4.741686
         },
         {
             "id": 5,
@@ -95,8 +95,8 @@
             "country": "The Netherlands",
             "description": "Jopen is ... TO ADD",
             "website": "http://www.jopen.nl/",
-            "latitude": 52.085147,
-            "longitude": 4.740602
+            "latitude": 52.085276,
+            "longitude": 4.741747
         },
         {
             "id": 6,
@@ -108,8 +108,8 @@
             "country": "England",
             "description": "The Kernel is ... TO ADD",
             "website": "http://www.thekernelbrewery.com",
-            "latitude": 52.085157,
-            "longitude": 4.740661
+            "latitude": 52.085319,
+            "longitude": 4.741814
         },
         {
             "id": 7,
@@ -121,8 +121,8 @@
             "country": "England",
             "description": "Thornbridge is ... TO ADD",
             "website": "http://www.thornbridgebrewery.co.uk",
-            "latitude": 52.084781,
-            "longitude": 4.741101
+            "latitude": 52.085052,
+            "longitude": 4.741399
         },
         {
             "id": 8,
@@ -134,8 +134,8 @@
             "country": "Belgium",
             "description": "Alvinne is ... TO ADD",
             "website": "http://www.alvinne.be",
-            "latitude": 52.084757,
-            "longitude": 4.741138
+            "latitude": 52.084733,
+            "longitude": 4.741157
         },
         {
             "id": 9,
@@ -147,8 +147,8 @@
             "country": "Sweden",
             "description": "Närke is ... TO ADD",
             "website": "http://www.kulturbryggeri.se",
-            "latitude": 52.084885,
-            "longitude": 4.741176
+            "latitude": 52.085218,
+            "longitude": 4.740328
         },
         {
             "id": 10,
@@ -160,8 +160,8 @@
             "country": "Italy",
             "description": "Toccalmatto is ... TO ADD",
             "website": "http://www.birratoccalmatto.it",
-            "latitude": 52.084938,
-            "longitude": 4.741254
+            "latitude": 52.084971,
+            "longitude": 4.741272
         },
         {
             "id": 11,
@@ -173,8 +173,8 @@
             "country": "Italy",
             "description": "Brewfist is ... TO ADD",
             "website": "http://www.brewfist.com",
-            "latitude": 52.084989,
-            "longitude": 4.741331
+            "latitude": 52.085012,
+            "longitude": 4.74134
         },
         {
             "id": 12,
@@ -186,8 +186,8 @@
             "country": "Belgium",
             "description": "Struise is ... TO ADD",
             "website": "http://struise.com",
-            "latitude": 52.08504,
-            "longitude": 4.741409
+            "latitude": 52.084763,
+            "longitude": 4.741087
         },
         {
             "id": 13,
@@ -199,8 +199,8 @@
             "country": "Denmark",
             "description": "To Øl is ... TO ADD",
             "website": "http://to-ol.dk",
-            "latitude": 52.085091,
-            "longitude": 4.741487
+            "latitude": 52.084925,
+            "longitude": 4.741211
         },
         {
             "id": 14,
@@ -212,8 +212,8 @@
             "country": "Spain",
             "description": "Naparbier is ... TO ADD",
             "website": "http://www.naparbier.com",
-            "latitude": 52.085144,
-            "longitude": 4.741568
+            "latitude": 52.085211,
+            "longitude": 4.740393
         },
         {
             "id": 15,
@@ -225,8 +225,8 @@
             "country": "Scotland",
             "description": "Fyne Ales is ... TO ADD",
             "website": "http://www.fyneales.com",
-            "latitude": 52.085197,
-            "longitude": 4.741645
+            "latitude": 52.085118,
+            "longitude": 4.740189
         },
         {
             "id": 16,
@@ -238,8 +238,8 @@
             "country": "France",
             "description": "Mont Salève is a micro brewery from the French Haute-Savoie, situated at the foot of the Salève mountain. Since 2010, brew master Mickaël Novo has gone beyond the classic French white and blond and experiments with British and American styles and hops.",
             "website": "http://labrasseriedumontsaleve.com",
-            "latitude": 52.085246,
-            "longitude": 4.741712
+            "latitude": 52.085195,
+            "longitude": 4.74043
         },
         {
             "id": 17,
@@ -251,9 +251,9 @@
             "country": "The Netherlands",
             "description": "Rooie Dop is ... TO ADD",
             "website": "http://www.rooiedop.nl",
-            "latitude": 52.085292,
-            "longitude": 4.741779
+            "latitude": 52.085075,
+            "longitude": 4.740127
         }
     ],
-    "revision": 4
+    "revision": 6
 }

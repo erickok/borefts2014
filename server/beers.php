@@ -11,8 +11,8 @@
             "abv": 6.2,
             "oakAged": false,
             "tags": "cherry",
-            "ratebeerId": -1,
-            "untappdId": -1
+            "ratebeerId": 230589,
+            "untappdId": 460705
         },
         {
             "id": 3,
@@ -33,7 +33,7 @@
             "abv": 9.8,
             "oakAged": true,
             "tags": "smoked,barrel aged,balsamico",
-            "ratebeerId": -1,
+            "ratebeerId": 230609,
             "untappdId": -1
         },
         {
@@ -55,7 +55,7 @@
             "abv": 9.8,
             "oakAged": true,
             "tags": "smoked,barrel aged,bourbon",
-            "ratebeerId": -1,
+            "ratebeerId": 230612,
             "untappdId": -1
         },
         {
@@ -1281,21 +1281,10 @@
         },
         {
             "id": 112,
-            "name": "Mont Salève GSC Bitter",
+            "name": "Mont Salève Twin Bitter",
             "brewerId": 16,
             "styleId": 6,
             "abv": 2.5,
-            "oakAged": false,
-            "tags": "",
-            "ratebeerId": -1,
-            "untappdId": -1
-        },
-        {
-            "id": 113,
-            "name": "Mont Salève Double IPA",
-            "brewerId": 16,
-            "styleId": 1,
-            "abv": 8,
             "oakAged": false,
             "tags": "",
             "ratebeerId": -1,
@@ -1331,7 +1320,7 @@
             "abv": 5,
             "oakAged": false,
             "tags": "oyster",
-            "ratebeerId": -1,
+            "ratebeerId": 230663,
             "untappdId": -1
         },
         {
@@ -1467,17 +1456,6 @@
             "untappdId": 370914
         },
         {
-            "id": 129,
-            "name": "Närke \"forest\" beers",
-            "brewerId": 9,
-            "styleId": 9,
-            "abv": -1,
-            "oakAged": false,
-            "tags": "",
-            "ratebeerId": -1,
-            "untappdId": -1
-        },
-        {
             "id": 130,
             "name": "Brewfist Terminal Pale Ale",
             "brewerId": 11,
@@ -1551,7 +1529,7 @@
             "abv": 7.2,
             "oakAged": false,
             "tags": "white ipa",
-            "ratebeerId": -1,
+            "ratebeerId": 230651,
             "untappdId": -1
         },
         {
@@ -1562,7 +1540,7 @@
             "abv": 4.3,
             "oakAged": false,
             "tags": "",
-            "ratebeerId": -1,
+            "ratebeerId": 230652,
             "untappdId": -1
         },
         {
@@ -1595,7 +1573,7 @@
             "abv": 5.4,
             "oakAged": false,
             "tags": "",
-            "ratebeerId": -1,
+            "ratebeerId": 230586,
             "untappdId": -1
         },
         {
@@ -1606,7 +1584,7 @@
             "abv": 5.4,
             "oakAged": false,
             "tags": "",
-            "ratebeerId": -1,
+            "ratebeerId": 230587,
             "untappdId": -1
         },
         {
@@ -1622,7 +1600,7 @@
         },
         {
             "id": 143,
-            "name": "De Molen Bommen & Granaten Giovanni",
+            "name": "De Molen Bommen & Giovanni",
             "brewerId": 0,
             "styleId": 0,
             "abv": 15.2,
@@ -1687,7 +1665,7 @@
             "untappdId": -1
         },
         {
-            "id":149,
+            "id": 149,
             "name": "Struise O.N.E. Our Nastiest Effort",
             "brewerId": 12,
             "styleId": 14,
@@ -1696,6 +1674,116 @@
             "tags": "barrel aged,bourbon",
             "ratebeerId": 186727,
             "untappdId": 449513
+        },
+        {
+            "id": 150,
+            "name": "De Molen Ook Best Lekker",
+            "brewerId": 0,
+            "styleId": 3,
+            "abv": 6.2,
+            "oakAged": false,
+            "tags": "cherry",
+            "ratebeerId": 230588,
+            "untappdId": 462626
+        },
+        {
+            "id": 151,
+            "name": "Fyne Ales Wee Jaggy Gruit",
+            "brewerId": 15,
+            "styleId": 9,
+            "abv": 3.8,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": -1,
+            "untappdId": -1
+        },
+        {
+            "id": 152,
+            "name": "De Molen Fresh Hop",
+            "brewerId": 0,
+            "styleId": 13,
+            "abv": 5.4,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 230649,
+            "untappdId": 462627
+        },
+        {
+            "id": 153,
+            "name": "Närke Svarte Kungen",
+            "brewerId": 9,
+            "styleId": 11,
+            "abv": 7.1,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 71176,
+            "untappdId": 362406
+        },
+        {
+            "id": 154,
+            "name": "Närke Skogsmölska Gruit Braggot",
+            "brewerId": 9,
+            "styleId": 9,
+            "abv": 6.7,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 230654,
+            "untappdId": -1
+        },
+        {
+            "id": 155,
+            "name": "Närke Skvatt GALEn",
+            "brewerId": 9,
+            "styleId": 9,
+            "abv": 5.9,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 130786,
+            "untappdId": 75520
+        },
+        {
+            "id": 156,
+            "name": "Närke Gransus",
+            "brewerId": 9,
+            "styleId": 9,
+            "abv": 5.9,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 152935,
+            "untappdId": 75518
+        },
+        {
+            "id": 157,
+            "name": "Närke Äljäjl",
+            "brewerId": 9,
+            "styleId": 9,
+            "abv": 6.7,
+            "oakAged": false,
+            "tags": "",
+            "ratebeerId": 186933,
+            "untappdId": 236467
+        },
+        {
+            "id": 158,
+            "name": "Mont Salève Barley Wine Pinot",
+            "brewerId": 16,
+            "styleId": 0,
+            "abv": 10.5,
+            "oakAged": true,
+            "tags": "barrel aged,wine",
+            "ratebeerId": 230672,
+            "untappdId": -1
+        },
+        {
+            "id": 159,
+            "name": "Mont Salève Cervoise",
+            "brewerId": 16,
+            "styleId": 9,
+            "abv": 7,
+            "oakAged": true,
+            "tags": "barrel aged,wine",
+            "ratebeerId": 230682,
+            "untappdId": -1
         }
     ],
     "revision": 6
