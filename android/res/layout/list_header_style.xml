@@ -23,7 +23,8 @@
 		<FrameLayout
 			android:layout_width="0dp"
 			android:layout_height="150dp"
-			android:layout_weight="1">
+			android:layout_weight="1" >
+
 			<View
 				android:id="@+id/color_view"
 				android:layout_width="24dp"

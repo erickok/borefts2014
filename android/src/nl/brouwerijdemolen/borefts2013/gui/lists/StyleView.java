@@ -19,14 +19,15 @@ package nl.brouwerijdemolen.borefts2013.gui.lists;
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
+
+import org.androidannotations.annotations.Bean;
+import org.androidannotations.annotations.EViewGroup;
+import org.androidannotations.annotations.ViewById;
+
 import android.content.Context;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.googlecode.androidannotations.annotations.Bean;
-import com.googlecode.androidannotations.annotations.EViewGroup;
-import com.googlecode.androidannotations.annotations.ViewById;
 
 /**
  * View that represents some {@link Style} object and displays a color indication.

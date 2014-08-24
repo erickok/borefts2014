@@ -4,18 +4,23 @@ import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BeerFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewerFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.MapFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StyleFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
+
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
+import org.androidannotations.annotations.OptionsItem;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.Extra;
-import com.googlecode.androidannotations.annotations.OptionsItem;
 
 /**
  * A wrapper activity that can open details screens for brewers, beers and styles by supplying the appropriate Extra.

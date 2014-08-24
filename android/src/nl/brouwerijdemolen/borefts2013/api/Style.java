@@ -11,6 +11,7 @@ public class Style implements Comparable<Style>, Parcelable {
 	private String name;
 	private int color;
 	private int abv;
+	private int body;
 	private int bitterness;
 	private int sweetness;
 	private int acidity;
@@ -34,6 +35,10 @@ public class Style implements Comparable<Style>, Parcelable {
 		return abv;
 	}
 
+	public int getBody() {
+		return body;
+	}
+	
 	public int getBitterness() {
 		return bitterness;
 	}

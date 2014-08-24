@@ -8,6 +8,10 @@ import nl.brouwerijdemolen.borefts2013.api.Beers;
 import nl.brouwerijdemolen.borefts2013.api.Brewers;
 import nl.brouwerijdemolen.borefts2013.api.GsonRequest;
 import nl.brouwerijdemolen.borefts2013.api.Styles;
+
+import org.androidannotations.annotations.EBean;
+import org.androidannotations.annotations.EBean.Scope;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
@@ -19,8 +23,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 import com.google.mygson.Gson;
-import com.googlecode.androidannotations.annotations.EBean;
-import com.googlecode.androidannotations.api.Scope;
 
 @EBean(scope = Scope.Singleton)
 public class ApiQueue {

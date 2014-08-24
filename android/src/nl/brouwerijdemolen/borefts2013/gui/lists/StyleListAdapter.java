@@ -3,13 +3,14 @@ package nl.brouwerijdemolen.borefts2013.gui.lists;
 import java.util.List;
 
 import nl.brouwerijdemolen.borefts2013.api.Style;
+
+import org.androidannotations.annotations.EBean;
+import org.androidannotations.annotations.RootContext;
+
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-
-import com.googlecode.androidannotations.annotations.EBean;
-import com.googlecode.androidannotations.annotations.RootContext;
 
 @EBean
 public class StyleListAdapter extends BaseAdapter {

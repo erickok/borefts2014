@@ -2,12 +2,12 @@ package nl.brouwerijdemolen.borefts2013.gui.helpers;
 
 import java.util.HashSet;
 
+import org.androidannotations.annotations.EBean;
+import org.androidannotations.annotations.EBean.Scope;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-
-import com.googlecode.androidannotations.annotations.EBean;
-import com.googlecode.androidannotations.api.Scope;
 
 @EBean(scope = Scope.Singleton)
 public class StarPersistance {

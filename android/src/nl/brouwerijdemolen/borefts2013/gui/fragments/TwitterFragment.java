@@ -1,16 +1,17 @@
 package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
 import nl.brouwerijdemolen.borefts2013.R;
+
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.ViewById;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.EFragment;
-import com.googlecode.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.fragment_twitter)
 public class TwitterFragment extends Fragment {

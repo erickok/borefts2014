@@ -6,14 +6,15 @@ import nl.brouwerijdemolen.borefts2013.gui.fragments.BarView;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.lists.BrewerHeader.BrewerHeaderedAdapter;
+
+import org.androidannotations.annotations.Bean;
+import org.androidannotations.annotations.EViewGroup;
+import org.androidannotations.annotations.ViewById;
+
 import android.content.Context;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.googlecode.androidannotations.annotations.Bean;
-import com.googlecode.androidannotations.annotations.EViewGroup;
-import com.googlecode.androidannotations.annotations.ViewById;
 
 @EViewGroup(R.layout.list_header_style)
 public class StyleHeader extends RelativeLayout {

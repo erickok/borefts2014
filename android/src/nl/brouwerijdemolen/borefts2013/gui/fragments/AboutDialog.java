@@ -3,6 +3,11 @@ package nl.brouwerijdemolen.borefts2013.gui.fragments;
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.ViewById;
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -12,10 +17,6 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.Click;
-import com.googlecode.androidannotations.annotations.EFragment;
-import com.googlecode.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.dialog_about)
 public class AboutDialog extends SherlockDialogFragment {

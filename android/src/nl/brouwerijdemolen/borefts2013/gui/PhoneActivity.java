@@ -5,9 +5,25 @@ import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
-import nl.brouwerijdemolen.borefts2013.gui.fragments.*;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.AboutDialog_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StarredFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StarredFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StylesFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.StylesFragment_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.TwitterFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
+
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OptionsItem;
+import org.androidannotations.annotations.OptionsMenu;
+
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -20,10 +36,6 @@ import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.ActionBar.TabListener;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.OptionsItem;
-import com.googlecode.androidannotations.annotations.OptionsMenu;
 
 @EActivity(R.layout.activity_phone)
 @OptionsMenu(R.menu.activity_start)
@@ -93,7 +105,7 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 	protected void actionSendcorrection() {
 		Intent startEmail = new Intent(Intent.ACTION_SEND);
 		startEmail.setType("message/rfc822");
-		startEmail.putExtra(Intent.EXTRA_EMAIL, new String[] { "borefts2013@2312.nl" });
+		startEmail.putExtra(Intent.EXTRA_EMAIL, new String[] { "borefts2014@2312.nl" });
 		startEmail.putExtra(Intent.EXTRA_SUBJECT, "Borefts 2013 Android app correction");
 		startActivity(startEmail);
 	}

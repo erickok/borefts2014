@@ -9,6 +9,7 @@
 		android:layout_height="wrap_content"
 		android:layout_centerHorizontal="true"
 		android:layout_marginBottom="24dp"
+		android:gravity="center_vertical"
 		android:layout_marginTop="32dp"
 		android:drawableLeft="@drawable/ic_launcher"
 		android:drawablePadding="@dimen/margin_half"

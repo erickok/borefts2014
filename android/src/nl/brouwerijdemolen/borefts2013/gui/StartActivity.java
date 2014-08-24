@@ -1,9 +1,10 @@
 package nl.brouwerijdemolen.borefts2013.gui;
 
+import org.androidannotations.annotations.AfterInject;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.res.BooleanRes;
+
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.googlecode.androidannotations.annotations.AfterInject;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.res.BooleanRes;
 
 /**
  * Wrapper activity that simply starts either the phone or tablet version of the main fragments-containing activity.

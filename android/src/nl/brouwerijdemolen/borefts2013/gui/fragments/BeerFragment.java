@@ -7,6 +7,16 @@ import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.MolenTypefaceSpan;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.NavigationManager;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.StarPersistance;
+
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Bean;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.FragmentArg;
+import org.androidannotations.annotations.OptionsItem;
+import org.androidannotations.annotations.OptionsMenu;
+import org.androidannotations.annotations.ViewById;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
@@ -18,14 +28,6 @@ import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.Menu;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.Bean;
-import com.googlecode.androidannotations.annotations.Click;
-import com.googlecode.androidannotations.annotations.EFragment;
-import com.googlecode.androidannotations.annotations.FragmentArg;
-import com.googlecode.androidannotations.annotations.OptionsItem;
-import com.googlecode.androidannotations.annotations.OptionsMenu;
-import com.googlecode.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.fragment_beer)
 @OptionsMenu(R.menu.fragment_beer)
@@ -36,11 +38,15 @@ public class BeerFragment extends SherlockFragment {
 	@Bean
 	protected StarPersistance stars;
 	@ViewById
-	protected TextView nameText, abvText;
+	protected TextView nameText, abvText, servingText, tostyleText;
 	@ViewById
 	protected Button brewerButton, styleButton;
 	@ViewById
 	protected LinearLayout tagsLayout;
+	@ViewById
+	protected View colorView;
+	@ViewById
+	protected BarView abvView, bitternessView, sweetnessView, acidityView;
 
 	public BeerFragment() {
 		setRetainInstance(true);
@@ -61,6 +67,13 @@ public class BeerFragment extends SherlockFragment {
 				addTagView(tag);
 			}
 		}
+		colorView.setBackgroundColor(beer.getColorIndicationResource(getResources()));
+		abvView.setValue(beer.getAbvIndication());
+		servingText.setText(beer.getServingResource(getResources()));
+		bitternessView.setValue(beer.getBitternessIndication());
+		sweetnessView.setValue(beer.getSweetnessIndication());
+		acidityView.setValue(beer.getAcidityIndication());
+		tostyleText.setVisibility(beer.getColor() == -1? View.VISIBLE: View.GONE);
 	}
 
 	@Override
