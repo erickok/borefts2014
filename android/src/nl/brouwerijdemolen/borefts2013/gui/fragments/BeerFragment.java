@@ -73,7 +73,7 @@ public class BeerFragment extends SherlockFragment {
 		bitternessView.setValue(beer.getBitternessIndication());
 		sweetnessView.setValue(beer.getSweetnessIndication());
 		acidityView.setValue(beer.getAcidityIndication());
-		tostyleText.setVisibility(beer.getColor() == -1? View.VISIBLE: View.GONE);
+		tostyleText.setVisibility(beer.getColour() == -1? View.VISIBLE: View.GONE);
 	}
 
 	@Override

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:background="@drawable/activatable_background_borefts"
 	android:padding="@dimen/margin_default" >
 
-	<com.android.volley.toolbox.NetworkImageView
+	<ImageView
 		android:id="@+id/logo_image"
 		android:layout_width="48dp"
-		android:layout_height="48dp" />
+		android:layout_height="48dp"
+		tools:ignore="ContentDescription" />
 
 	<TextView
 		android:id="@+id/name_text"

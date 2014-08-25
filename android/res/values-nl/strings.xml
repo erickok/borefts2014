@@ -57,9 +57,7 @@
 	
 	<string name="map_trains">Treinstation</string>
 	<string name="map_entrance">Ingang</string>
-	<string name="map_mtoilet1">Mannentoilet 1</string>
-	<string name="map_mtoilet2">Mannentoilet 2</string>
-	<string name="map_mtoilet3">Mannentoilet 3</string>
+	<string name="map_mtoilet1">Mannentoilet</string>
 	<string name="map_ftoilet1">Damestoilet 1</string>
 	<string name="map_ftoilet2">Damestoilet 2</string>
 	<string name="map_tokens">Muntverkoop</string>

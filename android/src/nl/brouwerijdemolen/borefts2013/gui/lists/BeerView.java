@@ -48,14 +48,13 @@ public class BeerView extends RelativeLayout {
 	}
 
 	public void bind(Beer beer, boolean showStyle) {
-		//nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), beer.getName()));
 		nameText.setText(beer.getName());
 		stylebrewerText.setText(showStyle? beer.getStyle().getName(): beer.getBrewer().getName());
 		if (beer.getAbv() > 0)
 			abvText.setText(getResources().getString(R.string.info_abvperc, beer.getAbv()));
 		else
 			abvText.setVisibility(View.GONE);
-		styleView.setBackgroundColor(beer.getStyle().getColorResource(getResources()));
+		styleView.setBackgroundColor(beer.getColorIndicationResource(getResources()));
 	}
 
 }

@@ -17,7 +17,7 @@ public class Beer implements Comparable<Beer>, Parcelable {
 	private int ratebeerId;
 	private int untappdId;
 	private int serving;
-	private int color;
+	private int colour;
 	private int body;
 	private int bitterness;
 	private int sweetness;
@@ -70,8 +70,8 @@ public class Beer implements Comparable<Beer>, Parcelable {
 		return serving;
 	}
 
-	public int getColor() {
-		return color;
+	public int getColour() {
+		return colour;
 	}
 
 	public int getBody() {
@@ -108,7 +108,7 @@ public class Beer implements Comparable<Beer>, Parcelable {
 
 	public int getAbvIndication() {
 		if (abv >= 0) {
-			return Math.min(Math.max((int) Math.round(abv / 2.2), 1), 5);
+			return Math.min(Math.max((int) Math.round(abv / 2.3), 1), 5);
 		}
 		return style.getAbv();
 	}
@@ -136,8 +136,8 @@ public class Beer implements Comparable<Beer>, Parcelable {
 
 	public int getColorIndicationResource(Resources res) {
 		int c = style.getColor();
-		if (color >= 0) {
-			c = color;
+		if (colour >= 0) {
+			c = colour;
 		}
 		switch (c) {
 		case 1:
@@ -182,7 +182,7 @@ public class Beer implements Comparable<Beer>, Parcelable {
 		this.ratebeerId = in.readInt();
 		this.untappdId = in.readInt();
 		this.serving = in.readInt();
-		this.color = in.readInt();
+		this.colour = in.readInt();
 		this.body = in.readInt();
 		this.bitterness = in.readInt();
 		this.sweetness = in.readInt();
@@ -218,7 +218,7 @@ public class Beer implements Comparable<Beer>, Parcelable {
 		dest.writeInt(ratebeerId);
 		dest.writeInt(untappdId);
 		dest.writeInt(serving);
-		dest.writeInt(color);
+		dest.writeInt(colour);
 		dest.writeInt(body);
 		dest.writeInt(bitterness);
 		dest.writeInt(sweetness);

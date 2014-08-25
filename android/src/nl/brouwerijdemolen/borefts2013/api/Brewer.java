@@ -5,8 +5,6 @@ import android.os.Parcelable;
 
 public class Brewer implements Comparable<Brewer>, Parcelable {
 
-	public static final String BREWER_LOGO_BASE_URL = "http://2312.nl/borefts2014/logos/%s";
-
 	private int id;
 	private String logoUrl;
 	private String name;
@@ -64,10 +62,6 @@ public class Brewer implements Comparable<Brewer>, Parcelable {
 	
 	public float getLongitude() {
 		return longitude;
-	}
-
-	public String getLogoFullUrl() {
-		return String.format(BREWER_LOGO_BASE_URL, logoUrl);
 	}
 
 	@Override

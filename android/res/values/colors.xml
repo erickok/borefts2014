@@ -8,9 +8,9 @@
 	<color name="blue">#1c68c0</color>
 	<color name="blue_half">#551c68c0</color>
 	<color name="style_1">#fff400</color>
-	<color name="style_2">#ffbd00</color>
-	<color name="style_3">#ff7900</color>
-	<color name="style_4">#8b490e</color>
+	<color name="style_2">#ffae00</color>
+	<color name="style_3">#ff6a00</color>
+	<color name="style_4">#78400d</color>
 	<color name="style_5">#2e1601</color>
 	<color name="style_unknown">#8c8c8c</color>
 </resources>

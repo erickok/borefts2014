@@ -57,9 +57,7 @@
 		
 	<string name="map_trains">Train station</string>
 	<string name="map_entrance">Entrance</string>
-	<string name="map_mtoilet1">Male toilet 1</string>
-	<string name="map_mtoilet2">Male toilet 2</string>
-	<string name="map_mtoilet3">Male toilet 3</string>
+	<string name="map_mtoilet">Male toilet</string>
 	<string name="map_ftoilet1">Female toilet 1</string>
 	<string name="map_ftoilet2">Female toilet 2</string>
 	<string name="map_tokens">Token sale</string>

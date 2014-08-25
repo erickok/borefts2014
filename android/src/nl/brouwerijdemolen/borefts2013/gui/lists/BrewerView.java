@@ -16,6 +16,8 @@
  */
 package nl.brouwerijdemolen.borefts2013.gui.lists;
 
+import java.io.IOException;
+
 import nl.brouwerijdemolen.borefts2013.R;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.gui.helpers.ApiQueue;
@@ -25,10 +27,11 @@ import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.util.Log;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.android.volley.toolbox.NetworkImageView;
 
 /**
  * View that represents some {@link Brewer} object and displays name, origin and logo.
@@ -40,7 +43,7 @@ public class BrewerView extends RelativeLayout {
 	@Bean
 	protected ApiQueue apiQueue;
 	@ViewById
-	protected NetworkImageView logoImage;
+	protected ImageView logoImage;
 	@ViewById
 	protected TextView nameText, originText;
 
@@ -49,10 +52,16 @@ public class BrewerView extends RelativeLayout {
 	}
 
 	public void bind(Brewer brewer) {
-		//nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), brewer.getShortName()));
+		// nameText.setText(MolenTypefaceSpan.makeMolenSpannable(getContext(), brewer.getShortName()));
 		nameText.setText(brewer.getShortName());
 		originText.setText(getResources().getString(R.string.info_origin, brewer.getCity(), brewer.getCountry()));
-		logoImage.setImageUrl(brewer.getLogoFullUrl(), apiQueue.getImageLoader());
+		try {
+			logoImage.setImageBitmap(BitmapFactory.decodeStream(getResources().getAssets().open(
+					"images/" + brewer.getLogoUrl())));
+		} catch (IOException e) {
+			// Should never happen, as the brewer logo always exists
+			Log.e(BrewerHeader.class.getSimpleName(), e.toString());
+		}
 	}
 
 }

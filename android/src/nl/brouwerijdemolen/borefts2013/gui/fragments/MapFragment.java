@@ -1,5 +1,6 @@
 package nl.brouwerijdemolen.borefts2013.gui.fragments;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,8 +29,6 @@ import android.widget.Toast;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageLoader.ImageContainer;
-import com.android.volley.toolbox.ImageLoader.ImageListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
@@ -50,24 +49,20 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 			R.string.map_trains, R.drawable.ic_marker_trains);
 	public static final MapElement ELEMENT_ENTRANCE = new MapElement(1, new LatLng(52.084935d, 4.740653d),
 			R.string.map_entrance, R.drawable.ic_marker_entrance);
-	public static final MapElement ELEMENT_FTOILET1 = new MapElement(2, new LatLng(52.084742d, 4.740870d),
-			R.string.map_ftoilet1, R.drawable.ic_marker_toilet);
-	public static final MapElement ELEMENT_FTOILET2 = new MapElement(3, new LatLng(52.085127d, 4.740728d),
-			R.string.map_ftoilet2, R.drawable.ic_marker_toilet);
+	public static final MapElement ELEMENT_FTOILET1 = new MapElement(2, new LatLng(52.085106d, 4.740752d),
+			R.string.map_ftoilet1, R.drawable.ic_marker_toilet); // In brewery
+	public static final MapElement ELEMENT_FTOILET2 = new MapElement(3, new LatLng(52.084605, 4.739573),
+			R.string.map_ftoilet2, R.drawable.ic_marker_toilet);// In kindereiland
 	public static final MapElement ELEMENT_TOKENS = new MapElement(4, new LatLng(52.084919d, 4.740567d),
 			R.string.map_tokens, R.drawable.ic_marker_tokens);
 	public static final MapElement ELEMENT_MILL = new MapElement(5, new LatLng(52.085711d, 4.742077d),
 			R.string.map_mill, R.drawable.ic_marker_mill);
-	public static final MapElement ELEMENT_FIRSTAID = new MapElement(6, new LatLng(52.084859d, 4.741085d),
+	public static final MapElement ELEMENT_FIRSTAID = new MapElement(6, new LatLng(52.084862d, 4.74019d),
 			R.string.map_firstaid, R.drawable.ic_marker_firstaid);
-	public static final MapElement ELEMENT_MTOILET1 = new MapElement(7, new LatLng(52.085345d, 4.741973d),
-			R.string.map_mtoilet1, R.drawable.ic_marker_toilet);
-	public static final MapElement ELEMENT_MTOILET2 = new MapElement(8, new LatLng(52.084771d, 4.740420d),
-			R.string.map_mtoilet2, R.drawable.ic_marker_toilet);
-	public static final MapElement ELEMENT_MTOILET3 = new MapElement(9, new LatLng(52.085106d, 4.740752d),
-			R.string.map_mtoilet3, R.drawable.ic_marker_toilet);
-	public static final MapElement ELEMENT_FOODPLAZA = new MapElement(10, new LatLng(52.084692d, 4.740983d),
-			R.string.map_foodplaza, R.drawable.ic_marker_food);
+	public static final MapElement ELEMENT_MTOILET = new MapElement(8, new LatLng(52.084771d, 4.740420d),
+			R.string.map_mtoilet, R.drawable.ic_marker_toilet); // In front
+	// public static final MapElement ELEMENT_FOODPLAZA = new MapElement(10, new LatLng(52.084692d, 4.740983d),
+	// R.string.map_foodplaza, R.drawable.ic_marker_food);
 	public static final int BREWER_ID_THRESHOLD = 100;
 
 	private SparseArray<Marker> elementMarkers;
@@ -113,17 +108,17 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		// Festival area 1
 		getMap().addPolygon(
 				new PolygonOptions()
-						.add(new LatLng(52.084906d, 4.740165d), new LatLng(52.084961d, 4.740251d),
+						.add(new LatLng(52.084546d, 4.739627d), new LatLng(52.084961d, 4.740251d),
 								new LatLng(52.085024d, 4.740243d), new LatLng(52.085169d, 4.740476d),
-								new LatLng(52.085009d, 4.740749d), new LatLng(52.084821d, 4.740436d))
+								new LatLng(52.085009d, 4.740749d), new LatLng(52.084417d, 4.739831d))
 						.strokeColor(getResources().getColor(R.color.yellow)).strokeWidth(5f)
 						.fillColor(getResources().getColor(R.color.yellow_half)));
 		// Bottling building
 		getMap().addPolygon(
 				new PolygonOptions()
 						.add(new LatLng(52.085263d, 4.740358d), new LatLng(52.085113d, 4.740092d),
-								new LatLng(52.085134d, 4.740039d), new LatLng(52.08504d, 4.739942d),
-								new LatLng(52.084915d, 4.740162d), new LatLng(52.084961d, 4.740251d),
+								new LatLng(52.085134d, 4.740039d), new LatLng(52.084694d, 4.739386d),
+								new LatLng(52.084546d, 4.739627d), new LatLng(52.084961d, 4.740251d),
 								new LatLng(52.085024d, 4.740243d), new LatLng(52.085190d, 4.740505d))
 						.strokeColor(getResources().getColor(R.color.darkred)).strokeWidth(5f)
 						.fillColor(getResources().getColor(R.color.darkred_half)));
@@ -141,21 +136,6 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 								new LatLng(52.084953d, 4.740698d), new LatLng(52.084892d, 4.740605d))
 						.strokeColor(getResources().getColor(R.color.blue)).strokeWidth(5f)
 						.fillColor(getResources().getColor(R.color.blue_half)));
-		// Food plaza
-		getMap().addPolygon(
-				new PolygonOptions()
-						.add(new LatLng(52.084730d, 4.741184d), new LatLng(52.084798d, 4.741074d),
-								new LatLng(52.084668d, 4.740881d), new LatLng(52.084625d, 4.741004d))
-						.strokeColor(getResources().getColor(R.color.blue)).strokeWidth(5f)
-						.fillColor(getResources().getColor(R.color.blue_half)));
-		// Festival area 2
-		getMap().addPolygon(
-				new PolygonOptions()
-						.add(new LatLng(52.084668d, 4.740881d), new LatLng(52.084762d, 4.740768d),
-								new LatLng(52.085470d, 4.741804d), new LatLng(52.085343d, 4.742064d),
-								new LatLng(52.085279d, 4.741973d), new LatLng(52.085324d, 4.741892d))
-						.strokeColor(getResources().getColor(R.color.yellow)).strokeWidth(5f)
-						.fillColor(getResources().getColor(R.color.yellow_half)));
 		// Mill building
 		getMap().addPolygon(
 				new PolygonOptions()
@@ -173,10 +153,8 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		addPoiMarker(ELEMENT_TOKENS);
 		addPoiMarker(ELEMENT_MILL);
 		addPoiMarker(ELEMENT_FIRSTAID);
-		addPoiMarker(ELEMENT_MTOILET1);
-		addPoiMarker(ELEMENT_MTOILET2);
-		addPoiMarker(ELEMENT_MTOILET3);
-		addPoiMarker(ELEMENT_FOODPLAZA);
+		addPoiMarker(ELEMENT_MTOILET);
+		// addPoiMarker(ELEMENT_FOODPLAZA);
 		if (initFocusId >= 0 && initFocusId < BREWER_ID_THRESHOLD) {
 			focusOnMarker(initFocusId);
 		}
@@ -190,23 +168,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 	public void onResponse(Brewers brewers) {
 		brewerMarkers = new HashMap<Marker, Brewer>();
 		for (final Brewer brewer : brewers.getBrewers()) {
-			apiQueue.getImageLoader().get(brewer.getLogoFullUrl(), new ImageListener() {
-
-				@Override
-				public void onResponse(ImageContainer response, boolean isImmediate) {
-					if (response.getBitmap() != null && getActivity() != null) {
-						addBrewerMarker(brewer, response.getBitmap());
-					}
-				}
-
-				@Override
-				public void onErrorResponse(VolleyError error) {
-					// Still show the marker, yet the default graphic will be used
-					if (getActivity() != null)
-						addBrewerMarker(brewer, null);
-				}
-
-			});
+			addBrewerMarker(brewer);
 		}
 	}
 
@@ -227,12 +189,12 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 	 * @param brewer The brewer to visualise on the map with a marker
 	 * @param bitmap The loaded logo bitmap of this brewer, or null if it was not successfully retreived
 	 */
-	public void addBrewerMarker(Brewer brewer, Bitmap bitmap) {
+	public void addBrewerMarker(Brewer brewer) {
 		BitmapDescriptor bitmapToUse;
-		if (bitmap == null)
+		if (brewer.getLogoUrl() == null)
 			bitmapToUse = BitmapDescriptorFactory.fromResource(R.drawable.ic_marker_mask);
 		else
-			bitmapToUse = BitmapDescriptorFactory.fromBitmap(drawBrewerMarker(bitmap));
+			bitmapToUse = BitmapDescriptorFactory.fromBitmap(drawBrewerMarker(brewer));
 		Marker marker = getMap().addMarker(
 				new MarkerOptions().position(new LatLng(brewer.getLatitude(), brewer.getLongitude()))
 						.title(brewer.getShortName()).icon(bitmapToUse));
@@ -245,22 +207,27 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 
 	/**
 	 * Draws a bitmap that has the shape and outline of a map marker but the contents of the brewer's logo.
-	 * @param brewerLogo The brewer logo as already loaded bitmap
+	 * @param brewer The brewer to create a marker for on the basis of its logo
 	 * @return A marker bitmap; this is not cached
 	 */
-	private Bitmap drawBrewerMarker(Bitmap brewerLogo) {
+	private Bitmap drawBrewerMarker(Brewer brewer) {
 		// TODO Cache the drawn compound bitmap?
-		Bitmap mask = BitmapFactory.decodeResource(getResources(), R.drawable.ic_marker_mask);
-		Bitmap outline = BitmapFactory.decodeResource(getResources(), R.drawable.ic_marker_outline);
-		Bitmap bmp = Bitmap.createBitmap(mask.getWidth(), mask.getHeight(), Config.ARGB_8888);
-		Canvas canvas = new Canvas(bmp);
-		Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
-		canvas.drawBitmap(mask, 0, 0, paint);
-		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-		canvas.drawBitmap(brewerLogo, null, new Rect(0, 0, mask.getWidth(), mask.getHeight()), paint);
-		paint.setXfermode(null);
-		canvas.drawBitmap(outline, 0, 0, paint);
-		return bmp;
+		try {
+			Bitmap mask = BitmapFactory.decodeResource(getResources(), R.drawable.ic_marker_mask);
+			Bitmap outline = BitmapFactory.decodeResource(getResources(), R.drawable.ic_marker_outline);
+			Bitmap logo = BitmapFactory.decodeStream(getResources().getAssets().open("images/" + brewer.getLogoUrl()));
+			Bitmap bmp = Bitmap.createBitmap(mask.getWidth(), mask.getHeight(), Config.ARGB_8888);
+			Canvas canvas = new Canvas(bmp);
+			Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
+			canvas.drawBitmap(mask, 0, 0, paint);
+			paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+			canvas.drawBitmap(logo, null, new Rect(0, 0, mask.getWidth(), mask.getHeight()), paint);
+			paint.setXfermode(null);
+			canvas.drawBitmap(outline, 0, 0, paint);
+			return bmp;
+		} catch (IOException e) {
+			return null; // Should never happen, as the brewer logo always exists
+		}
 	}
 
 	@Override
