@@ -58,6 +58,8 @@ public class StylesFragment extends Fragment implements Listener<Styles>, ErrorL
 
 	@Override
 	public void onResponse(Styles styles) {
+		if (getActivity() == null || !isAdded())
+			return;
 		Collections.sort(styles.getStyles());
 		styleListAdapter.update(styles.getStyles());
 		theList.setAdapter(styleListAdapter);

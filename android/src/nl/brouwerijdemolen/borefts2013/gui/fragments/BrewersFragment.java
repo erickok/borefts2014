@@ -60,6 +60,8 @@ public class BrewersFragment extends Fragment implements Listener<Brewers>, Erro
 
 	@Override
 	public void onResponse(Brewers brewers) {
+		if (getActivity() == null || !isAdded())
+			return;
 		Collections.sort(brewers.getBrewers(), brewersComparator);
 		brewerListAdapter.update(brewers.getBrewers());
 		theList.setAdapter(brewerListAdapter);

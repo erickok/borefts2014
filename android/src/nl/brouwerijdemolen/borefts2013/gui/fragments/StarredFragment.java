@@ -80,6 +80,8 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 		apiQueue.requestBrewers(new Listener<Brewers>() {
 			@Override
 			public void onResponse(Brewers brewers) {
+				if (getActivity() == null || !isAdded())
+					return;
 				handleBrewersResult(brewers.getBrewers());
 			}
 		}, this);
@@ -95,6 +97,8 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 		apiQueue.requestStyles(new Listener<Styles>() {
 			@Override
 			public void onResponse(Styles styles) {
+				if (getActivity() == null || !isAdded())
+					return;
 				handleStylesResult(styles.getStyles());
 			}
 		}, this);
@@ -115,6 +119,8 @@ public class StarredFragment extends Fragment implements ErrorListener, OnItemCl
 		apiQueue.requestBeers(new Listener<Beers>() {
 			@Override
 			public void onResponse(Beers beers) {
+				if (getActivity() == null || !isAdded())
+					return;
 				// Beers are loaded now too; search for those that are starred and bind the beer brewer/style
 				List<Beer> beersList = new ArrayList<Beer>();
 				for (Beer beer : beers.getBeers()) {

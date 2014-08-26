@@ -76,6 +76,8 @@ public class BrewerFragment extends Fragment implements Listener<Styles>, ErrorL
 
 	@Override
 	public void onResponse(Styles styles) {
+		if (getActivity() == null || !isAdded())
+			return;
 		// Handle the styles in a background thread
 		handleStylesResult(styles.getStyles());
 	}

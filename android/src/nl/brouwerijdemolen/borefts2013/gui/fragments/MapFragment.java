@@ -178,6 +178,8 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 
 	@Override
 	public void onResponse(Brewers brewers) {
+		if (getActivity() == null || !isAdded())
+			return;
 		brewerMarkers = new HashMap<Marker, Brewer>();
 		for (final Brewer brewer : brewers.getBrewers()) {
 			addBrewerMarker(brewer);

@@ -74,6 +74,8 @@ public class StyleFragment extends Fragment implements Listener<Brewers>, ErrorL
 
 	@Override
 	public void onResponse(Brewers brewers) {
+		if (getActivity() == null || !isAdded())
+			return;
 		// Handle the brewers in a background thread
 		handleBrewersResult(brewers.getBrewers());
 	}
@@ -93,6 +95,8 @@ public class StyleFragment extends Fragment implements Listener<Brewers>, ErrorL
 		apiQueue.requestBeers(new Listener<Beers>() {
 			@Override
 			public void onResponse(Beers beers) {
+				if (getActivity() == null || !isAdded())
+					return;
 				// Beers are loaded now too; sort them and add the style and brewer objects
 				List<Beer> beersList = new ArrayList<Beer>();
 				for (Beer beer : beers.getBeers()) {
