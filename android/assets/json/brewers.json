@@ -1,17 +1,3 @@
-<?php
-  include 'enablecache.php';
-  
-  // Bottling building
-  //    52.085126,4.740201   52.085156,4.740249   52.085182,4.740303   52.085205,4.740351
-  //
-  // In front of bottling building
-  //    52.084895,4.740244   52.084928,4.740292   52.084965,4.740351   52.085001,4.740405
-  //
-  // In front of Kinderland
-  //    52.084559,4.739686   52.084589,4.739729   52.084619,4.739777   52.084655,4.739825      52.084724,4.739954   52.084757,4.740002   52.084787,4.740051   52.08481,4.740099
-  //
-  
-?>
 {
     "brewers": [
         {
@@ -221,6 +207,32 @@
             "website": "http://www.birratoccalmatto.it",
             "latitude": 52.084965,
             "longitude": 4.740351
+        },
+        {
+            "id": 21,
+            "logoUrl": "montsaleve.jpg",
+            "name": "Brasserie du Mont Salève",
+            "shortName": "Mont Salève",
+            "sortName": "Mont Saleve",
+            "city": "Neydens",
+            "country": "France",
+            "description": "",
+            "website": "http://labrasseriedumontsaleve.com",
+            "latitude": 52.085195,
+            "longitude": 4.74043
+        },
+        {
+            "id": 22,
+            "logoUrl": "rocket.png",
+            "name": "Rocket Brewing Co",
+            "shortName": "Rocket Brewing",
+            "sortName": "Rocket",
+            "city": "Copenhagen",
+            "country": "Denmark",
+            "description": "",
+            "website": "http://www.rocketbrewing.dk",
+            "latitude": 52.085195,
+            "longitude": 4.74043
         }
     ],
     "revision": 20

@@ -221,6 +221,32 @@
             "website": "http://www.birratoccalmatto.it",
             "latitude": 52.084965,
             "longitude": 4.740351
+        },
+        {
+            "id": 21,
+            "logoUrl": "montsaleve.jpg",
+            "name": "Brasserie du Mont Salève",
+            "shortName": "Mont Salève",
+            "sortName": "Mont Saleve",
+            "city": "Neydens",
+            "country": "France",
+            "description": "",
+            "website": "http://labrasseriedumontsaleve.com",
+            "latitude": 52.085195,
+            "longitude": 4.74043
+        },
+        {
+            "id": 22,
+            "logoUrl": "rocket.png",
+            "name": "Rocket Brewing Co",
+            "shortName": "Rocket Brewing",
+            "sortName": "Rocket",
+            "city": "Copenhagen",
+            "country": "Denmark",
+            "description": "",
+            "website": "http://www.rocketbrewing.dk",
+            "latitude": 52.085195,
+            "longitude": 4.74043
         }
     ],
     "revision": 20

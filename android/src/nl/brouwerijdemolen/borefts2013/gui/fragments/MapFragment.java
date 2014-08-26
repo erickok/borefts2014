@@ -23,6 +23,7 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.os.Handler;
 import android.util.SparseArray;
 import android.widget.Toast;
 
@@ -90,7 +91,7 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		if (isMinimap) {
 			getMap().moveCamera(
 					CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
-							.target(new LatLng(52.085207d, 4.740871d)).zoom(17f).bearing(-46f).build()));
+							.target(new LatLng(52.084867d, 4.740051d)).zoom(18f).bearing(-46f).build()));
 			getMap().getUiSettings().setAllGesturesEnabled(false);
 			getMap().getUiSettings().setZoomControlsEnabled(false);
 			getMap().setOnMarkerClickListener(this);
@@ -98,10 +99,21 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		} else {
 			getMap().moveCamera(
 					CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
-							.target(new LatLng(52.085041d, 4.741054d)).zoom(18f).build()));
+							.target(new LatLng(52.085141d, 4.740854d)).zoom(17.2f).bearing(-8f).build()));
 			getMap().setMyLocationEnabled(true);
 			getMap().getUiSettings().setCompassEnabled(true);
 			getMap().setOnInfoWindowClickListener(this);
+			// Schedule zooming to festival terrain (except when serching for the mill or trains)
+			if (initFocusId != 5 && initFocusId != 0) {
+				new Handler().postDelayed(new Runnable() {
+					@Override
+					public void run() {
+						getMap().animateCamera(
+								CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder()
+										.target(new LatLng(52.084867d, 4.740051d)).zoom(18.2f).bearing(-46f).build()));
+					}
+				}, 1000);
+			}
 		}
 
 		// Load the festival outline

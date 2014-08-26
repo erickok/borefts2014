@@ -185,7 +185,7 @@
         },
         {
         	"id": 19,
-            "name": "Flemish Brown",
+            "name": "Flemish Red/Brown",
             "body": 3,
             "color": 4,
             "abv": 3,
