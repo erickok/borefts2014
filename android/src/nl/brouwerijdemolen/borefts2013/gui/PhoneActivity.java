@@ -6,6 +6,8 @@ import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.AboutDialog_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BafFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BafFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.InfoFragment;
@@ -47,6 +49,7 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 	private StylesFragment stylesFragment = null;
 	private TwitterFragment twitterFragment = null;
 	private StarredFragment starredFragment = null;
+	private BafFragment bafFragment = null;
 
 	@AfterViews
 	protected void init() {
@@ -64,6 +67,8 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 				getSupportActionBar().newTab().setText(R.string.action_twitter).setTabListener(tabListener));
 		getSupportActionBar().addTab(
 				getSupportActionBar().newTab().setText(R.string.info_stars).setTabListener(tabListener));
+		getSupportActionBar().addTab(
+				getSupportActionBar().newTab().setText(R.string.info_baf).setTabListener(tabListener));
 
 		pager = (ViewPager) findViewById(R.id.pager);
 		pager.setAdapter(new TabsPagerAdapter(getSupportFragmentManager()));
@@ -123,7 +128,7 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 
 		@Override
 		public int getCount() {
-			return 5;
+			return 6;
 		}
 
 		@Override
@@ -149,6 +154,10 @@ public class PhoneActivity extends SherlockFragmentActivity implements Navigatio
 				if (starredFragment == null)
 					starredFragment = StarredFragment_.builder().build();
 				return starredFragment;
+			case 5:
+				if (bafFragment == null)
+					bafFragment = BafFragment_.builder().build();
+				return bafFragment;
 			}
 			return null;
 		}

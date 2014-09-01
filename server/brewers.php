@@ -108,9 +108,9 @@
         {
             "id": 12,
             "logoUrl": "brekeriet.jpg",
-            "name": "Brekeriek Beer",
-            "shortName": "Brekeriek",
-            "sortName": "Brekeriek",
+            "name": "Brekeriet Beer",
+            "shortName": "Brekeriet",
+            "sortName": "Brekeriet",
             "city": "Staffanstorp",
             "country": "Sweden",
             "description": "",
@@ -247,7 +247,20 @@
             "website": "http://www.rocketbrewing.dk",
             "latitude": 52.085195,
             "longitude": 4.74043
+        },
+        {
+            "id": 23,
+            "logoUrl": "cantillon.png",
+            "name": "Brasserie Cantillon Brouwerij",
+            "shortName": "Cantillon",
+            "sortName": "Cantillon",
+            "city": "Brussels",
+            "country": "Belgium",
+            "description": "",
+            "website": "http://www.cantillon.be",
+            "latitude": 52.085195,
+            "longitude": 4.74043
         }
     ],
-    "revision": 20
+    "revision": 21
 }

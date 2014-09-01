@@ -23,7 +23,7 @@
 	<string name="info_times">Sep 26 &#8211; 27\n12:00 &#8211; 22:00</string>
 	<string name="info_tokens">MUNTEN</string>
 	<string name="info_getmore">EXTRA MUNTEN</string>
-	<string name="info_entry">€ 20,- voor toegang, glas, flesje water, festivalboekje en 7 munten</string>
+	<string name="info_entry">€ 20,- voor glas, festivalboekje en 6 munten</string>
 	<string name="info_token">€ 10,- voor 6 extra munten of € 2,- per losse munt</string>
 	<string name="info_extra">Extra munten kunnen worden gekocht voor de brouwerijingang.</string>
 	<string name="info_publictransport">OPENBAAR VERVOER</string>
@@ -33,7 +33,9 @@
 	<string name="info_taxis">Zoek een taxi</string>
 	<string name="info_beercafe">BIERWINKEL</string>
 	<string name="info_findmill">Zoek de molen</string>
-	<string name="info_shopinfo">De bierwinkel in de molen is natuurlijk weer geopend; voor specialiteiten van De Molen en brouwers op het festival en honderen andere bieren.</string>
+	<string name="info_shopinfo">De bierwinkel in de molen is natuurlijk weer geopend; voor specialiteiten van De Molen en brouwers op het festival en honderden andere bieren.</string>
+	<string name="info_merchandise">MERCHANDISE</string>
+	<string name="info_shirts">Ook dit jaar is er weer merchandise beschikbaar van de meeste aanwezige brouwers. Bovendien is er een uniek Borefts festivalt-shirt beschikbaar.</string>
 
 	<string name="info_origin">%1$s, %2$s</string>
 	<string name="info_abvperc">%1$.1f%%</string>

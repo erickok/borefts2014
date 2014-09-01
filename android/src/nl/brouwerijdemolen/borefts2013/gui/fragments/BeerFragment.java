@@ -134,7 +134,7 @@ public class BeerFragment extends SherlockFragment {
 			Toast.makeText(getActivity(), R.string.error_notcoupled, Toast.LENGTH_LONG).show();
 			return;
 		}
-		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://untappd.com/b/b/" + beer.getUntappdId()))
+		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://untappd.com/qr/beer/" + beer.getUntappdId()))
 				.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 	}
 

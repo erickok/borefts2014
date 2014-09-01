@@ -198,6 +198,28 @@
 			android:paddingLeft="4dp"
 			android:text="@string/info_shopinfo"
 			android:textIsSelectable="false" />
+
+		<TextView
+			android:id="@+id/merchandise_text"
+			style="@style/SectionHeader"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/shopinfo_text"
+			android:layout_margin="@dimen/margin_default"
+			android:text="@string/info_merchandise"
+			android:textIsSelectable="false" />
+
+		<TextView
+			android:id="@+id/shirts_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/merchandise_text"
+			android:layout_marginBottom="@dimen/margin_half"
+			android:layout_marginLeft="@dimen/margin_default"
+			android:layout_marginRight="@dimen/margin_default"
+			android:paddingLeft="4dp"
+			android:text="@string/info_shirts"
+			android:textIsSelectable="false" />
 	</RelativeLayout>
 
 </ScrollView>

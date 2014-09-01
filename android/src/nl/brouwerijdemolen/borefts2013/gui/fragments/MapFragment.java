@@ -207,8 +207,13 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		BitmapDescriptor bitmapToUse;
 		if (brewer.getLogoUrl() == null)
 			bitmapToUse = BitmapDescriptorFactory.fromResource(R.drawable.ic_marker_mask);
-		else
-			bitmapToUse = BitmapDescriptorFactory.fromBitmap(drawBrewerMarker(brewer));
+		else {
+			Bitmap brewerMarker = drawBrewerMarker(brewer);
+			if (brewerMarker == null)
+				bitmapToUse = BitmapDescriptorFactory.fromResource(R.drawable.ic_marker_mask);
+			else
+				bitmapToUse = BitmapDescriptorFactory.fromBitmap(brewerMarker);
+		}
 		Marker marker = getMap().addMarker(
 				new MarkerOptions().position(new LatLng(brewer.getLatitude(), brewer.getLongitude()))
 						.title(brewer.getShortName()).icon(bitmapToUse));

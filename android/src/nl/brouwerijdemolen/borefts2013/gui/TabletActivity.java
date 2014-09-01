@@ -6,6 +6,8 @@ import nl.brouwerijdemolen.borefts2013.api.Beer;
 import nl.brouwerijdemolen.borefts2013.api.Brewer;
 import nl.brouwerijdemolen.borefts2013.api.Style;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.AboutDialog_;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BafFragment;
+import nl.brouwerijdemolen.borefts2013.gui.fragments.BafFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.BeerFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewerFragment_;
 import nl.brouwerijdemolen.borefts2013.gui.fragments.BrewersFragment;
@@ -54,6 +56,7 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 	private BrewersFragment brewersFragment = null;
 	private StylesFragment stylesFragment = null;
 	private StarredFragment starredFragment = null;
+	private BafFragment bafFragment = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -74,6 +77,8 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 							.setTag("twitter"));
 		getSupportActionBar().addTab(
 				getSupportActionBar().newTab().setText(R.string.info_stars).setTabListener(this).setTag("stars"));
+		getSupportActionBar().addTab(
+				getSupportActionBar().newTab().setText(R.string.info_baf).setTabListener(this).setTag("baf"));
 
 		// Set up panes layout and load the first
 		setPaneSizer(new ExamplePaneSizer());
@@ -177,6 +182,10 @@ public class TabletActivity extends PanesActivity implements TabListener, Naviga
 			if (starredFragment == null)
 				starredFragment = StarredFragment_.builder().build();
 			addFragment(mapFragment, starredFragment);
+		} else if (tab.getTag().equals("baf")) {
+			if (bafFragment == null)
+				bafFragment = BafFragment_.builder().build();
+			addFragment(mapFragment, bafFragment);
 		}
 		supportInvalidateOptionsMenu();
 	}

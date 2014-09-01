@@ -10,6 +10,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
+import android.view.ViewTreeObserver;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -18,6 +20,7 @@ public class TwitterFragment extends Fragment {
 
 	@ViewById
 	protected WebView twitterWebview;
+	private int height;
 
 	public TwitterFragment() {
 		setRetainInstance(true);
@@ -36,7 +39,18 @@ public class TwitterFragment extends Fragment {
 				return true;
 			}
 		});
-		refreshTwitterFeed();
+		ViewTreeObserver vto = twitterWebview.getViewTreeObserver();
+		if (vto.isAlive()) {
+			vto.addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+				@SuppressWarnings("deprecation")
+				@Override
+				public void onGlobalLayout() {
+					twitterWebview.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+					height = (int) ((twitterWebview.getHeight() - 13) / getResources().getDisplayMetrics().density);
+					refreshTwitterFeed();
+				}
+			});
+		}
 	}
 
 	/**
@@ -44,11 +58,17 @@ public class TwitterFragment extends Fragment {
 	 * requests a manual refresh.
 	 */
 	public void refreshTwitterFeed() {
-		twitterWebview
-				.loadDataWithBaseURL(
-						"https://twitter.com",
-						"<html></body><a class=\"twitter-timeline\" data-dnt=\"true\" href=\"https://twitter.com/search?q=%23borefts\" data-widget-id=\"375665309723541504\" data-chrome=\"noheader noborders transparent\" data-related=\"molenbier,molennieuws\">Loading tweets about \"#borefts\"...</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\"://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script></body></html>",
-						"text/html", "UTF-8", null);
+		if (height == 0)
+			return; // Layout not yet initialized
+		twitterWebview.loadDataWithBaseURL("https://twitter.com",
+				"<html></body><a class=\"twitter-timeline\" data-dnt=\"true\" href=\"https://twitter.com/search"
+						+ "?q=%23borefts\" data-widget-id=\"375665309723541504\" height=\"" + Integer.toString(height)
+						+ "\" data-chrome=\"noheader noborders transparent\" data-related=\"molenbier,"
+						+ "molennieuws\">Loading tweets about \"#borefts\"...</a><script>!function(d,s,"
+						+ "id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':"
+						+ "'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\"://"
+						+ "platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,"
+						+ "\"script\",\"twitter-wjs\");</script></body></html>", "text/html", "UTF-8", null);
 	}
 
 }

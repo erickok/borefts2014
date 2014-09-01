@@ -23,7 +23,7 @@
 	<string name="info_times">Sep 26 &#8211; 27\n12:00 &#8211; 22:00</string>
 	<string name="info_tokens">TOKENS</string>
 	<string name="info_getmore">Get more</string>
-	<string name="info_entry">€ 20,- for entry, glass, bottle of water, festival book and 7 tokens</string>
+	<string name="info_entry">€ 20,- for glass, festival booklet and 6 tokens</string>
 	<string name="info_token">€ 10,- for 6 extra tokens or € 2,- per single token</string>
 	<string name="info_extra">Additional tokens can be bought in the front of the brewery.</string>
 	<string name="info_publictransport">PUBLIC TRANSPORT</string>
@@ -34,7 +34,9 @@
 	<string name="info_beercafe">BEER SHOP</string>
 	<string name="info_findmill">Find mill</string>
 	<string name="info_shopinfo">The beer shop in the old mill is of course open; for De Molen specialties, festival beers and hundreds of other beers.</string>
-
+	<string name="info_merchandise">MERCHANDISE</string>
+	<string name="info_shirts">Most brewers will again bring merchansise this year. Moreover, a special Borefts festival t-shirt will be available.</string>
+	
 	<string name="info_origin">%1$s, %2$s</string>
 	<string name="info_abvperc">%1$.1f%%</string>
 	<string name="info_color">COLOR</string>
@@ -55,6 +57,8 @@
 	<string name="info_stars">Stars</string>
 	<string name="info_nostars">No beers starred yet.\n\nYou can add your favourite beers to this list using the star button in the top of every beer details screen.</string>
 		
+	<string name="info_baf">BAF!</string>
+	
 	<string name="map_trains">Train station</string>
 	<string name="map_entrance">Entrance</string>
 	<string name="map_mtoilet">Male toilet</string>
