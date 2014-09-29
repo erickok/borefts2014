@@ -1,16 +1,5 @@
 <?php
   include 'enablecache.php';
-  
-  // Bottling building
-  //    52.085126,4.740201   52.085156,4.740249   52.085182,4.740303   52.085205,4.740351
-  //
-  // In front of bottling building
-  //    52.084895,4.740244   52.084928,4.740292   52.084965,4.740351   52.085001,4.740405
-  //
-  // In front of Kinderland
-  //    52.084559,4.739686   52.084589,4.739729   52.084619,4.739777   52.084655,4.739825      52.084724,4.739954   52.084757,4.740002   52.084787,4.740051   52.08481,4.740099
-  //
-  
 ?>
 {
     "brewers": [
@@ -24,8 +13,8 @@
             "country": "The Netherlands",
             "description": "De Molen is the host of the Borefts festival... TO ADD",
             "website": "http://www.brouwerijdemolen.nl",
-            "latitude": 52.085126,
-            "longitude": 4.740201
+            "latitude": 52.085131,
+            "longitude": 4.740166
         },
         {
             "id": 1,
@@ -37,8 +26,8 @@
             "country": "The Netherlands",
             "description": "Emelisse is... TO ADD",
             "website": "http://www.emelisse.nl",
-            "latitude": 52.085156,
-            "longitude": 4.740249
+            "latitude": 52.084658,
+            "longitude": 4.739801
         },
         {
             "id": 3,
@@ -50,8 +39,8 @@
             "country": "Spain",
             "description": "Laugar is ... TO ADD",
             "website": "http://www.laugarbrewery.com",
-            "latitude": 52.085182,
-            "longitude": 4.740303
+            "latitude": 52.084746,
+            "longitude": 4.739941
         },
         {
             "id": 6,
@@ -63,8 +52,8 @@
             "country": "England",
             "description": "The Kernel is ... TO ADD",
             "website": "http://www.thekernelbrewery.com",
-            "latitude": 52.085205,
-            "longitude": 4.740351
+            "latitude": 52.084678,
+            "longitude": 4.739842
         },
         {
             "id": 8,
@@ -76,8 +65,8 @@
             "country": "Belgium",
             "description": "Alvinne is ... TO ADD",
             "website": "http://www.alvinne.be",
-            "latitude": 52.084895,
-            "longitude": 4.740244
+            "latitude": 52.084723,
+            "longitude": 4.739911
         },
         {
             "id": 9,
@@ -89,8 +78,8 @@
             "country": "Sweden",
             "description": "Närke is ... TO ADD",
             "website": "http://www.kulturbryggeri.se",
-            "latitude": 52.084928,
-            "longitude": 4.740292
+            "latitude": 52.085224,
+            "longitude": 4.740346
         },
         {
             "id": 11,
@@ -102,8 +91,8 @@
             "country": "Italy",
             "description": "Brewfist is ... TO ADD",
             "website": "http://www.brewfist.com",
-            "latitude": 52.085001,
-            "longitude": 4.740405
+            "latitude": 52.084892,
+            "longitude": 4.740201
         },
         {
             "id": 12,
@@ -115,8 +104,8 @@
             "country": "Sweden",
             "description": "",
             "website": "http://www.brekeriet.se",
-            "latitude": 52.084559,
-            "longitude": 4.739686
+            "latitude": 52.084841,
+            "longitude": 4.740102
         },
         {
             "id": 13,
@@ -128,8 +117,8 @@
             "country": "England",
             "description": "",
             "website": "http://www.burningskybeer.com",
-            "latitude": 52.084589,
-            "longitude": 4.739729
+            "latitude": 52.085182,
+            "longitude": 4.740252
         },
         {
             "id": 14,
@@ -141,8 +130,8 @@
             "country": "Italy",
             "description": "",
             "website": "http://www.birrificiodelducato.net/en/",
-            "latitude": 52.084619,
-            "longitude": 4.739777
+            "latitude": 52.084823,
+            "longitude": 4.74007
         },
         {
             "id": 15,
@@ -154,8 +143,8 @@
             "country": "USA/Denmark",
             "description": "",
             "website": "http://eviltwin.dk",
-            "latitude": 52.084655,
-            "longitude": 4.739825
+            "latitude": 52.085204,
+            "longitude": 4.740397
         },
         {
             "id": 16,
@@ -167,8 +156,8 @@
             "country": "England",
             "description": "",
             "website": "http://www.magicrockbrewing.com",
-            "latitude": 52.084724,
-            "longitude": 4.739954
+            "latitude": 52.084614,
+            "longitude": 4.739724
         },
         {
             "id": 17,
@@ -180,8 +169,8 @@
             "country": "England",
             "description": "",
             "website": "http://www.ramsgatebrewery.co.uk",
-            "latitude": 52.084757,
-            "longitude": 4.740002
+            "latitude": 52.085166,
+            "longitude": 4.740217
         },
         {
             "id": 18,
@@ -193,8 +182,8 @@
             "country": "Belgium",
             "description": "",
             "website": "http://www.gueuzerietilquin.be/en/",
-            "latitude": 52.084787,
-            "longitude": 4.740051
+            "latitude": 52.084635,
+            "longitude": 4.739761
         },
         {
             "id": 19,
@@ -206,8 +195,8 @@
             "country": "The Netherlands",
             "description": "",
             "website": "http://brouwerijhetuiltje.nl/",
-            "latitude": 52.08481,
-            "longitude": 4.740099
+            "latitude": 52.084802,
+            "longitude": 4.740037
         },
         {
             "id": 20,
@@ -219,8 +208,8 @@
             "country": "Italy",
             "description": "",
             "website": "http://www.birratoccalmatto.it",
-            "latitude": 52.084965,
-            "longitude": 4.740351
+            "latitude": 52.084911,
+            "longitude": 4.740238
         },
         {
             "id": 21,
@@ -232,8 +221,8 @@
             "country": "France",
             "description": "",
             "website": "http://labrasseriedumontsaleve.com",
-            "latitude": 52.085195,
-            "longitude": 4.74043
+            "latitude": 52.085192,
+            "longitude": 4.740429
         },
         {
             "id": 22,
@@ -245,8 +234,8 @@
             "country": "Denmark",
             "description": "",
             "website": "http://www.rocketbrewing.dk",
-            "latitude": 52.085195,
-            "longitude": 4.74043
+            "latitude": 52.084784,
+            "longitude": 4.740002
         },
         {
             "id": 23,
@@ -258,9 +247,9 @@
             "country": "Belgium",
             "description": "",
             "website": "http://www.cantillon.be",
-            "latitude": 52.085195,
-            "longitude": 4.74043
+            "latitude": 52.084556,
+            "longitude": 4.739697
         }
     ],
-    "revision": 21
+    "revision": 23
 }

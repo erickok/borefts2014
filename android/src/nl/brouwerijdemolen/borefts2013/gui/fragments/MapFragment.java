@@ -52,15 +52,15 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 			R.string.map_entrance, R.drawable.ic_marker_entrance);
 	public static final MapElement ELEMENT_FTOILET1 = new MapElement(2, new LatLng(52.085106d, 4.740752d),
 			R.string.map_ftoilet1, R.drawable.ic_marker_toilet); // In brewery
-	public static final MapElement ELEMENT_FTOILET2 = new MapElement(3, new LatLng(52.084605, 4.739573),
-			R.string.map_ftoilet2, R.drawable.ic_marker_toilet);// In kindereiland
+	public static final MapElement ELEMENT_FTOILET2 = new MapElement(3, new LatLng(52.084635d, 4.740171d),
+			R.string.map_ftoilet2, R.drawable.ic_marker_toilet);// Keet
 	public static final MapElement ELEMENT_TOKENS = new MapElement(4, new LatLng(52.084919d, 4.740567d),
 			R.string.map_tokens, R.drawable.ic_marker_tokens);
 	public static final MapElement ELEMENT_MILL = new MapElement(5, new LatLng(52.085711d, 4.742077d),
 			R.string.map_mill, R.drawable.ic_marker_mill);
 	public static final MapElement ELEMENT_FIRSTAID = new MapElement(6, new LatLng(52.084862d, 4.74019d),
 			R.string.map_firstaid, R.drawable.ic_marker_firstaid);
-	public static final MapElement ELEMENT_MTOILET = new MapElement(8, new LatLng(52.084771d, 4.740420d),
+	public static final MapElement ELEMENT_MTOILET = new MapElement(8, new LatLng(52.084286d, 4.739509d),
 			R.string.map_mtoilet, R.drawable.ic_marker_toilet); // In front
 	// public static final MapElement ELEMENT_FOODPLAZA = new MapElement(10, new LatLng(52.084692d, 4.740983d),
 	// R.string.map_foodplaza, R.drawable.ic_marker_food);
@@ -128,10 +128,9 @@ public class MapFragment extends com.google.android.gms.maps.SupportMapFragment 
 		// Bottling building
 		getMap().addPolygon(
 				new PolygonOptions()
-						.add(new LatLng(52.085263d, 4.740358d), new LatLng(52.085113d, 4.740092d),
-								new LatLng(52.085134d, 4.740039d), new LatLng(52.084694d, 4.739386d),
-								new LatLng(52.084546d, 4.739627d), new LatLng(52.084961d, 4.740251d),
-								new LatLng(52.085024d, 4.740243d), new LatLng(52.085190d, 4.740505d))
+						.add(new LatLng(52.085176d, 4.740509d), new LatLng(52.085268d, 4.740362d),
+								new LatLng(52.085037d, 4.739954d), new LatLng(52.084911d, 4.740147d),
+								new LatLng(52.084958d, 4.740247d), new LatLng(52.085024d, 4.740252d))
 						.strokeColor(getResources().getColor(R.color.darkred)).strokeWidth(5f)
 						.fillColor(getResources().getColor(R.color.darkred_half)));
 		// Brewery building
